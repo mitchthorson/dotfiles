@@ -43,7 +43,7 @@ prompt_git() {
 			fi;
 
 		fi;
-
+#
 		# Get the short symbolic ref.
 		# If HEAD isn’t a symbolic ref, get the short SHA for the latest commit
 		# Otherwise, just give up.
@@ -74,6 +74,7 @@ if tput setaf 1 &> /dev/null; then
 	violet=$(tput setaf 61);
 	white=$(tput setaf 15);
 	yellow=$(tput setaf 136);
+
 else
 	bold='';
 	reset="\e[0m";

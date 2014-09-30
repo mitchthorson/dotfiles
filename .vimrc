@@ -1,6 +1,6 @@
 " Use the Solarized Dark theme
 set background=dark
-colorscheme solarized
+colorscheme base16-default
 
 " Make Vim more useful
 set nocompatible
@@ -41,9 +41,11 @@ set number
 " Enable syntax highlighting
 syntax on
 " Highlight current line
-set cursorline
-" Make tabs as wide as two spaces
-set tabstop=2
+" set cursorline
+" Set tabs to equal 2 spaces and use softtabs
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -98,3 +100,5 @@ if has("autocmd")
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 endif
+
+execute pathogen#infect()
