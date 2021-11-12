@@ -1,2 +1,2 @@
-require('settings')
-require('colors')
+require("settings")
+require("colors")
