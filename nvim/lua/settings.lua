@@ -30,6 +30,7 @@ opt.splitright = true
 opt.splitbelow = true
 opt.ignorecase = true
 opt.smartcase = true
+opt.hidden = true
 
 -----------------------------------------------------------
 -- Tabs, indent
