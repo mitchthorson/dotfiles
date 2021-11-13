@@ -5,10 +5,12 @@ require 'paq-nvim' {
 	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
 	'hrsh7th/nvim-compe';
 	'EdenEast/nightfox.nvim';
+	'nvim-lualine/lualine.nvim';
 }
 
-require("plugins/nvim-tree")
-require("plugins/lsp-config")
-require("plugins/nvim-treesitter")
-require("plugins/compe-config")
+require("nvim-tree-config")
+require("lsp-config")
+require("nvim-treesitter-config")
+require("compe-config")
+require("nvim-lualine-config")
 
