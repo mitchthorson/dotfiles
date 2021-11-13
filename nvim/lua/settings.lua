@@ -22,7 +22,7 @@ opt.swapfile = false          -- don't use swapfile
 vim.cmd [[
 	syntax enable
 ]]
-
+vim.o.fileencoding = "utf-8"
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
@@ -34,6 +34,8 @@ opt.splitbelow = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.hidden = true
+opt.cmdheight = 2
+opt.termguicolors = false
 
 -----------------------------------------------------------
 -- Tabs, indent
