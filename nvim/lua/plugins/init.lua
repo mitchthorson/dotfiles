@@ -18,4 +18,5 @@ require("nvim-treesitter-config")
 require("nvim-lualine-config")
 require("bufferline-config")
 require("nvim-autopairs-config")
+require("which-key-config")
 
