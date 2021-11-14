@@ -21,3 +21,6 @@ map('v', '<', '<gv', {noremap = true})
 -- avoid ESC
 map('i', 'jk', '<ESC>', {noremap = true})
 map('i', 'kj', '<ESC>', {noremap = true})
+
+-- terminal
+map('t', '<ESC>', '<C-\\><C-N>', {noremap = true})

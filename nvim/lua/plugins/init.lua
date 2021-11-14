@@ -17,14 +17,18 @@ require 'paq-nvim' {
 	'hrsh7th/cmp-path';
 	'hrsh7th/cmp-cmdline';
 	'hrsh7th/nvim-cmp';
+	'hrsh7th/cmp-vsnip';
+	'hrsh7th/vim-vsnip';
+	'onsails/lspkind-nvim';
 }
 
 require("nvim-tree-config")
-require("lsp-config")
+--require("lsp-config")
 require("nvim-treesitter-config")
 require("nvim-lualine-config")
 require("bufferline-config")
 require("nvim-autopairs-config")
 require("which-key-config")
 require("telescope-config")
+require("cmp-config")
 
