@@ -1,1 +1,1 @@
-require('nightfox').load('Duskfox')
+require('nightfox').load('duskfox')

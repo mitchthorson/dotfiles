@@ -1,5 +1,4 @@
 require 'paq-nvim' {
-	'neovim/nvim-lspconfig';
 	'kyazdani42/nvim-web-devicons';
 	'kyazdani42/nvim-tree.lua';
 	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
@@ -10,6 +9,14 @@ require 'paq-nvim' {
 	'p00f/nvim-ts-rainbow';
 	'windwp/nvim-autopairs';
 	'folke/which-key.nvim';
+	'nvim-lua/plenary.nvim';
+	'nvim-telescope/telescope.nvim';
+	'neovim/nvim-lspconfig';
+	'hrsh7th/cmp-nvim-lsp';
+	'hrsh7th/cmp-buffer';
+	'hrsh7th/cmp-path';
+	'hrsh7th/cmp-cmdline';
+	'hrsh7th/nvim-cmp';
 }
 
 require("nvim-tree-config")
@@ -19,4 +26,5 @@ require("nvim-lualine-config")
 require("bufferline-config")
 require("nvim-autopairs-config")
 require("which-key-config")
+require("telescope-config")
 

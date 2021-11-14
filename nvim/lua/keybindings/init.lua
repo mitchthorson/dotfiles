@@ -6,7 +6,7 @@ map('n', '<M-h>', ':vertical resize -2<CR>', {noremap = true})
 map('n', '<M-l>', ':vertical resize +2<CR>', {noremap = true}) 
 
 -- use TAB to cycle through buffers
-map('n', '<TAB>', ':bnext<CR>', {noremap = true})
+map('n', '<TAB>', ':bnext<CR>', {noremap = true, silent = true})
 
 -- basic window navigation
 map('n', '<C-h>', '<C-w>h', {noremap = true})

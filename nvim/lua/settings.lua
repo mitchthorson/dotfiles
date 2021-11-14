@@ -34,7 +34,7 @@ opt.splitbelow = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.hidden = true
-opt.cmdheight = 2
+opt.cmdheight = 1
 opt.termguicolors = false
 
 -----------------------------------------------------------
