@@ -20,6 +20,7 @@ require 'paq-nvim' {
 	'hrsh7th/cmp-vsnip';
 	'hrsh7th/vim-vsnip';
 	'onsails/lspkind-nvim';
+	'numToStr/Comment.nvim';
 }
 
 require("nvim-tree-config")
@@ -31,4 +32,5 @@ require("nvim-autopairs-config")
 require("which-key-config")
 require("telescope-config")
 require("cmp-config")
+require("comment-config")
 
