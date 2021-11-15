@@ -22,6 +22,7 @@ require 'paq-nvim' {
 	'onsails/lspkind-nvim';
 	'numToStr/Comment.nvim';
 	'akinsho/toggleterm.nvim';
+	'lewis6991/gitsigns.nvim';
 }
 
 require("nvim-tree-config")
@@ -35,4 +36,5 @@ require("telescope-config")
 require("cmp-config")
 require("comment-config")
 require("toggleterm-config")
+require("gitsigns-config")
 
