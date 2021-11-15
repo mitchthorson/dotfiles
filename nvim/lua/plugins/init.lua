@@ -23,7 +23,7 @@ require 'paq-nvim' {
 }
 
 require("nvim-tree-config")
---require("lsp-config")
+require("lsp-config")
 require("nvim-treesitter-config")
 require("nvim-lualine-config")
 require("bufferline-config")
