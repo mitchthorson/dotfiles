@@ -21,6 +21,7 @@ require 'paq-nvim' {
 	'hrsh7th/vim-vsnip';
 	'onsails/lspkind-nvim';
 	'numToStr/Comment.nvim';
+	'akinsho/toggleterm.nvim';
 }
 
 require("nvim-tree-config")
@@ -33,4 +34,5 @@ require("which-key-config")
 require("telescope-config")
 require("cmp-config")
 require("comment-config")
+require("toggleterm-config")
 
