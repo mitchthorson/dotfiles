@@ -2,4 +2,7 @@
 !.gitignore
 !nvim/
 !nvim/**/*
+!alacritty/
+!alacritty/**/*
+alacritty/themes
 nvim/plugged

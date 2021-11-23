@@ -1,0 +1,10 @@
+font:
+  size: 10
+  normal:
+    family: BlexMono Nerd Font
+import:
+  - ~/.config/alacritty/themes/rose-pine/rose-pine.yml
+window:
+  dimensions:
+    columns: 100
+    lines: 30
