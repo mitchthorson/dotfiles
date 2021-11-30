@@ -1,4 +1,17 @@
 local wk = require("which-key")
+local Terminal = require("toggleterm.terminal").Terminal
+local toggle_split = function()
+	local term = Terminal:new({direction = "horizontal"})
+	return term:toggle()
+end
+local toggle_vsplit = function()
+	local term = Terminal:new({direction = "vertical"})
+	return term:toggle()
+end
+local toggle_lazygit = function()
+	local term = Terminal:new({cmd = "lazygit", direction = "float"})
+	return term:toggle()
+end
 local mappings = {
 	q = {":q<CR>", "Quit"},
 	Q = {":wq<CR>", "Save & quit"},
@@ -19,6 +32,13 @@ local mappings = {
     e = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', "Show line diagnostics"},
     q = {'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', "Show loclist"}
   },
+	t = {
+		name = "Terminal",
+		t = {":ToggleTerm<cr>", "Open terminal"},
+		s = {toggle_split, "Open horizontal terminal"},
+		v = {toggle_vsplit, "Open vertical terminal"},
+		g = {toggle_lazygit, "Open lazygit"},
+	}
 }
 local opts = {prefix = "<leader>"}
 wk.register(mappings, opts)
