@@ -79,3 +79,12 @@ cmd [[
     autocmd TermOpen * startinsert
     autocmd BufLeave term://* stopinsert
 ]]
+
+
+-----------------------------------------------------------
+-- Filetypes
+-----------------------------------------------------------
+cmd [[
+	au BufNewFile,BufRead *.glsl set filetype=glsl
+]]
+
