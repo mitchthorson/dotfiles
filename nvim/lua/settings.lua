@@ -21,8 +21,10 @@ opt.mouse = "a"               -- enable mouse support
 opt.swapfile = false          -- don't use swapfile
 vim.cmd [[
 	syntax enable
+	filetype plugin on
 ]]
 vim.o.fileencoding = "utf-8"
+
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
