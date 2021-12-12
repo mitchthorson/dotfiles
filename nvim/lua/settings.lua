@@ -30,6 +30,7 @@ vim.o.fileencoding = "utf-8"
 -----------------------------------------------------------
 opt.number = true
 opt.relativenumber = true
+opt.cursorline = true
 opt.showmatch = true
 opt.splitright = true
 opt.splitbelow = true
