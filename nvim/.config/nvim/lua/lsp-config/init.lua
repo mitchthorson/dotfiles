@@ -27,6 +27,9 @@ require'lspconfig'.cssls.setup{
 require'lspconfig'.svelte.setup{
 	capabilities = capabilities
 }
+require'lspconfig'.r_language_server.setup{
+	capabilities = capabilities
+}
 
 -- setup lua language server
 local system_name
