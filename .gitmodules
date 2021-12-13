@@ -1,0 +1,3 @@
+[submodule "alacritty/.config/alacritty/themes/rose-pine"]
+	path = alacritty/.config/alacritty/themes/rose-pine
+	url = git@github.com:rose-pine/alacritty.git
