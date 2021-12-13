@@ -25,7 +25,7 @@ require 'paq-nvim' {
 	'lewis6991/gitsigns.nvim';
 }
 
-require("nvim-tree-config")
+-- require("nvim-tree-config")
 require("lsp-config")
 require("nvim-treesitter-config")
 require("nvim-lualine-config")
