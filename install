@@ -7,3 +7,5 @@ stow -D alacritty
 stow alacritty
 stow -D zsh
 stow zsh
+stow -D tmux
+stow tmux
