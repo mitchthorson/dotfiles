@@ -1,5 +1,10 @@
 #! /bin/sh
 
+# make some symlinks for zsh themes
+ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/typewritten.zsh-theme $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten.zsh-theme
+ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/async $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/async
+
+
 FOLDERS=$(echo "bin nvim alacritty zsh tmux")
 for folder in $FOLDERS
 do

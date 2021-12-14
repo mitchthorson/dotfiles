@@ -1,1 +1,1 @@
-/home/mitchthorson/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/typewritten.zsh-theme
+/Users/mthorson/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/typewritten.zsh-theme
