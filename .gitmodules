@@ -1,3 +1,12 @@
 [submodule "alacritty/.config/alacritty/themes/rose-pine"]
 	path = alacritty/.config/alacritty/themes/rose-pine
 	url = git@github.com:rose-pine/alacritty.git
+[submodule "zsh/.oh-my-zsh/custom/themes/typewritten"]
+	path = zsh/.oh-my-zsh/custom/themes/typewritten
+	url = git@github.com:reobin/typewritten.git
+[submodule "zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+	path = zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
+[submodule "zsh/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+	path = zsh/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
