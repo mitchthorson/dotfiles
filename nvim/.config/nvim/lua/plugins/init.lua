@@ -29,7 +29,7 @@ require 'paq-nvim' {
 require("lsp-config")
 require("nvim-treesitter-config")
 require("nvim-lualine-config")
-require("bufferline-config")
+-- require("bufferline-config")
 require("nvim-autopairs-config")
 require("which-key-config")
 require("telescope-config")
