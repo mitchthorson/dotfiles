@@ -37,6 +37,7 @@ opt.splitbelow = true
 opt.ignorecase = true
 opt.smartcase = true
 opt.cmdheight = 1
+opt.scrolloff = 8
 opt.termguicolors = false
 
 -----------------------------------------------------------

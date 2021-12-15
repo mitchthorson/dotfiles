@@ -21,9 +21,8 @@ map('n', '<C-l>', '<C-w>l', {noremap = true})
 map('v', '>', '>gv', {noremap = true})
 map('v', '<', '<gv', {noremap = true})
 
--- avoid ESC
-map('i', 'jk', '<ESC>', {noremap = true})
-map('i', 'kj', '<ESC>', {noremap = true})
-
 -- terminal
 map('t', '<ESC>', '<C-\\><C-N>', {noremap = true})
+
+-- open file explorer
+map('n', '<Leader>e', ':Vex<CR>', {noremap = true})
