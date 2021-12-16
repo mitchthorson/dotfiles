@@ -5,9 +5,6 @@ map('n', '<M-k>', ':resize +2<CR>', {noremap = true})
 map('n', '<M-h>', ':vertical resize -2<CR>', {noremap = true}) 
 map('n', '<M-l>', ':vertical resize +2<CR>', {noremap = true}) 
 
--- reload nvim configuration
-map('n', '<Leader><CR>', ':so ~/.config/nvim/init.lua<CR>', {noremap = true})
-
 -- use TAB to cycle through buffers
 map('n', '<TAB>', ':bnext<CR>', {noremap = true, silent = true})
 
@@ -23,6 +20,3 @@ map('v', '<', '<gv', {noremap = true})
 
 -- terminal
 map('t', '<ESC>', '<C-\\><C-N>', {noremap = true})
-
--- open file explorer
-map('n', '<Leader>e', ':Vex<CR>', {noremap = true})
