@@ -24,3 +24,7 @@ map('t', '<ESC>', '<C-\\><C-N>', {noremap = true})
 -- yank to clipboard
 map('v', '<leader>y', '"+y', {noremap = true})
 map('n', '<leader>y', '"+y', {noremap = true})
+
+-- move lines around more easily
+map('v', 'J', ":m '>+1<CR>gv=gv", {noremap = true})
+map('v', 'K', ":m '<-2<CR>gv=gv", {noremap = true})
