@@ -18,5 +18,9 @@ map('n', '<C-l>', '<C-w>l', {noremap = true})
 map('v', '>', '>gv', {noremap = true})
 map('v', '<', '<gv', {noremap = true})
 
--- terminal
+-- terminal go to normal mode with escape
 map('t', '<ESC>', '<C-\\><C-N>', {noremap = true})
+
+-- yank to clipboard
+map('v', '<leader>y', '"+y', {noremap = true})
+map('n', '<leader>y', '"+y', {noremap = true})
