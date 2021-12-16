@@ -41,6 +41,15 @@ opt.scrolloff = 8
 opt.termguicolors = false
 
 -----------------------------------------------------------
+-- NetRW
+-----------------------------------------------------------
+g.netrw_banner = 0
+g.netrw_liststyle = 3
+g.netrw_keepdir = 0
+g.netrw_winsize = 25
+g.netrw_localcopydircmd = 'cp -r'
+
+-----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
 opt.expandtab = false     -- use tabs, not spaces
