@@ -51,7 +51,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec --no-startup-id dmenu_run -nb "#191724" -nf "#eb6f92" -sb "#eb6f92" -sf "#191724" -fn "-ibm-ibm plex sans-bold-i-normal--0-0-0-0-p-0-ascii-0"
+
+# bindsym $mod+d exec --no-startup-id dmenu_run -nb papayawhip -nf coral -sb coral -sf papayawhip
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -145,6 +147,13 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+# assign apps to workspaces
+assign [class="firefox"] $ws1
+assign [class="discord"] $ws9
+# workaround for spotify, as it does not set its class initially
+# see: https://www.reddit.com/r/i3wm/comments/52dy4m/spotify_doesnt_start_at_assigned_workspace/
+for_window [class="Spotify"] move to workspace $ws10
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -183,13 +192,40 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-		tray_output primary
+		position top
 }
 
 # Borders
+for_window [class=".*"] border pixel 2px
+
+# Colors
+# Rosé Pine theme
+# https://rosepinetheme.com/palette.html#rose-pine
+set $base-color	#191724
+set $surface-color #1f1d2e
+set $overlay-color #26233a
+set $inactive-color #555169
+set $subtle-color #6e6a86
+set $text-color #e0def4
+set $love-color	#eb6f92
+set $gold-color	#f6c177
+set $rose-color	#ebbcba
+set $pine-color	#31748f
+set $foam-color	#9ccfd8
+set $iris-color	#c4a7e7
+set $highlight-color #2a2837
+set $highlightInactive-color #211f2d
+set $highlightOverlay #3a384a
+
+#                       border              background         text                 indicator
+client.focused          $iris-color         $iris-color        $text-color          $iris-color
+client.unfocused        $love-color         $base-color        $text-color          $iris-color
+client.focused_inactive $love-color         $base-color        $text-color          $iris-color
+client.urgent           $love-color         $base-color        $text-color          $iris-color
+
+
 #
-for_window [class=".*"] border pixel 2px 
-client.focused #9d79d6 #393bff #9d79d6 #9d79d6 #9d79d6
+# client.focused #9d79d6 #393bff #9d79d6 #9d79d6 #9d79d6
 
 # Set gaps
 gaps inner 8
