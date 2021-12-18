@@ -47,17 +47,19 @@ line-color = #f00
 border-size = 0
 border-color = #00000000
 
-padding-left = 0
+padding-left = 2
 padding-right = 2
+padding-top = 2
+padding-bottom = 2
 
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = BlexMono Nerd Font:size=10;style=Regular
+font-0 = BlexMono Nerd Font:size=11;style=Regular
 
 modules-left = i3
-modules-center = mpd
-modules-right = xbacklight-acpi pulseaudio wlan battery date 
+modules-center = 
+modules-right = pulseaudio wlan battery date 
 
 tray-position = right
 tray-padding = 2
@@ -171,14 +173,23 @@ label-urgent-padding = 1
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+icon-prev = ﭢ
+icon-stop = ﭥ
+icon-play = 喇
+icon-pause = 
+icon-next = ﭠ
 
 label-song-maxlen = 25
 label-song-ellipsis = true
+
+[module/playerctl]
+type = custom/script
+format-margin = 1
+exec = playerctl_status playerctld      55
+;format-prefix = 
+exec-if = [[ "$(playerctl -l)" != "No players found" ]] && echo "0"
+tail = true
+interval = 0
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -275,12 +286,16 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL %percentage%%
+format-volume = <ramp-volume><label-volume>
+label-volume = %percentage:3:3%%
 label-volume-foreground = ${root.foreground}
 
-label-muted = 🔇 muted
+label-muted = "婢 muted"
 label-muted-foreground = ${colors.foreground-alt}
+
+ramp-volume-0 = 奄
+ramp-volume-1 = 奔
+ramp-volume-2 = 墳
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
