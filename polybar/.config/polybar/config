@@ -220,24 +220,24 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = ${env:WIRELESS_NETWORK_INTERFACE:wlp0s20f3}
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
 format-connected-underline = ${colors.alert}
-label-connected = %essid%
+label-connected = "直 "
+label-connected-foreground = ${colors.foreground}
 
-format-disconnected = "睊  no connection"
+format-disconnected = "睊 "
 ;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
+format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = " " 
-ramp-signal-1 = " " 
-ramp-signal-2 = " "
-ramp-signal-3 = " "
-ramp-signal-4 = " "
+ramp-signal-0 = "直 " 
+ramp-signal-1 = "直 " 
+ramp-signal-2 = "直 "
+ramp-signal-3 = "直 "
+ramp-signal-4 = "直 "
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
@@ -343,9 +343,16 @@ format-full-prefix = "  "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = "  "
-ramp-capacity-1 = "  "
-ramp-capacity-2 = "  "
+ramp-capacity-0 = ""
+ramp-capacity-1 = ""
+ramp-capacity-2 = ""
+ramp-capacity-3 = ""
+ramp-capacity-4 = ""
+ramp-capacity-5 = ""
+ramp-capacity-6 = ""
+ramp-capacity-7 = ""
+ramp-capacity-8 = ""
+ramp-capacity-9 = ""
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 =   
