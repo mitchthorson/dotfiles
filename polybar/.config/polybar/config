@@ -24,7 +24,7 @@ background-alt = #1f1d2e
 foreground = #E0DEF4
 foreground-alt = #6E6A86
 accent1 = #c4a7e7
-accent2 = #31748f
+accent2 = #9ccfd8
 accent3 = #f6c177
 accent4 = #31748F
 accent5 = #eb6f92
@@ -55,11 +55,11 @@ padding-bottom = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = BlexMono Nerd Font:size=11;style=Regular
+font-0 = BlexMono Nerd Font:size=12;style=Bold
 
 modules-left = i3
 modules-center = xwindow
-modules-right = pulseaudio wlan battery date 
+modules-right = pulseaudio wlan system-bluetooth-bluetoothctl battery date 
 
 tray-position = right
 tray-padding = 2
@@ -82,6 +82,7 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
+label-foreground = ${colors.accent2}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -238,7 +239,7 @@ interval = 3.0
 label-connected = "直 %essid%"
 label-connected-foreground = ${colors.accent5}
 
-format-disconnected = "睊 "
+format-disconnected = "睊 disconnected"
 ;format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -278,10 +279,10 @@ time = %H:%M
 time-alt = %H:%M:%S
 
 format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.accent1}
+format-prefix-foreground = ${colors.accent1}
 
 label = %date% %time%
+label-foreground = ${colors.accent1}
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -356,8 +357,8 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-foreground = ${colors.accent3}
 label-discharging-foreground = ${colors.accent3}
 
-format-full= " "
-format-full-prefix-foreground = ${colors.accent3}
+format-full= " charged"
+format-full-foreground = ${colors.accent3}
 
 ramp-capacity-0 = ""
 ramp-capacity-1 = ""
@@ -430,6 +431,13 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/system-bluetooth-bluetoothctl]
+type = custom/script
+exec = polybarbluetooth
+tail = true
+click-left = polybarbluetooth --toggle &
+format-foreground = ${colors.accent2}
 
 [settings]
 screenchange-reload = true
