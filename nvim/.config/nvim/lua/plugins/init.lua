@@ -1,4 +1,5 @@
-require 'paq-nvim' {
+require 'paq' {
+	'savq/paq-nvim';
 	'kyazdani42/nvim-web-devicons';
 	'kyazdani42/nvim-tree.lua';
 	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
