@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-icon_path=/usr/share/icons/Papirus-Dark/24x24/actions/
+icon_path=/usr/share/icons/Papirus-Dark/24x24/apps/
 notify_id=508
 notification_time=2000
 
