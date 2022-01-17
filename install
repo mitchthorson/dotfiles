@@ -5,7 +5,7 @@ ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/typewritten.zsh-t
 ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/async $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/async
 
 
-FOLDERS=$(echo "bin nvim alacritty zsh tmux i3 polybar")
+FOLDERS=$(echo "bin nvim alacritty zsh tmux i3 polybar picom")
 for folder in $FOLDERS
 do
 	echo "Installing $folder"
