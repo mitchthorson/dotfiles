@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+# inspired by https://github.com/CorpSouth/scripts/blob/main/volume.sh
+
+icon_path=/usr/share/icons/Papirus-Dark/24x24/actions/
+notify_id=506
+notification_time=2000
+
+function get_volume {
+	pactl get-sink-volume @DEFAULT_SINK@ | awk '/Volume:/ {print $5}' | tail -n1 | cut -d '%' -f 1
+}
+
+function get_volume_icon {
+    if [ "$1" -lt 34 ]
+    then
+        echo -n "audio-volume-low.svg"
+    elif [ "$1" -lt 67 ]
+    then
+        echo -n "audio-volume-medium.svg"
+    elif [ "$1" -le 100 ]
+    then
+        echo -n "audio-volume-high.svg"
+    else
+        echo -n "audio-volume-high.svg"
+    fi
+}
+
+function volume_notification {
+    volume=`get_volume`
+    vol_icon=`get_volume_icon $volume`
+    dunstify -r $notify_id -u low -i $icon_path$vol_icon -h int:value:"$volume" -t $notification_time "Volume: ${volume}%" 
+}
+
+function mute_notification {
+	muted=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '/Mute: / { print $2 }' | head -n1)
+    volume=`get_volume`
+    vol_icon=`get_volume_icon $volume`
+    if [ $muted == 'yes' ]
+    then
+        dunstify -r $notify_id -u low -t $notification_time -i ${icon_path}audio-volume-muted.svg "Muted"
+    else
+        dunstify -r $notify_id -u low -t $notification_time -i $icon_path$vol_icon  -h int:value:"$volume" "Unmuted: ${volume}%"
+    fi
+}
+
+case $1 in
+    up)
+        pactl set-sink-volume @DEFAULT_SINK@ +5%
+        volume_notification
+        ;;
+    down)
+        pactl set-sink-volume @DEFAULT_SINK@ -5%
+        volume_notification
+	    ;;
+    mute)
+        pactl set-sink-mute @DEFAULT_SINK@ toggle
+        mute_notification
+        ;;
+    *)
+        echo "Usage: $0 up | down | mute"
+        ;;
+esac
