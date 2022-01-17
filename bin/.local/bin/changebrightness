@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+icon_path=/usr/share/icons/Papirus-Dark/24x24/actions/
+notify_id=508
+notification_time=2000
+
+function get_brightness {
+	xbacklight -get | awk '{print int($1)}'
+}
+
+function get_brightness_icon {
+	echo "display-brightness.svg"
+}
+
+function brightness_notification {
+    brightness=`get_brightness`
+    brightness_icon=`get_brightness_icon $brightness`
+    dunstify -r $notify_id -u low -i $icon_path$brightness_icon -h int:value:"$brightness" -t $notification_time "Brightness: ${brightness}%" 
+}
+
+case $1 in
+    up)
+		xbacklight -inc 10
+        brightness_notification
+        ;;
+    down)
+		xbacklight -dec 10
+        brightness_notification
+	    ;;
+    *)
+        echo "Usage: $0 up | down"
+        ;;
+esac
