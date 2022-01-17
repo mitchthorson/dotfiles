@@ -6,5 +6,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 alias v="nvim"
 alias z="cd"
 alias vim="nvim"
-alies DF="$HOME/dotfiles"
+alias DF="$HOME/dotfiles"
 alias nv="$DF/nvim/.config/nvim"
