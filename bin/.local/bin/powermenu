@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# credit to: https://github.com/ericmurphyxyz/archrice/blob/master/.local/bin/powermenu
+
 chosen=$(printf "  Power Off\n  Restart\n  Lock" | rofi -dmenu -i -theme-str '@import "power.rasi"')
 
 case "$chosen" in
