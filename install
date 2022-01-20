@@ -5,7 +5,7 @@ ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/typewritten.zsh-t
 ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/async $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/async
 
 
-FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst")
+FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst rofi")
 FOLDERS_MAC=$(echo "bin nvim zsh tmux")
 FOLDER=$(echo "")
 
