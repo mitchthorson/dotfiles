@@ -18,16 +18,16 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #191724
-background-alt = #1f1d2e
+background = #161320
+background-alt = #1A1826
 ;foreground = ${xrdb:color7:#222}
-foreground = #E0DEF4
-foreground-alt = #6E6A86
-accent1 = #c4a7e7
-accent2 = #9ccfd8
-accent3 = #f6c177
-accent4 = #31748F
-accent5 = #eb6f92
+foreground = #D9E0EE
+foreground-alt = #C3BAC6
+accent1 = #DDB6F2
+accent2 = #E8A2AF
+accent3 = #F8BD96
+accent4 = #ABE9B3
+accent5 = #96CDFB
 
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -148,8 +148,8 @@ label-mode-background = ${colors.accent1}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-foreground = ${colors.accent1}
-label-focused-underline= ${colors.accent1}
+label-focused-foreground = ${colors.accent4}
+label-focused-underline= ${colors.accent4}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor

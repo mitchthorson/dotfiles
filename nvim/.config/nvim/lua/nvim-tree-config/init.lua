@@ -1,5 +1,6 @@
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_refresh_wait = 250
+vim.g.nvim_tree_quit_on_open = 1
 vim.cmd[[let g:nvim_tree_show_icons = {
 	\ 'git': 0,
 	\ 'folders': 0,
