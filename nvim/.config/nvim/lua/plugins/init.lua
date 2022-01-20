@@ -4,6 +4,7 @@ require 'paq' {
 	'kyazdani42/nvim-tree.lua';
 	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
 	'EdenEast/nightfox.nvim';
+	{'catppuccin/nvim', as = 'catppuccin'};
 	'nvim-lualine/lualine.nvim';
 	'akinsho/bufferline.nvim';
 	'windwp/nvim-ts-autotag';
@@ -26,7 +27,7 @@ require 'paq' {
 	'lewis6991/gitsigns.nvim';
 }
 
--- require("nvim-tree-config")
+require("nvim-tree-config")
 require("lsp-config")
 require("nvim-treesitter-config")
 require("nvim-lualine-config")

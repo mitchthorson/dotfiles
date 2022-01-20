@@ -1,6 +1,11 @@
 vim.g.nvim_tree_indent_markers = 1
 vim.g.nvim_tree_refresh_wait = 250
-
+vim.cmd[[let g:nvim_tree_show_icons = {
+	\ 'git': 0,
+	\ 'folders': 0,
+	\ 'files': 0,
+	\ 'folder_arrows': 0,
+\ }]]
 require'nvim-tree'.setup {
 	open_on_setup    = true,
 	auto_close       = true,
@@ -9,5 +14,6 @@ require'nvim-tree'.setup {
 		auto_resize = true
 	}
 }
+
 
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})

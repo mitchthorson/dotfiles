@@ -5,7 +5,7 @@ font:
   normal:
     family: BlexMono Nerd Font
 import:
-  - ~/.config/alacritty/themes/rose-pine/rose-pine.yml
+  - ~/.config/alacritty/themes/catppuccin/catppuccin.yml
 window:
   dimensions:
     columns: 100

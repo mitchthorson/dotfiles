@@ -1,1 +1,1 @@
-require('nightfox').load('duskfox')
+vim.cmd[[colorscheme catppuccin]]
