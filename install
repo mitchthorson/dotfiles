@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/usr/bin/env bash
 
 # make some symlinks for zsh themes
 ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/typewritten.zsh-theme $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten.zsh-theme
@@ -29,17 +29,18 @@ done
 
 # remove .zshrc if it exists so we can
 # create it with the correct version for the environment
-if [ -f zsh/.zshrc ]; then
+if [ -f $HOME/dotfiles/zsh/.zshrc ]; then
 	rm zsh/.zshrc
 fi
 
 if [ -z ${INSTALL_ENV} ]; then
 	echo "Please specify which environment to install"
 	exit 0
-elif [ $INSTALL_ENV="macos" ]; then
-	cp zsh/.zshrc_macos zsh/.zshrc
+elif [ "$INSTALL_ENV" = "macos" ]; then
+	echo "$INSTALL_ENV"
+	cp $HOME/dotfiles/zsh/.zshrc_macos zsh/.zshrc
 else
-	cp zsh/.zshrc_linux zsh/.zshrc
+	cp $HOME/dotfiles/zsh/.zshrc_linux zsh/.zshrc
 fi
 
 echo "Installing for env: $INSTALL_ENV"
