@@ -3,8 +3,8 @@ vim.g.nvim_tree_refresh_wait = 250
 vim.g.nvim_tree_quit_on_open = 1
 vim.cmd[[let g:nvim_tree_show_icons = {
 	\ 'git': 0,
-	\ 'folders': 0,
-	\ 'files': 0,
+	\ 'folders': 1,
+	\ 'files': 1,
 	\ 'folder_arrows': 0,
 \ }]]
 require'nvim-tree'.setup {

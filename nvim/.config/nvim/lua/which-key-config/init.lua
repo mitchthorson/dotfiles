@@ -31,7 +31,7 @@ local mappings = {
 		D = {'<cmd>lua vim.lsp.buf.type_definition()<CR>', "Type definition"},
 		r = {'<cmd>lua vim.lsp.buf.rename()<CR>', "Rename"},
 		a = {'<cmd>lua vim.lsp.buf.code_action()<CR>', "Code actions"},
-		e = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', "Show line diagnostics"},
+		e = {'<cmd>lua vim.diagnostic.open_float()<CR>', "Show line diagnostics"},
 		q = {'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', "Show loclist"}
 	  },
 	t = {
