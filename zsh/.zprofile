@@ -2,7 +2,9 @@
 export PATH="$HOME/.local/bin:$PATH"
 
 # source local variables before starting X
-source $HOME/.oh-my-zsh/custom/local.zsh
+if [ -f $HOME/.oh-my-zsh/custom/local.zsh ]; then
+	source $HOME/.oh-my-zsh/custom/local.zsh
+fi
 
 # starting up X
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then

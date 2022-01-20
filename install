@@ -5,7 +5,44 @@ ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/typewritten.zsh-t
 ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/async $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/async
 
 
-FOLDERS=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst")
+FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst")
+FOLDERS_MAC=$(echo "bin nvim zsh tmux")
+FOLDER=$(echo "")
+
+while [ "$1" != "" ]; do
+	case $1 in
+		--macos )
+			shift
+			INSTALL_ENV="macos"
+			FOLDERS=$FOLDERS_MAC
+			;;
+
+		--linux )
+			shift
+			INSTALL_ENV="linux"
+			FOLDERS=$FOLDERS_LINUX
+			;;
+
+		* ) shift;;
+	esac
+done
+
+# remove .zshrc if it exists so we can
+# create it with the correct version for the environment
+if [ -f zsh/.zshrc ]; then
+	rm zsh/.zshrc
+fi
+
+if [ -z ${INSTALL_ENV} ]; then
+	echo "Please specify which environment to install"
+	exit 0
+elif [ $INSTALL_ENV="macos" ]; then
+	cp zsh/.zshrc_macos zsh/.zshrc
+else
+	cp zsh/.zshrc_linux zsh/.zshrc
+fi
+
+echo "Installing for env: $INSTALL_ENV"
 for folder in $FOLDERS
 do
 	echo "Installing $folder"
