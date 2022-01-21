@@ -9,39 +9,30 @@ FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst rofi")
 FOLDERS_MAC=$(echo "bin nvim zsh tmux")
 FOLDER=$(echo "")
 
-while [ "$1" != "" ]; do
-	case $1 in
-		--macos )
-			shift
-			INSTALL_ENV="macos"
-			FOLDERS=$FOLDERS_MAC
-			;;
-
-		--linux )
-			shift
-			INSTALL_ENV="linux"
-			FOLDERS=$FOLDERS_LINUX
-			;;
-
-		* ) shift;;
-	esac
-done
-
 # remove .zshrc if it exists so we can
 # create it with the correct version for the environment
 if [ -f $HOME/dotfiles/zsh/.zshrc ]; then
 	rm zsh/.zshrc
 fi
 
-if [ -z ${INSTALL_ENV} ]; then
-	echo "Please specify which environment to install"
-	exit 0
-elif [ "$INSTALL_ENV" = "macos" ]; then
-	echo "$INSTALL_ENV"
-	cp $HOME/dotfiles/zsh/.zshrc_macos zsh/.zshrc
-else
-	cp $HOME/dotfiles/zsh/.zshrc_linux zsh/.zshrc
-fi
+case $1 in
+	--macos )
+		INSTALL_ENV="macos"
+		FOLDERS=$FOLDERS_MAC
+		cp $HOME/dotfiles/zsh/.zshrc_macos zsh/.zshrc
+		;;
+
+	--linux )
+		INSTALL_ENV="linux"
+		FOLDERS=$FOLDERS_LINUX
+		cp $HOME/dotfiles/zsh/.zshrc_linux zsh/.zshrc
+		;;
+
+	* ) 
+		echo -e "Please specify which environment to install:\n--linux\n--macos"
+		exit
+	;;
+esac
 
 echo "Installing for env: $INSTALL_ENV"
 for folder in $FOLDERS
