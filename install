@@ -19,13 +19,13 @@ case $1 in
 	--macos )
 		INSTALL_ENV="macos"
 		FOLDERS=$FOLDERS_MAC
-		cp $HOME/dotfiles/zsh/.zshrc_macos zsh/.zshrc
+		cp $HOME/dotfiles/zsh/.zshrc_macos $HOME/dotfiles/zsh/.zshrc
 		;;
 
 	--linux )
 		INSTALL_ENV="linux"
 		FOLDERS=$FOLDERS_LINUX
-		cp $HOME/dotfiles/zsh/.zshrc_linux zsh/.zshrc
+		cp $HOME/dotfiles/zsh/.zshrc_linux $HOME/dotfiles/zsh/.zshrc
 		;;
 
 	* ) 
