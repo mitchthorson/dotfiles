@@ -8,3 +8,8 @@ alias z="cd"
 alias vim="nvim"
 alias DF="$HOME/dotfiles"
 alias NV="$HOME/dotfiles/nvim/.config/nvim"
+
+# golang stuff
+GOPATH="$HOME/go"
+GOBIN="$GOPATH/bin"
+export PATH=$PATH:$GOBIN
