@@ -1,31 +1,39 @@
 #!/usr/bin/env bash
 
+DOTFILES_FOLDER="$HOME/dotfiles"
+FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst rofi")
+FOLDERS_MAC=$(echo "bin nvim zsh tmux")
+FOLDERS=$(echo "")
+
 # make some symlinks for zsh themes
 ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/typewritten.zsh-theme $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten.zsh-theme
 ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/async $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/async
 
-
-FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst rofi")
-FOLDERS_MAC=$(echo "bin nvim zsh tmux")
-FOLDER=$(echo "")
-
 # remove .zshrc if it exists so we can
 # create it with the correct version for the environment
-if [ -f $HOME/dotfiles/zsh/.zshrc ]; then
+if [ -f $DOTFILES_FOLDER/zsh/.zshrc ]; then
 	rm zsh/.zshrc
+fi
+
+# remove alacritty config if it exists so we can
+# create it with the correct version for the environment
+if [ -f $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.yml ]; then
+	rm $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.yml
 fi
 
 case $1 in
 	--macos )
 		INSTALL_ENV="macos"
 		FOLDERS=$FOLDERS_MAC
-		cp $HOME/dotfiles/zsh/.zshrc_macos $HOME/dotfiles/zsh/.zshrc
+		cp $DOTFILES_FOLDER/zsh/.zshrc_macos $HOME/dotfiles/zsh/.zshrc
+		cp $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty_macos.yml $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.yml
 		;;
 
 	--linux )
 		INSTALL_ENV="linux"
 		FOLDERS=$FOLDERS_LINUX
-		cp $HOME/dotfiles/zsh/.zshrc_linux $HOME/dotfiles/zsh/.zshrc
+		cp $DOTFILES_FOLDER/zsh/.zshrc_linux $DOTFILES_FOLDER/zsh/.zshrc
+		cp $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty_linux.yml $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.yml
 		;;
 
 	* ) 
