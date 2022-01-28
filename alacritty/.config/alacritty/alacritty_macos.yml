@@ -12,9 +12,9 @@ window:
     lines: 50
   padding:
     x: 10
-    y: 10
+    y: 20
   dynamic_padding: true
-  decorations: none
-  opacity: 0.5
+  decorations: transparent
+background_opacity: 0.9
 key_bindings:
   - { key: Return,              mods: Command,            action: ToggleSimpleFullscreen      }
