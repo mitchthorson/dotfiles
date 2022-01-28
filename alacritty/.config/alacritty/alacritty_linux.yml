@@ -4,6 +4,16 @@ font:
   size: 10
   normal:
     family: BlexMono Nerd Font
+    style: Text
+  bold:
+    family: BlexMono Nerd Font
+    style: Bold
+  italic:
+    family: BlexMono Nerd Font
+    style: Text Italic
+  bold_italic:
+    family: BlexMono Nerd Font
+    style: Bold Italic
 import:
   - ~/.config/alacritty/themes/catppuccin/catppuccin.yml
 window:
