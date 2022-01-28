@@ -1,4 +1,5 @@
 require 'paq' {
+	'sbdchd/neoformat';
 	'savq/paq-nvim';
 	'kyazdani42/nvim-web-devicons';
 	'kyazdani42/nvim-tree.lua';
