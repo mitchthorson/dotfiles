@@ -15,6 +15,6 @@ window:
     y: 20
   dynamic_padding: true
   decorations: transparent
-background_opacity: 0.9
+background_opacity: 0.95
 key_bindings:
   - { key: Return,              mods: Command,            action: ToggleSimpleFullscreen      }
