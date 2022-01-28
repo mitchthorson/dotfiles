@@ -53,7 +53,7 @@ if [ -z $DESKTOP_DUAL_DISPLAY ]; then
 fi
 
 nitrogen --restore &
-picom &
+picom --experimental-backends &
 eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 exec /usr/bin/i3
