@@ -28,6 +28,7 @@ accent2 = #E8A2AF
 accent3 = #F8BD96
 accent4 = #ABE9B3
 accent5 = #96CDFB
+accent6 = #FAE3B0
 
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -59,11 +60,11 @@ font-0 = BlexMono Nerd Font:size=13:style=Bold
 
 modules-left = i3
 modules-center = xwindow
-modules-right = pulseaudio wlan system-bluetooth-bluetoothctl battery date 
+modules-right = pulseaudio wlan system-bluetooth-bluetoothctl battery date powermenu
 
 tray-position = right
-tray-padding = 2
-;tray-background = #0063ff
+tray-padding = 3
+; tray-background = #1E1E2E
 
 ;wm-restack = bspwm
 wm-restack = i3
@@ -171,7 +172,7 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-label-foreground = ${colors.accent2}
+label-foreground = ${colors.accent6}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -326,7 +327,7 @@ interface = ${env:WIRELESS_NETWORK_INTERFACE:wlp0s20f3}
 interval = 3.0
 
 ; format-connected-underline = ${colors.accent5}
-label-connected = "直 %essid%"
+label-connected = "直 connected"
 label-connected-foreground = ${colors.accent5}
 
 format-disconnected = "睊 disconnected"
@@ -362,11 +363,11 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %b %d %Y"
-date-alt = " %b %d %Y"
+date = " %b %d"
+date-alt = " %a %b %d %Y"
 
 time = %H:%M
-time-alt = %H:%M:%S
+time-alt = %H:%M
 
 format-prefix = 
 format-prefix-foreground = ${colors.accent1}
@@ -492,33 +493,10 @@ ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = 
-label-open-foreground = ${colors.accent2}
-label-close =  cancel
-label-close-foreground = ${colors.accent2}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
+type = custom/text
+content=""
+content-foreground = ${colors.accent6}
+click-left = powermenu
 
 [module/system-bluetooth-bluetoothctl]
 type = custom/script
