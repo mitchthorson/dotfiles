@@ -441,6 +441,7 @@ full-at = 98
 
 format-charging = <ramp-capacity> <label-charging>
 format-charging-foreground = ${colors.accent3}
+format-charging-prefix = " "
 label-charging-foreground = ${colors.accent3}
 
 format-discharging = <ramp-capacity> <label-discharging>
@@ -462,17 +463,14 @@ ramp-capacity-8 = ""
 ramp-capacity-9 = ""
 ramp-capacity-foreground = ${colors.accent3}
 
-animation-charging-0 =   
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.accent3}
-animation-charging-framerate = 750
-
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.accent3}
-animation-discharging-framerate = 750
+ramp-charge-0 = ""
+ramp-charge-1 = ""
+ramp-charge-2 = ""
+ramp-charge-3 = ""
+ramp-charge-4 = ""
+ramp-charge-5 = ""
+ramp-charge-6 = ""
+ramp-charge-foreground = ${colors.accent3}
 
 [module/temperature]
 type = internal/temperature
