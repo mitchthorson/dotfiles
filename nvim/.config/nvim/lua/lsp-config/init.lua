@@ -1,4 +1,4 @@
-vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
+local map = vim.api.nvim_set_keymap
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
@@ -7,17 +7,27 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "hl" })
 end
 
--- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
--- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require'lspconfig'.html.setup {
-	capabilities = capabilities
-}
+-- lsp specific keybindings to setup on LSP attach
+local function set_lsp_keybindings()
+	map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
+	map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
+	map('n', 'gt', '<cmd>lua vim.lsp.buf.type_definition()<CR>', {noremap = true})
+	map('n', 'gi', '<cmd>lua vim.lsp.buf.type_implementation()<CR>', {noremap = true})
+	map('n', '<leader>dj', '<cmd>lua vim.diagnostic.goto_next()<CR>', {noremap = true})
+	map('n', '<leader>dk', '<cmd>lua vim.diagnostic.goto_previous()<CR>', {noremap = true})
+	map('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true})
+end
 
+-- capabilities to use with each language server
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+require'lspconfig'.html.setup {
+	capabilities = capabilities,
+	on_attach = set_lsp_keybindings
+}
 require'lspconfig'.tsserver.setup{
 	capabilities = capabilities
 }
-
 require'lspconfig'.pyright.setup{
 	capabilities = capabilities
 }
@@ -30,11 +40,14 @@ require'lspconfig'.svelte.setup{
 require'lspconfig'.r_language_server.setup{
 	capabilities = capabilities
 }
+require'lspconfig'.gopls.setup{
+	capabilities = capabilities
+}
 
 -- setup lua language server
 
 -- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
-local sumneko_root_path = "/home/mitchthorson/lua-language-server"
+local sumneko_root_path = (os.getenv("LUA_LSP_PATH") or "/home/mitchthorson/lua-language-server")
 local sumneko_binary = sumneko_root_path.."/bin/lua-language-server"
 
 local runtime_path = vim.split(package.path, ';')
