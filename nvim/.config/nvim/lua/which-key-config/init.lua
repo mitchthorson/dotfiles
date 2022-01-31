@@ -42,5 +42,5 @@ local mappings = {
 		g = {toggle_lazygit, "Open lazygit"},
 	}
 }
-local opts = {prefix = "<leader>"}
+local opts = {prefix = "<leader>m"}
 wk.register(mappings, opts)
