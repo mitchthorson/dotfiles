@@ -19,7 +19,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #161320
-background-alt = #1A1826
+background-alt = #302D41
 ;foreground = ${xrdb:color7:#222}
 foreground = #D9E0EE
 foreground-alt = #C3BAC6
@@ -33,7 +33,7 @@ accent6 = #FAE3B0
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 30
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0
@@ -54,7 +54,7 @@ padding-top = 3
 padding-bottom = 3
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
 font-0 = BlexMono Nerd Font:size=13:style=Bold
 
