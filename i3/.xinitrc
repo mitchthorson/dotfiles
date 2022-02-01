@@ -48,7 +48,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-if [ -z $DESKTOP_DUAL_DISPLAY ]; then
+if [ -n $DESKTOP_DUAL_DISPLAY ]; then
 	xrandr --output DP-2 --primary --mode 2560x1440 --rate 143.97 --output HDMI-0 --mode 1920x1080 --rate 75.00 --left-of DP-2
 fi
 
