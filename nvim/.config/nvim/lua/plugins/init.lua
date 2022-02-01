@@ -1,6 +1,6 @@
 require 'paq' {
-	'sbdchd/neoformat';
 	'savq/paq-nvim';
+	'sbdchd/neoformat';
 	'kyazdani42/nvim-web-devicons';
 	'kyazdani42/nvim-tree.lua';
 	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
@@ -11,7 +11,7 @@ require 'paq' {
 	'windwp/nvim-ts-autotag';
 	'p00f/nvim-ts-rainbow';
 	'windwp/nvim-autopairs';
-	'folke/which-key.nvim';
+	-- 'folke/which-key.nvim';
 	'nvim-lua/plenary.nvim';
 	'nvim-telescope/telescope.nvim';
 	'neovim/nvim-lspconfig';
@@ -26,7 +26,7 @@ require 'paq' {
 	'saadparwaiz1/cmp_luasnip';
 	'onsails/lspkind-nvim';
 	'numToStr/Comment.nvim';
-	'akinsho/toggleterm.nvim';
+	-- 'akinsho/toggleterm.nvim';
 	'lewis6991/gitsigns.nvim';
 }
 
@@ -40,6 +40,6 @@ require("nvim-autopairs-config")
 require("telescope-config")
 require("cmp-config")
 require("comment-config")
-require("toggleterm-config")
+-- require("toggleterm-config")
 require("gitsigns-config")
 
