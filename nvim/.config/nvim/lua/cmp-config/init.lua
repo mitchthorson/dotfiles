@@ -13,11 +13,12 @@ local feedkey = function(key, mode)
 end
 
 local lspkind = require('lspkind')
+local luasnip = require('luasnip')
 
 cmp.setup({
 	snippet = {
 		expand = function(args)
-			require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+			luasnip.lsp_expand(args.body) -- For `luasnip` users.
 		end,
 	},
 	mapping = {
@@ -33,8 +34,8 @@ cmp.setup({
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-			elseif vim.fn["vsnip#available"](1) == 1 then
-				feedkey("<Plug>(vsnip-expand-or-jump)", "")
+			elseif luasnip.expand_or_jumpable() then
+				luasnip.expand_or_jump()
 			elseif has_words_before() then
 				cmp.complete()
 			else
@@ -45,16 +46,14 @@ cmp.setup({
 		["<S-Tab>"] = cmp.mapping(function()
 			if cmp.visible() then
 				cmp.select_prev_item()
-			elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-				feedkey("<Plug>(vsnip-jump-prev)", "")
+			elseif luasnip.jumpable(-1) then
+				luasnip.jump(-1)
 			end
 		end, { "i", "s" }),
 	},
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
 		{ name = 'luasnip' }, -- For luasnip users.
-		-- { name = 'ultisnips' }, -- For ultisnips users.
-		-- { name = 'snippy' }, -- For snippy users.
 	}, {
 		{ name = 'buffer' },
 	}),
