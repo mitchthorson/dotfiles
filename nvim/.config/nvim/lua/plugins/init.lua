@@ -3,7 +3,6 @@ require 'paq' {
 	'savq/paq-nvim';
 	'sbdchd/neoformat';
 	'kyazdani42/nvim-web-devicons';
-	-- 'kyazdani42/nvim-tree.lua';
 	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
 	{'catppuccin/nvim', as = 'catppuccin'};
 	'nvim-lualine/lualine.nvim';
@@ -24,6 +23,7 @@ require 'paq' {
 	'onsails/lspkind-nvim';
 	'numToStr/Comment.nvim';
 	'lewis6991/gitsigns.nvim';
+	-- 'kyazdani42/nvim-tree.lua';
 	-- 'folke/which-key.nvim';
 	-- 'hrsh7th/cmp-vsnip';
 	-- 'hrsh7th/vim-vsnip';
@@ -32,7 +32,6 @@ require 'paq' {
 }
 
 -- load config files for plugins that need additional config
--- require("nvim-tree-config")
 require("lsp-config")
 require("nvim-treesitter-config")
 require("nvim-lualine-config")
@@ -41,6 +40,7 @@ require("telescope-config")
 require("cmp-config")
 require("comment-config")
 require("gitsigns-config")
+-- require("nvim-tree-config")
 -- require("which-key-config")
 -- require("toggleterm-config")
 -- require("bufferline-config")
