@@ -44,10 +44,11 @@ opt.termguicolors = false
 -- NetRW
 -----------------------------------------------------------
 g.netrw_banner = 0
-g.netrw_liststyle = 3
+g.netrw_liststyle = 0
 g.netrw_keepdir = 0
 g.netrw_winsize = 25
 g.netrw_localcopydircmd = 'cp -r'
+g.netrw_browse_split = 0
 
 -----------------------------------------------------------
 -- Tabs, indent

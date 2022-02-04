@@ -3,7 +3,7 @@ require 'paq' {
 	'savq/paq-nvim';
 	'sbdchd/neoformat';
 	'kyazdani42/nvim-web-devicons';
-	'kyazdani42/nvim-tree.lua';
+	-- 'kyazdani42/nvim-tree.lua';
 	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
 	{'catppuccin/nvim', as = 'catppuccin'};
 	'nvim-lualine/lualine.nvim';
@@ -32,7 +32,7 @@ require 'paq' {
 }
 
 -- load config files for plugins that need additional config
-require("nvim-tree-config")
+-- require("nvim-tree-config")
 require("lsp-config")
 require("nvim-treesitter-config")
 require("nvim-lualine-config")
