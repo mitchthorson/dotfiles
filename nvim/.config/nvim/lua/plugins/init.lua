@@ -23,6 +23,7 @@ require 'paq' {
 	'onsails/lspkind-nvim';
 	'numToStr/Comment.nvim';
 	'lewis6991/gitsigns.nvim';
+	'tpope/vim-fugitive';
 	-- 'kyazdani42/nvim-tree.lua';
 	-- 'folke/which-key.nvim';
 	-- 'hrsh7th/cmp-vsnip';
