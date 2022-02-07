@@ -6,7 +6,6 @@ require 'paq' {
 	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
 	{'catppuccin/nvim', as = 'catppuccin'};
 	'nvim-lualine/lualine.nvim';
-	'akinsho/bufferline.nvim';
 	'windwp/nvim-ts-autotag';
 	'p00f/nvim-ts-rainbow';
 	'windwp/nvim-autopairs';
@@ -23,6 +22,7 @@ require 'paq' {
 	'onsails/lspkind-nvim';
 	'numToStr/Comment.nvim';
 	'lewis6991/gitsigns.nvim';
+	-- 'akinsho/bufferline.nvim';
 	-- 'kyazdani42/nvim-tree.lua';
 	-- 'folke/which-key.nvim';
 	-- 'hrsh7th/cmp-vsnip';
