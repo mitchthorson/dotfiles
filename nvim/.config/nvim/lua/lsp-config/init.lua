@@ -8,7 +8,7 @@ for type, icon in pairs(signs) do
 end
 
 -- lsp specific keybindings to setup on LSP attach
-local function set_lsp_keybindings()
+local function handle_attach(client)
 	map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
 	map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true})
 	map('n', 'gt', '<cmd>lua vim.lsp.buf.type_definition()<CR>', {noremap = true})
@@ -25,31 +25,31 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 require'lspconfig'.html.setup {
 	capabilities = capabilities,
-	on_attach = set_lsp_keybindings
+	on_attach = handle_attach
 }
 require'lspconfig'.tsserver.setup{
 	capabilities = capabilities,
-	on_attach = set_lsp_keybindings
+	on_attach = handle_attach
 }
 require'lspconfig'.pyright.setup{
 	capabilities = capabilities,
-	on_attach = set_lsp_keybindings
+	on_attach = handle_attach
 }
 require'lspconfig'.cssls.setup{
 	capabilities = capabilities,
-	on_attach = set_lsp_keybindings
+	on_attach = handle_attach
 }
 require'lspconfig'.svelte.setup{
 	capabilities = capabilities,
-	on_attach = set_lsp_keybindings
+	on_attach = handle_attach
 }
 require'lspconfig'.r_language_server.setup{
 	capabilities = capabilities,
-	on_attach = set_lsp_keybindings
+	on_attach = handle_attach
 }
 require'lspconfig'.gopls.setup{
 	capabilities = capabilities,
-	on_attach = set_lsp_keybindings
+	on_attach = handle_attach
 }
 
 -- setup lua language server
@@ -65,7 +65,7 @@ table.insert(runtime_path, "lua/?/init.lua")
 require'lspconfig'.sumneko_lua.setup {
 	cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
 	capabilities = capabilities,
-	on_attach = set_lsp_keybindings,
+	on_attach = handle_attach,
 	settings = {
 		Lua = {
 			runtime = {
