@@ -5,10 +5,6 @@ FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst rofi")
 FOLDERS_MAC=$(echo "bin alacritty nvim zsh tmux")
 FOLDERS=$(echo "")
 
-# make some symlinks for zsh themes
-ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/typewritten.zsh-theme $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten.zsh-theme
-ln -sf $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/typewritten/async $HOME/dotfiles/zsh/.oh-my-zsh/custom/themes/async
-
 # remove .zshrc if it exists so we can
 # create it with the correct version for the environment
 if [ -f $DOTFILES_FOLDER/zsh/.zshrc ]; then
