@@ -2,7 +2,7 @@
 
 DOTFILES_FOLDER="$HOME/dotfiles"
 FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst rofi")
-FOLDERS_MAC=$(echo "bin nvim zsh tmux")
+FOLDERS_MAC=$(echo "bin alacritty nvim zsh tmux")
 FOLDERS=$(echo "")
 
 # make some symlinks for zsh themes

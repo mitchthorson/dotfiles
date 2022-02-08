@@ -13,3 +13,4 @@
 [submodule "alacritty/.config/alacritty/themes/catppuccin"]
 	path = alacritty/.config/alacritty/themes/catppuccin
 	url = git@github.com:catppuccin/alacritty.git
+
