@@ -19,7 +19,7 @@ map('v', '>', '>gv', {noremap = true})
 map('v', '<', '<gv', {noremap = true})
 
 -- terminal go to normal mode with escape
-map('t', '<ESC>', '<C-\\><C-N>', {noremap = true})
+map('t', '<ESC>', '<C-\\><C-n>', {noremap = true})
 
 -- yank to clipboard
 map('v', '<leader>y', '"+y', {noremap = true})

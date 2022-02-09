@@ -24,6 +24,7 @@ require 'paq' {
 	'numToStr/Comment.nvim';
 	'lewis6991/gitsigns.nvim';
 	'tpope/vim-fugitive';
+	'jalvesaq/Nvim-R';
 
 	-- 'akinsho/bufferline.nvim';
 	-- 'kyazdani42/nvim-tree.lua';
