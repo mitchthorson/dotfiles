@@ -1,5 +1,12 @@
 local actions = require('telescope.actions')
-require('telescope').setup {
+local telescope = require('telescope')
+
+-- Extensions
+
+-- https://github.com/AckslD/nvim-neoclip.lua
+require("telescope").load_extension "neoclip"
+
+telescope.setup {
 	defaults = {
 		layout_config = {
 			width = 0.75,
@@ -9,7 +16,7 @@ require('telescope').setup {
 			vertical = {mirror = false},
 		},
 		find_command = {'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'},
-		prompt_prefix = " ",
+		prompt_prefix = "  ",
 		selection_caret = " ",
 		entry_prefix = "  ",
 		initial_mode = "insert",
@@ -23,7 +30,7 @@ require('telescope').setup {
 		winblend = 0,
 		border = {},
 		borderchars = {'─', '│', '─', '│', '╭', '╮', '╯', '╰'},
-		color_devicons = true,
+		color_devicons = false,
 		use_less = true,
 		set_env = {['COLORTERM'] = 'truecolor'}, -- default = nil,
 		file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
@@ -46,4 +53,12 @@ require('telescope').setup {
 		}
 	}
 }
+
+local key_map = vim.api.nvim_set_keymap
+-- Telescope shortcuts
+key_map('n', '<leader>f', '<CMD>Telescope find_files<CR>', {noremap = true})
+key_map('n', '<leader>F', '<CMD>Telescope live_grep<CR>', {noremap = true})
+key_map('n', '<leader>r', '<CMD>Telescope lsp_references<CR>', {noremap = true})
+key_map('n', '<leader>h', '<CMD>Telescope help_tags<CR>', {noremap = true})
+key_map('n', '<leader>c', '<CMD>Telescope neoclip star<CR>', {noremap = true})
 

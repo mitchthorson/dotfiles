@@ -10,6 +10,7 @@ require 'paq' {
 	'p00f/nvim-ts-rainbow';
 	'windwp/nvim-autopairs';
 	'nvim-lua/plenary.nvim';
+	'AckslD/nvim-neoclip.lua';
 	'nvim-telescope/telescope.nvim';
 	'neovim/nvim-lspconfig';
 	'hrsh7th/cmp-nvim-lsp';
@@ -23,6 +24,7 @@ require 'paq' {
 	'numToStr/Comment.nvim';
 	'lewis6991/gitsigns.nvim';
 	'tpope/vim-fugitive';
+
 	-- 'akinsho/bufferline.nvim';
 	-- 'kyazdani42/nvim-tree.lua';
 	-- 'folke/which-key.nvim';
@@ -41,6 +43,8 @@ require("telescope-config")
 require("cmp-config")
 require("comment-config")
 require("gitsigns-config")
+require("neoclip-config")
+
 -- require("nvim-tree-config")
 -- require("which-key-config")
 -- require("toggleterm-config")

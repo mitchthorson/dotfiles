@@ -29,10 +29,5 @@ map('n', '<leader>y', '"+y', {noremap = true})
 map('v', 'J', ":m '>+1<CR>gv=gv", {noremap = true})
 map('v', 'K', ":m '<-2<CR>gv=gv", {noremap = true})
 
--- Telescope shortcuts
-map('n', '<leader>f', '<CMD>Telescope find_files<CR>', {noremap = true})
-map('n', '<leader>F', '<CMD>Telescope live_grep<CR>', {noremap = true})
-map('n', '<leader>r', '<CMD>Telescope lsp_references<CR>', {noremap = true})
-
 -- Toggle NetRW 
 map('n', '<C-n>', ':Lex<CR>', {noremap = true, silent = true})
