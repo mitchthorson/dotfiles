@@ -20,6 +20,14 @@ require('lualine').setup {
 		component_separators = { left = '⦚', right = '⦚'},
 	},
 	sections = {
+		lualine_a = {
+			{
+				'mode',
+				fmt = function (str)
+					return string.format("%s %s", "", str)
+				end
+			},
+		},
 		lualine_b = {
 			{
 				'branch',
@@ -27,15 +35,16 @@ require('lualine').setup {
 			},
 			'diff',
 			'diagnostics',
-		},
-		lualine_c = {
 			{
 				'filename',
 				path = 1,
+				fmt = function(str)
+					return string.format("%s %s", "", str)
+				end
 			}
 		},
-		lualine_x = {
-		},
+		lualine_c = {},
+		lualine_x = {},
 		lualine_y = {
 			'encoding',
 			{

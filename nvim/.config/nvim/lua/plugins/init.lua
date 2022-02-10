@@ -13,6 +13,7 @@ require 'paq' {
 	'nvim-lua/plenary.nvim';
 	'AckslD/nvim-neoclip.lua';
 	'nvim-telescope/telescope.nvim';
+	'nvim-telescope/telescope-file-browser.nvim';
 	'neovim/nvim-lspconfig';
 	'hrsh7th/cmp-nvim-lsp';
 	'hrsh7th/cmp-buffer';
