@@ -5,6 +5,7 @@ require 'paq' {
 	'kyazdani42/nvim-web-devicons';
 	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
 	{'catppuccin/nvim', as = 'catppuccin'};
+	'gruvbox-community/gruvbox';
 	'nvim-lualine/lualine.nvim';
 	'windwp/nvim-ts-autotag';
 	'p00f/nvim-ts-rainbow';
@@ -25,6 +26,7 @@ require 'paq' {
 	'lewis6991/gitsigns.nvim';
 	'tpope/vim-fugitive';
 	'jalvesaq/Nvim-R';
+	-- 'glepnir/galaxyline.nvim';
 
 	-- 'akinsho/bufferline.nvim';
 	-- 'kyazdani42/nvim-tree.lua';

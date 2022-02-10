@@ -1,7 +1,18 @@
 local catppuccin = require("catppuccin")
+
+local colorscheme = "catppuccin"
+local transparent_bg = true
+
+-- gruvbox setup
+vim.g.gruvbox_contrast_dark = "hard"
+vim.g.gruvbox_invert_selection = false
+
+-- catppuccin setup
 catppuccin.setup({
-	transparent_background = true,
+	transparent_background = transparent_bg,
 })
-vim.cmd[[
-	colorscheme catppuccin
-]]
+
+vim.cmd("colorscheme " .. colorscheme)
+if (transparent_bg and colorscheme == "gruvbox") then
+	vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
+end
