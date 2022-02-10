@@ -27,10 +27,10 @@ require 'paq' {
 	'lewis6991/gitsigns.nvim';
 	'tpope/vim-fugitive';
 	'jalvesaq/Nvim-R';
+	'kyazdani42/nvim-tree.lua';
 	-- 'glepnir/galaxyline.nvim';
 
 	-- 'akinsho/bufferline.nvim';
-	-- 'kyazdani42/nvim-tree.lua';
 	-- 'folke/which-key.nvim';
 	-- 'hrsh7th/cmp-vsnip';
 	-- 'hrsh7th/vim-vsnip';
@@ -48,8 +48,8 @@ require("cmp-config")
 require("comment-config")
 require("gitsigns-config")
 require("neoclip-config")
+require("nvim-tree-config")
 
--- require("nvim-tree-config")
 -- require("which-key-config")
 -- require("toggleterm-config")
 -- require("bufferline-config")
