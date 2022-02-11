@@ -1,7 +1,7 @@
 local catppuccin = require("catppuccin")
 
-local colorscheme = "catppuccin"
-local transparent_bg = true
+local colorscheme = "gruvbox"
+local transparent_bg = false
 
 -- gruvbox setup
 vim.g.gruvbox_contrast_dark = "hard"

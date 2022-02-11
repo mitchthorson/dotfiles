@@ -16,7 +16,7 @@ font:
     family: BlexMono Nerd Font
     style: Bold Italic
 import:
-  - ~/.config/alacritty/themes/catppuccin/catppuccin.yml
+  - ~/.config/alacritty/themes/gruvbox-dark.yml
 window:
   dimensions:
     columns: 150
@@ -26,6 +26,6 @@ window:
     y: 20
   dynamic_padding: true
   decorations: transparent
-background_opacity: 0.95
+background_opacity: 1
 key_bindings:
   - { key: Return,              mods: Command,            action: ToggleSimpleFullscreen      }
