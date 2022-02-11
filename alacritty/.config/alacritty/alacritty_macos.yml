@@ -1,7 +1,7 @@
 env:
   TERM: xterm-256color
 font:
-  size: 16
+  size: 17
   use_thin_strokes: true
   normal:
     family: BlexMono Nerd Font
