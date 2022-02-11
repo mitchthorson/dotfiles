@@ -14,9 +14,9 @@ bindkey -M vicmd v "edit-command-line"
 autoload -Uz vcs_info
 precmd () { vcs_info }
 setopt prompt_subst
-zstyle ':vcs_info:git:*' formats ' %F{white}on %F{blue} %b'
-PROMPT='%F{yellow}%n %F{white}in %F{cyan} %~${vcs_info_msg_0_} %F{white}❯ '
-RPROMPT='%F{yellow}%* %F{magenta}%(?.﫟.)'
+zstyle ':vcs_info:git:*' formats ' %F{white}on %F{yellow} %b'
+PROMPT='%F{magenta}%n %F{white}in %F{cyan} %~${vcs_info_msg_0_} %F{white}❯ '
+RPROMPT='%F{blue}%* %F{green}%(?.﫟.)'
 
 # aliases
 alias vim="nvim"
