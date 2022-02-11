@@ -28,10 +28,9 @@ require'nvim-tree'.setup {
 
 
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
-vim.cmd(string.format("hi NvimTreeIndentMarker guifg=%s", palette.gray2))
-vim.cmd(string.format("hi NvimTreeFolderIcon guifg=%s", palette.green))
-vim.cmd(string.format("hi NvimTreeFolderName guifg=%s", palette.peach))
-vim.cmd(string.format("hi NvimTreeOpenedFolderName guifg=%s", palette.peach))
-vim.cmd("hi NvimTreeVertSplit guibg=NONE ctermbg=NONE")
-vim.cmd(string.format("hi NvimTreeRootFolder guifg=%s", palette.mauve))
--- vim.cmd("hi NvimTreeIndentMarker guifg=red")
+-- vim.cmd(string.format("hi NvimTreeIndentMarker guifg=%s", palette.gray2))
+-- vim.cmd(string.format("hi NvimTreeFolderIcon guifg=%s", "#d79921"))
+-- vim.cmd(string.format("hi NvimTreeFolderName guifg=%s", "#689d6a"))
+-- vim.cmd(string.format("hi NvimTreeOpenedFolderName guifg=%s", "#8ec07c"))
+-- vim.cmd("hi NvimTreeVertSplit guibg=NONE ctermbg=NONE")
+-- vim.cmd(string.format("hi NvimTreeRootFolder guifg=%s", "#fe8019"))

@@ -1,17 +1,7 @@
-local custom_theme = require('lualine.themes.catppuccin')
-local palette = require('catppuccin.core.color_palette')
+local custom_theme = require'lualine.themes.gruvbox'
 
--- custom_theme.normal.a.fg = palette.black4
-custom_theme.normal.a.bg = palette.peach
-custom_theme.normal.b.fg = palette.peach
-custom_theme.normal.b.bg = palette.black0
-custom_theme.insert.b.fg = palette.green
-custom_theme.insert.b.bg = palette.black0
-custom_theme.command.a.bg = palette.red
-custom_theme.command.b.fg = palette.red
-custom_theme.command.b.bg = palette.black0
-custom_theme.visual.b.bg = palette.black0
-custom_theme.replace.b.bg = palette.black0
+custom_theme.normal.b.bg = "#1c1c1c"
+custom_theme.normal.c.bg = "#1c1c1c"
 
 require('lualine').setup {
 	options = {
