@@ -2,8 +2,8 @@
 export PATH="$HOME/.local/bin:$PATH"
 
 # source local variables before starting X
-if [ -f $HOME/.oh-my-zsh/custom/local.zsh ]; then
-	source $HOME/.oh-my-zsh/custom/local.zsh
+if [ -f $HOME/.zsh/local.zsh ]; then
+	source $HOME/.zsh/local.zsh
 fi
 
 # pyenv
