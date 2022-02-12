@@ -14,16 +14,16 @@ bindkey -M vicmd v "edit-command-line"
 autoload -Uz vcs_info
 precmd () { vcs_info }
 setopt prompt_subst
-zstyle ':vcs_info:git:*' formats ' %F{white}on %F{blue} %b'
-PROMPT='%F{green}%n %F{white}in %F{16} %~${vcs_info_msg_0_} %F{white}❯ '
-RPROMPT='🌙 %F{yellow}%* %F{magenta}%(?.﫟.)'
+zstyle ':vcs_info:git:*' formats ' %F{white}on %F{yellow} %b'
+PROMPT='%F{magenta}%n %F{white}in %F{cyan} %~${vcs_info_msg_0_} %F{white}❯ '
+RPROMPT='%F{blue}%* %F{green}%(?.﫟.)'
 
 # aliases
 alias vim="nvim"
 alias DOTS="cd $HOME/dotfiles"
 alias nvrc="cd $HOME/dotfiles/nvim/.config/nvim"
 alias ll="ls -lah"
-alias zrc="$EDITOR $HOME/dotfiles/zsh/.zshrc_macos"
+alias zrc="$EDITOR $HOME/dotfiles/zsh/.zshrc_linux"
 
 # Plugins
 source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
