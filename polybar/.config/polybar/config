@@ -18,17 +18,17 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #161320
-background-alt = #302D41
+background = #282828
+background-alt = #1c1c1c
 ;foreground = ${xrdb:color7:#222}
-foreground = #D9E0EE
-foreground-alt = #C3BAC6
-accent1 = #DDB6F2
-accent2 = #E8A2AF
-accent3 = #F8BD96
-accent4 = #ABE9B3
-accent5 = #96CDFB
-accent6 = #FAE3B0
+foreground = #ebdbb2
+foreground-alt = #a89984
+accent1 = #fb4934
+accent2 = #98971a
+accent3 = #d79921
+accent4 = #b16286
+accent5 = #689d6a
+accent6 = #fe8019
 
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
