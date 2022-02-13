@@ -1,18 +1,22 @@
-## Shared shell configurations between linux and macos versions
+## shared shell configurations between linux and macos versions
+
+# history
+export SAVEHIST=50000
+export HISTFILE=$HOME/.histfile
 
 # vi keybindings
 bindkey -v
 
-# Editor info
+# editor info
 export EDITOR=vim
 export VISUAL=vim
 
-# Command Editor
+# command editor
 autoload -z edit-command-line
 zle -N edit-command-line
 bindkey -M vicmd v "edit-command-line"
 
-# Prompt
+# prompt
 autoload -Uz vcs_info
 precmd () { vcs_info }
 setopt prompt_subst
@@ -28,9 +32,9 @@ alias ls="ls --color=auto"
 alias ll="ls -lah"
 alias zrc="$EDITOR $HOME/dotfiles/zsh/.zshrc_linux"
 
-# Plugins
-source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
-source "$HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+# plugins
+# source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+# source "$HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # nvm setup
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"

@@ -1,5 +1,5 @@
 # load shared configuration
-source $HOME/.zsh/shared.sh
+source $HOME/.zsh/shared.zsh
 
 # FZF fuzzy find history
 source $HOME/.fzf.zsh

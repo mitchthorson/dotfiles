@@ -1,5 +1,5 @@
 # load shared configurations
-source $HOME/.zsh/shared.sh
+source $HOME/.zsh/shared.zsh
 
 # FZF fuzzy find history
 source /usr/share/fzf/key-bindings.zsh
