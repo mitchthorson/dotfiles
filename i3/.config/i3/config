@@ -201,12 +201,11 @@ bindsym $mod+r mode "resize"
 for_window [class=".*"] border pixel 2px
 
 # Colors
-# Rosé Pine theme
-# https://rosepinetheme.com/palette.html#rose-pine
-set $base-color	#161320
-set $text-color #D9E0EE
-set $border-color #96CDFB
-set $border-inactive-color #F8BD96
+# gruvbox
+set $base-color	#282828
+set $text-color #ebdbb2
+set $border-color #689d6a
+set $border-inactive-color #fabd2f
 
 #                       border                  background         text                 indicator
 client.focused          $border-color           $border-color      $text-color          $border-color
