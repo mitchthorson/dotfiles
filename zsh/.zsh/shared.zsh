@@ -46,9 +46,8 @@ PROMPT='%F{9}%n %F{white}in %F{13} %~${vcs_info_msg_0_} %F{3}❯ '
 alias vim="nvim"
 alias DOTS="cd $HOME/dotfiles"
 alias nvrc="cd $HOME/dotfiles/nvim/.config/nvim"
-alias ls="ls --color=auto"
-alias ll="ls -lah"
 alias zrc="$EDITOR $HOME/dotfiles/zsh/.zshrc_linux"
+alias ll="ls -lah"
 
 # plugins
 source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"

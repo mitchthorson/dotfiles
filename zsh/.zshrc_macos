@@ -1,6 +1,9 @@
 # load shared configuration
 source $HOME/.zsh/shared.zsh
 
+# macos specific aliases
+alias ls="ls -G"
+
 # FZF fuzzy find history
 source $HOME/.fzf.zsh
 
