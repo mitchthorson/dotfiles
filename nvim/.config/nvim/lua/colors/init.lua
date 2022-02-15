@@ -15,7 +15,7 @@ if (transparent_bg and colorscheme == "gruvbox") then
 end
 
 --highlights
-vim.cmd(string.format("hi StatusLine gui=NONE guibg=NONE ctermbg=NONE guifg=%s", palette.white))
+vim.cmd(string.format("hi StatusLine gui=NONE guibg=NONE ctermbg=NONE guifg=%s", palette.light4))
 vim.cmd("hi SignColumn guibg=NONE ctermbg=NONE")
 vim.cmd("hi DiagnosticSignError guibg=NONE ctermbg=NONE")
 vim.cmd("hi DiagnosticSignHint guibg=NONE ctermbg=NONE")
