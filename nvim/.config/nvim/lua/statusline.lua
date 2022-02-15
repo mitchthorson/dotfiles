@@ -69,7 +69,14 @@ local function gitbranch()
 	if not git_info or git_info.head == "" then
 		return ""
 	end
-	return string.format("branch: %s", git_info.head)
+	return table.concat {
+		"%#StatusLineAccent3# ",
+		"[",
+		"%#StatusLine# ",
+		string.format("branch: %s", git_info.head),
+		"%#StatusLineAccent3# ",
+		"]",
+	}
 end
 
 Statusline = {}
@@ -89,12 +96,7 @@ Statusline.active = function()
     filename(),
     "%#StatusLineAccent2# ",
 	"]",
-    "%#StatusLineAccent3# ",
-	"[",
-    "%#StatusLine# ",
     gitbranch(),
-    "%#StatusLineAccent3# ",
-	"]",
     "%=",
     "%#StatusLineAccent4# ",
 	"[",
