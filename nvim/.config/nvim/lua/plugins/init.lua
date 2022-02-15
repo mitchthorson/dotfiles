@@ -7,7 +7,7 @@ require 'paq' {
 	{'catppuccin/nvim', as = 'catppuccin'};
 	-- 'gruvbox-community/gruvbox';
 	'ellisonleao/gruvbox.nvim';
-	'nvim-lualine/lualine.nvim';
+	-- 'nvim-lualine/lualine.nvim';
 	'windwp/nvim-ts-autotag';
 	'p00f/nvim-ts-rainbow';
 	'windwp/nvim-autopairs';
@@ -42,7 +42,7 @@ require 'paq' {
 -- load config files for plugins that need additional config
 require("lsp-config")
 require("nvim-treesitter-config")
-require("nvim-lualine-config")
+-- require("nvim-lualine-config")
 require("nvim-autopairs-config")
 require("telescope-config")
 require("cmp-config")
