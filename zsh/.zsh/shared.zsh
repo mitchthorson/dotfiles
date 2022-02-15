@@ -40,7 +40,7 @@ precmd () { vcs_info }
 NEWLINE=$'\n'
 setopt prompt_subst
 zstyle ':vcs_info:git:*' formats ' %F{white}on %F{14} %b'
-PROMPT='%F{9}%n %F{white}in %F{13} %~${vcs_info_msg_0_} %F{3}${NEWLINE}$ '
+PROMPT='%F{12}╔ %F{9}%n %F{white}in %F{13} %~${vcs_info_msg_0_} ${NEWLINE}%F{12}╚ %F{3}$ '
 # RPROMPT='%F{blue}%* %F{green}%(?.﫟.)'
 
 # aliases
@@ -49,6 +49,7 @@ alias DOTS="cd $HOME/dotfiles"
 alias nvrc="cd $HOME/dotfiles/nvim/.config/nvim"
 alias zrc="$EDITOR $HOME/dotfiles/zsh/.zshrc_linux"
 alias ll="ls -lah"
+alias glo="git log --oneline"
 
 # plugins
 source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
