@@ -39,8 +39,8 @@ autoload -Uz vcs_info
 precmd () { vcs_info }
 NEWLINE=$'\n'
 setopt prompt_subst
-zstyle ':vcs_info:git:*' formats ' %F{white}on %F{14} %b'
-PROMPT='%F{9}%n %F{white}in %F{13} %~${vcs_info_msg_0_} %F{3}${NEWLINE}$ '
+zstyle ':vcs_info:git:*' formats ' %F{white}on %F{3} %b'
+PROMPT='%F{5}╔ %F{4}%n %F{white}in %F{6} %~${vcs_info_msg_0_} ${NEWLINE}%F{5}╚ %F{2}$ '
 # RPROMPT='%F{blue}%* %F{green}%(?.﫟.)'
 
 # aliases

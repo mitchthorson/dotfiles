@@ -64,6 +64,21 @@ local function lineinfo()
   return "%P %l:%c"
 end
 
+local function gitbranch()
+	local git_info = vim.b.gitsigns_status_dict
+	if not git_info or git_info.head == "" then
+		return ""
+	end
+	return table.concat {
+		"%#StatusLineAccent3# ",
+		"[",
+		"%#StatusLine# ",
+		string.format("branch: %s", git_info.head),
+		"%#StatusLineAccent3# ",
+		"]",
+	}
+end
+
 Statusline = {}
 
 Statusline.active = function()
@@ -74,7 +89,6 @@ Statusline.active = function()
     mode(),
     "%#StatusLineAccent1# ",
 	"]",
-    "%#StatusLine# ",
     "%#StatusLineAccent2# ",
 	"[",
     "%#StatusLine# ",
@@ -82,20 +96,19 @@ Statusline.active = function()
     filename(),
     "%#StatusLineAccent2# ",
 	"]",
-    "%#StatusLine# ",
+    gitbranch(),
     "%=",
-    "%#StatusLineAccent3# ",
+    "%#StatusLineAccent4# ",
 	"[",
     "%#StatusLine# ",
     filetype(),
-    "%#StatusLineAccent3# ",
-	"]",
-    "%#StatusLine# ",
     "%#StatusLineAccent4# ",
+	"]",
+    "%#StatusLineAccent5# ",
 	"[",
     "%#StatusLine# ",
     lineinfo(),
-    "%#StatusLineAccent4# ",
+    "%#StatusLineAccent5# ",
 	"]",
     "%#StatusLine# ",
   }
