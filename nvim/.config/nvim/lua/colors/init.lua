@@ -10,7 +10,7 @@ vim.o.background = "dark"
 
 vim.cmd("colorscheme " .. colorscheme)
 
-if (transparent_bg and colorscheme == "gruvbox") then
+if (transparent_bg) then
 	vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 end
 
