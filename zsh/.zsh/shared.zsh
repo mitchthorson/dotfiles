@@ -49,6 +49,7 @@ alias DOTS="cd $HOME/dotfiles"
 alias nvrc="cd $HOME/dotfiles/nvim/.config/nvim"
 alias zrc="$EDITOR $HOME/dotfiles/zsh/.zshrc_linux"
 alias ll="ls -lah"
+alias glo="git log --oneline"
 
 # plugins
 source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
