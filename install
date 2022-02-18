@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 DOTFILES_FOLDER="$HOME/dotfiles"
-FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst rofi gtk")
-FOLDERS_MAC=$(echo "bin alacritty nvim zsh tmux")
+FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst rofi gtk kitty")
+FOLDERS_MAC=$(echo "bin alacritty nvim zsh tmux kitty")
 FOLDERS=$(echo "")
 
 # remove .zshrc if it exists so we can
