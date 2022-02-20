@@ -7,6 +7,7 @@ require 'paq' {
 	{'catppuccin/nvim', as = 'catppuccin'};
 	-- 'gruvbox-community/gruvbox';
 	'ellisonleao/gruvbox.nvim';
+	'Mofiqul/dracula.nvim';
 	-- 'nvim-lualine/lualine.nvim';
 	'windwp/nvim-ts-autotag';
 	'p00f/nvim-ts-rainbow';

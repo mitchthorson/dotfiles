@@ -1,4 +1,4 @@
-local palette = require("gruvbox.colors")
+local palette = require('dracula').colors()
 
 vim.g.nvim_tree_indent_markers = 0
 vim.g.nvim_tree_refresh_wait = 250
@@ -29,8 +29,10 @@ require'nvim-tree'.setup {
 
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 -- vim.cmd(string.format("hi NvimTreeIndentMarker guifg=%s", palette.gray2))
-vim.cmd(string.format("hi NvimTreeFolderIcon guifg=%s", palette.neutral_yellow))
-vim.cmd(string.format("hi NvimTreeFolderName guifg=%s", palette.neutral_aqua))
-vim.cmd(string.format("hi NvimTreeOpenedFolderName guifg=%s", palette.neutral_blue))
+vim.cmd(string.format("hi NvimTreeFolderIcon guifg=%s", palette.yellow))
+vim.cmd(string.format("hi NvimTreeFolderName guifg=%s", palette.green))
+vim.cmd(string.format("hi NvimTreeOpenedFolderName guifg=%s", palette.pink))
 -- vim.cmd("hi NvimTreeVertSplit guibg=NONE ctermbg=NONE")
--- vim.cmd(string.format("hi NvimTreeRootFolder guifg=%s", "#fe8019"))
+vim.cmd(string.format("hi NvimTreeRootFolder guifg=%s", palette.purple))
+vim.cmd("hi NvimTreeVertSplit guibg=NONE ctermbg=NONE")
+vim.cmd("hi NvimTreeNormal guibg=NONE ctermbg=NONE")
