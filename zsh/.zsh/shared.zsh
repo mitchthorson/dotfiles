@@ -63,4 +63,4 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # golang stuff
 GOPATH="$HOME/go"
 GOBIN="$GOPATH/bin"
-export PATH=$GOBIN:$PATH:
+export PATH=$GOBIN:$PATH
