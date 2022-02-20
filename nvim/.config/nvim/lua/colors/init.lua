@@ -32,3 +32,8 @@ vim.cmd(string.format("hi StatusLineAccent4 gui=NONE guibg=NONE ctermbg=NONE gui
 vim.cmd(string.format("hi StatusLineAccent5 gui=NONE guibg=NONE ctermbg=NONE guifg=%s", palette.pink))
 vim.cmd(string.format("hi StatusLineAccent6 gui=NONE guibg=NONE ctermbg=NONE guifg=%s", palette.orange))
 vim.cmd(string.format("hi GitSignsCurrentLineBlame guifg=%s", palette.pink))
+
+-- custom italic settings
+vim.cmd("hi Comment gui=italic")
+vim.cmd("hi TSMethod gui=italic")
+vim.cmd("hi TSFunction gui=italic")
