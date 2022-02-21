@@ -201,11 +201,11 @@ bindsym $mod+r mode "resize"
 for_window [class=".*"] border pixel 2px
 
 # Colors
-# gruvbox
-set $base-color	#282828
-set $text-color #ebdbb2
-set $border-color #689d6a
-set $border-inactive-color #fabd2f
+# Dracula
+set $base-color	#282a36
+set $text-color #f8f8f2
+set $border-color #bd93f9
+set $border-inactive-color #6272a4
 
 #                       border                  background         text                 indicator
 client.focused          $border-color           $border-color      $text-color          $border-color
