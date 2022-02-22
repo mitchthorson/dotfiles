@@ -36,8 +36,8 @@ map('v', 'K', ":m '<-2<CR>gv=gv", {noremap = true})
 map('n', '<leader>gs', ':G<CR>', {noremap = true})
 map('n', '<leader>gc', ':G commit<CR>', {noremap = true})
 map('n', '<leader>gp', ':G push<CR>', {noremap = true})
-map('n', '<leader>gh', ':diffget //3<CR>', {noremap = true})
-map('n', '<leader>gu', ':diffget //2<CR>', {noremap = true})
+map('n', '<leader>gj', ':diffget //3<CR>', {noremap = true})
+map('n', '<leader>gf', ':diffget //2<CR>', {noremap = true})
 
 -- listchars toggle
 map('n', '<leader>z', ':set list!<CR>', {noremap = true})
