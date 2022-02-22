@@ -1,5 +1,5 @@
-require("keybindings")
 require("colors")
 require("settings")
+require("keybindings")
 require("statusline")
 require("plugins")

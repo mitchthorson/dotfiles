@@ -64,6 +64,25 @@ cmd [[au BufEnter * set fo-=c fo-=r fo-=o]]
 cmd [[autocmd FileType text,markdown,html,xhtml,javascript setlocal cc=0]]
 
 -----------------------------------------------------------
+-- Listchars
+-----------------------------------------------------------
+--opt.listchars = {
+-- trail = '·',
+--tab = '>-',
+--nbsp = '+',
+--eol = '↵'
+--}
+opt.listchars = {
+	space = '·',
+	tab = '>-',
+	trail = '_',
+	eol = '↵',
+	nbsp = '+'
+}
+
+vim.o.list = true
+
+-----------------------------------------------------------
 -- Autocompletion
 -----------------------------------------------------------
 -- insert mode completion options
