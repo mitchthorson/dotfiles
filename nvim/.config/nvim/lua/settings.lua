@@ -36,6 +36,7 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.cmdheight = 1
 opt.scrolloff = 8
+opt.sidescrolloff = 5
 opt.termguicolors = true
 
 -----------------------------------------------------------
