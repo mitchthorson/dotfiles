@@ -1,7 +1,7 @@
 env:
   TERM: xterm-256color
 font:
-  size: 11
+  size: 12
   normal:
     family: BlexMono Nerd Font
     style: Text
@@ -15,7 +15,7 @@ font:
     family: BlexMono Nerd Font
     style: Bold Italic
 import:
-  - ~/.config/alacritty/themes/gruvbox-dark.yml
+  - ~/.config/alacritty/themes/dracula/dracula.yml
 window:
   dimensions:
     columns: 100
