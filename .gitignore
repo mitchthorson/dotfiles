@@ -2,3 +2,4 @@ zsh/.oh-my-zsh/custom/themes/async
 zsh/.oh-my-zsh/custom/themes/typewritten.zsh-theme
 zsh/.zshrc
 alacritty/.config/alacritty/alacritty.yml
+kitty/.config/kitty/kitty.conf
