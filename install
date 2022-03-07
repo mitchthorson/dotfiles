@@ -17,12 +17,19 @@ if [ -f $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.yml ]; then
 	rm $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.yml
 fi
 
+# remove kitty config if it exists so we can
+# create it with the correct version for the environment
+if [ -f $DOTFILES_FOLDER/kitty/.config/kitty/kitty.conf ]; then
+	rm $DOTFILES_FOLDER/kitty/.config/kitty/kitty.conf
+fi
+
 case $1 in
 	--macos )
 		INSTALL_ENV="macos"
 		FOLDERS=$FOLDERS_MAC
 		cp $DOTFILES_FOLDER/zsh/.zshrc_macos $HOME/dotfiles/zsh/.zshrc
 		cp $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty_macos.yml $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.yml
+		cp $DOTFILES_FOLDER/kitty/.config/kitty/kitty_macos.conf $DOTFILES_FOLDER/kitty/.config/kitty/kitty.conf
 		;;
 
 	--linux )
@@ -30,6 +37,7 @@ case $1 in
 		FOLDERS=$FOLDERS_LINUX
 		cp $DOTFILES_FOLDER/zsh/.zshrc_linux $DOTFILES_FOLDER/zsh/.zshrc
 		cp $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty_linux.yml $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.yml
+		cp $DOTFILES_FOLDER/kitty/.config/kitty/kitty_linux.conf $DOTFILES_FOLDER/kitty/.config/kitty/kitty.conf
 		;;
 
 	* ) 
