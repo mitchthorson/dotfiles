@@ -1,8 +1,6 @@
 local palette = require('dracula').colors()
 
-vim.g.nvim_tree_indent_markers = 0
 vim.g.nvim_tree_refresh_wait = 250
-vim.g.nvim_tree_quit_on_open = 1
 vim.g.nvim_tree_show_icons = {
 	git = 0,
 	folders = 1,
@@ -23,7 +21,17 @@ require'nvim-tree'.setup {
 	view = {
 		width = 30,
 		auto_resize = true
-	}
+	},
+	renderer = {
+		indent_markers = {
+			enable = false,
+		}
+	},
+	actions = {
+		open_file = {
+			quit_on_open = true,
+		},
+	},
 }
 
 
