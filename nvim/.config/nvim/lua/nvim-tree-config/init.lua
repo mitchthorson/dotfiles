@@ -17,10 +17,8 @@ vim.g.nvim_tree_icons = {
 }
 require'nvim-tree'.setup {
 	open_on_setup    = false,
-	auto_close       = false,
 	view = {
 		width = 30,
-		auto_resize = true
 	},
 	renderer = {
 		indent_markers = {
