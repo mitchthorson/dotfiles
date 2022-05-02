@@ -51,6 +51,7 @@ alias zrc="$EDITOR $HOME/dotfiles/zsh/.zshrc_linux"
 alias ll="ls -lah"
 alias glo="git log --oneline"
 alias glg="git log --graph --decorate --oneline"
+alias lazydocker="TERM=screen-256color lazydocker"
 
 # plugins
 source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
