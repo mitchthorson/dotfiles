@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+current_dir=$(pwd)
+current_name=$(basename "$current_dir" | tr . _)
+tmux_running=$(pgrep tmux)
+
+if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s $current_name -c $current_dir
+    exit 0
+fi
+
+if ! tmux has-session -t $current_name 2> /dev/null; then
+    tmux new-session -ds $current_name -c $current_dir
+fi
+
+tmux switch-client -t $current_name

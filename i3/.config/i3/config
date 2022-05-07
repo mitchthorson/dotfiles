@@ -218,7 +218,7 @@ client.urgent           $border-inactive-color  $base-color        $text-color  
 # client.focused #9d79d6 #393bff #9d79d6 #9d79d6 #9d79d6
 
 # Set gaps
-gaps inner 0
+gaps inner 10
 gaps outer 0
 
 # Sreen brightness controls
