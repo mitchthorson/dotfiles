@@ -112,3 +112,5 @@ cmd [[
 	au BufNewFile,BufRead *.glsl set filetype=glsl
 ]]
 
+-- python
+g.python_recommended_style = 0
