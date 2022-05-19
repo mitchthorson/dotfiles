@@ -5,10 +5,8 @@ require 'paq' {
 	'kyazdani42/nvim-web-devicons';
 	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
 	{'catppuccin/nvim', as = 'catppuccin'};
-	-- 'gruvbox-community/gruvbox';
 	'ellisonleao/gruvbox.nvim';
 	'Mofiqul/dracula.nvim';
-	-- 'nvim-lualine/lualine.nvim';
 	'windwp/nvim-ts-autotag';
 	'p00f/nvim-ts-rainbow';
 	'windwp/nvim-autopairs';
@@ -31,14 +29,6 @@ require 'paq' {
 	'jalvesaq/Nvim-R';
 	'kyazdani42/nvim-tree.lua';
 	'vimwiki/vimwiki';
-	-- 'glepnir/galaxyline.nvim';
-
-	-- 'akinsho/bufferline.nvim';
-	-- 'folke/which-key.nvim';
-	-- 'hrsh7th/cmp-vsnip';
-	-- 'hrsh7th/vim-vsnip';
-	-- 'akinsho/toggleterm.nvim';
-	-- 'EdenEast/nightfox.nvim';
 }
 
 -- load config files for plugins that need additional config
@@ -46,13 +36,13 @@ require("lsp-config")
 require("nvim-treesitter-config")
 -- require("nvim-lualine-config")
 require("nvim-autopairs-config")
-require("telescope-config")
 require("cmp-config")
 require("comment-config")
 require("gitsigns-config")
 require("neoclip-config")
 require("nvim-tree-config")
 require("luasnip-config")
+require("telescope-config")
 require("vimwiki-config")
 
 -- require("which-key-config")

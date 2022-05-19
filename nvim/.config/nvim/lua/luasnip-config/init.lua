@@ -10,6 +10,11 @@ local str_timestamp = function()
 	return os.date(fmt)
 end
 
+local str_today = function()
+	local fmt = "%Y-%m-%d"
+	return os.date(fmt)
+end
+
 ls.add_snippets("vimwiki", {
 	ls.snippet("fm", {
 		ls.text_node({ 
@@ -30,5 +35,8 @@ ls.add_snippets("vimwiki", {
 	}),
 	ls.snippet("timestamp", {
 		ls.text_node(str_timestamp())
+	}),
+	ls.snippet("today", {
+		ls.text_node(str_today())
 	}),
 })

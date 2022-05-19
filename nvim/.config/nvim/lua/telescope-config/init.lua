@@ -1,5 +1,9 @@
 local actions = require('telescope.actions')
 local telescope = require('telescope')
+local pickers = require"telescope.pickers"
+local finders = require"telescope.finders"
+
+local M = {}
 
 telescope.setup {
 	defaults = {
@@ -55,6 +59,29 @@ telescope.setup {
 require("telescope").load_extension "neoclip"
 require("telescope").load_extension "file_browser"
 
+-- custom vimwiki searcher
+local conf = require("telescope.config").values
+
+M.vimwiki_pages = function(opts)
+  --TODO: Optionally check if vimwiki index matches anything?
+  local index = '0'
+  if opts then
+    if opts['index'] then
+      index = opts['index']
+    elseif opts['i'] then
+      index = opts['i']
+    end
+  end
+  local vimwiki_cmd = 'vimwiki#base#find_files(' .. index .. ', 0)'
+  pickers.new(opts, {
+    prompt_title = "vimwiki pages",
+    finder = finders.new_table {
+      results = vim.api.nvim_eval(vimwiki_cmd)
+    },
+    sorter = conf.generic_sorter(opts),
+  }):find()
+end
+
 local key_map = vim.api.nvim_set_keymap
 -- Telescope shortcuts
 key_map('n', '<leader>f', '<CMD>Telescope find_files<CR>', {noremap = true})
@@ -63,4 +90,6 @@ key_map('n', '<leader>r', '<CMD>Telescope lsp_references<CR>', {noremap = true})
 key_map('n', '<leader>h', '<CMD>Telescope help_tags<CR>', {noremap = true})
 key_map('n', '<leader>c', '<CMD>Telescope neoclip star<CR>', {noremap = true})
 key_map('n', '<leader>p', '<CMD>Telescope file_browser<CR>', {noremap = true})
+key_map('n', '<leader>w', '<CMD>lua require("telescope-config").vimwiki_pages()<CR>', {noremap = true})
 
+return M
