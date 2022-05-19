@@ -30,6 +30,7 @@ require 'paq' {
 	'tpope/vim-fugitive';
 	'jalvesaq/Nvim-R';
 	'kyazdani42/nvim-tree.lua';
+	'vimwiki/vimwiki';
 	-- 'glepnir/galaxyline.nvim';
 
 	-- 'akinsho/bufferline.nvim';
@@ -51,6 +52,8 @@ require("comment-config")
 require("gitsigns-config")
 require("neoclip-config")
 require("nvim-tree-config")
+require("luasnip-config")
+require("vimwiki-config")
 
 -- require("which-key-config")
 -- require("toggleterm-config")
