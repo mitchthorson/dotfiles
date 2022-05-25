@@ -1,0 +1,38 @@
+#! /usr/bin/env bash
+
+# relative to $HOME
+BACKUP_FOLDERS=$(echo "Documents wiki")
+BACKUP_TARGET="workstation-backups/archt490"
+
+if [[ -z $BACKUP_ADDR ]] ; then
+	echo "Make sure to define the BACKUP_ADDR environment variable!"
+    exit 0
+fi
+
+echo ""
+echo ""
+echo "================================================"
+echo "=============== Begining backup ================"
+echo "================================================"
+echo ""
+echo ""
+
+# example rsync command from synology kb
+# rsync -av -e ssh home/ admin@192.168.55.66::NetBackup/backupdata/
+
+for FOLDER in $BACKUP_FOLDERS
+do
+	echo "  Backing up: $HOME/$FOLDER"
+	echo ""
+	rsync --progress -av -e 'ssh -p 4022' $HOME/$FOLDER  rsync-backup@$BACKUP_ADDR::$BACKUP_TARGET
+	echo ""
+	echo "  done"
+done
+
+echo ""
+echo ""
+echo "================================================"
+echo "=============== backup complete ================"
+echo "================================================"
+echo ""
+echo ""
