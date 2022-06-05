@@ -1,15 +1,21 @@
 local ls = require("luasnip")
 
+-- this prints out a UTC timestamp to the seconds
+-- good for consistent timestamping and identifying notes
 local isosec = function()
-	local fmt = "%Y%m%d%H%M%S"
+	local fmt = "!%Y%m%d%H%M%S"
 	return os.date(fmt)
 end
 
+-- prints out a more readable - seperated UTC timestamp to the seconds
+-- i often use this for created/modified timestamps
 local str_timestamp = function()
-	local fmt = "%Y-%m-%dT%H:%M:%S"
+	local fmt = "!%Y-%m-%dT%H:%M:%S"
 	return os.date(fmt)
 end
 
+-- prints out a more readable - seperated local timestamp to the seconds
+-- i use this for journal entry titles
 local str_today = function()
 	local fmt = "%Y-%m-%d"
 	return os.date(fmt)
