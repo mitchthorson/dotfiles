@@ -1,21 +1,24 @@
--- local palette = require("gruvbox.colors")
+-----------------------------------------------
+-- color settings
+-----------------------------------------------
+-- currently using dracula via
+-- https://github.com/Mofiqul/dracula.nvim 
+-- with a few personal touches/overrides below
+-----------------------------------------------
+
 local palette = require('dracula').colors()
 
 local colorscheme = "dracula"
 local transparent_bg = true
 
--- gruvbox setup
--- vim.g.gruvbox_contrast_dark = "hard"
--- vim.g.gruvbox_invert_selection = true
 vim.o.background = "dark"
-
 vim.cmd("colorscheme " .. colorscheme)
-
 if (transparent_bg) then
 	vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 end
 
---highlights
+-----------------------------------------------
+-- custom highlights
 vim.cmd(string.format("hi StatusLine gui=NONE guibg=NONE ctermbg=NONE guifg=%s", palette.white))
 vim.cmd("hi SignColumn guibg=NONE ctermbg=NONE")
 vim.cmd("hi DiagnosticSignError guibg=NONE ctermbg=NONE")
@@ -33,7 +36,8 @@ vim.cmd(string.format("hi StatusLineAccent5 gui=NONE guibg=NONE ctermbg=NONE gui
 vim.cmd(string.format("hi StatusLineAccent6 gui=NONE guibg=NONE ctermbg=NONE guifg=%s", palette.orange))
 vim.cmd(string.format("hi GitSignsCurrentLineBlame guifg=%s", palette.pink))
 
--- custom italic settings
+-----------------------------------------------
+-- custom italic and syntax settings
 vim.cmd(string.format("hi Comment gui=italic guifg=%s", palette.white))
 vim.cmd("hi TSMethod gui=italic")
 vim.cmd("hi TSFunction gui=italic")

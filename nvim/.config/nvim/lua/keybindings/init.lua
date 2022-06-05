@@ -1,5 +1,6 @@
 -----------------------------------------------
 -- keybindings
+-----------------------------------------------
 -- any and all custom keybindings,
 -- except those that need to be configured with plugin dependencies
 -----------------------------------------------
