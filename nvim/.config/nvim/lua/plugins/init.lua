@@ -1,5 +1,6 @@
 -----------------------------------------------
 -- plugins settings
+-----------------------------------------------
 -- load all of our third party plugins
 -- using the paq-nvim plugin
 -- https://github.com/savq/paq-nvim
@@ -10,13 +11,13 @@
 -- remove installed plugins that are no longer used with PaqClean
 -- do all of the above with PaqSync
 -----------------------------------------------
+
 require 'paq' {
 	'savq/paq-nvim';
 	'sbdchd/neoformat';
-	'kyazdani42/nvim-web-devicons';
 	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
-	{'catppuccin/nvim', as = 'catppuccin'};
-	'ellisonleao/gruvbox.nvim';
+	-- {'catppuccin/nvim', as = 'catppuccin'};
+	-- 'ellisonleao/gruvbox.nvim';
 	'Mofiqul/dracula.nvim';
 	'windwp/nvim-ts-autotag';
 	'p00f/nvim-ts-rainbow';
@@ -43,6 +44,7 @@ require 'paq' {
 
 -----------------------------------------------
 -- load config files for plugins that need additional config
+
 require("lsp-config")
 require("nvim-treesitter-config")
 require("nvim-autopairs-config")
