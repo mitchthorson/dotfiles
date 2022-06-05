@@ -1,3 +1,9 @@
+-----------------------------------------------
+-- settings and snippets for the luasnip plugin
+-- https://github.com/L3MON4D3/LuaSnip
+-- currently surfacing via nvim-cmp
+-----------------------------------------------
+
 local ls = require("luasnip")
 
 -- this prints out a UTC timestamp to the seconds

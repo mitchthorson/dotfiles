@@ -1,4 +1,6 @@
- -- Setup nvim-cmp.
+ -- Setup and configure nvim-cmp plugin
+ -- https://github.com/hrsh7th/nvim-cmp
+ -- this provides easy to use completions from sources like lsp and luasnip
 vim.g.completeopt="menu,menuone,noselect,noinsert"
 
 local cmp = require'cmp'
