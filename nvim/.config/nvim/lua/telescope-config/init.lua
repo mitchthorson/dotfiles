@@ -55,8 +55,6 @@ telescope.setup {
 
 -- Extensions
 
--- https://github.com/AckslD/nvim-neoclip.lua
-require("telescope").load_extension "neoclip"
 require("telescope").load_extension "file_browser"
 
 -- custom vimwiki searcher
@@ -88,7 +86,6 @@ key_map('n', '<leader>f', '<CMD>Telescope find_files<CR>', {noremap = true})
 key_map('n', '<leader>F', '<CMD>Telescope live_grep<CR>', {noremap = true})
 key_map('n', '<leader>r', '<CMD>Telescope lsp_references<CR>', {noremap = true})
 key_map('n', '<leader>h', '<CMD>Telescope help_tags<CR>', {noremap = true})
-key_map('n', '<leader>c', '<CMD>Telescope neoclip star<CR>', {noremap = true})
 key_map('n', '<leader>p', '<CMD>Telescope file_browser<CR>', {noremap = true})
 key_map('n', '<leader>w', '<CMD>lua require("telescope-config").vimwiki_pages()<CR>', {noremap = true})
 
