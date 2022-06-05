@@ -47,6 +47,10 @@ map('n', '<leader>z', ':set list!<CR>', {noremap = true})
 -- turn off the post search higlights with <leader>x
 map('n', '<leader>x', ':noh<CR>', {noremap = true})
 
+-- jump to my vim journal from anywhere
+-- as long as its in ~/wiki/notes/Vim Journal.md
+map('n', '<leader>vj', ':e ~/wiki/notes/Vim Journal.md<CR>', {noremap = true})
+
 -- Toggle NetRW  
 -- deprecated for now
 -- I've moved to nvimtree
