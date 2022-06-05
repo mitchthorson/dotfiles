@@ -1,4 +1,15 @@
+-----------------------------------------------
+-- plugins settings
 -- load all of our third party plugins
+-- using the paq-nvim plugin
+-- https://github.com/savq/paq-nvim
+-- it is simple, fast and easy to use
+
+-- install missing plugins with PaqInstall
+-- update plugins with PaqUpdate
+-- remove installed plugins that are no longer used with PaqClean
+-- do all of the above with PaqSync
+-----------------------------------------------
 require 'paq' {
 	'savq/paq-nvim';
 	'sbdchd/neoformat';
@@ -11,7 +22,6 @@ require 'paq' {
 	'p00f/nvim-ts-rainbow';
 	'windwp/nvim-autopairs';
 	'nvim-lua/plenary.nvim';
-	'AckslD/nvim-neoclip.lua';
 	'nvim-telescope/telescope.nvim';
 	'nvim-telescope/telescope-file-browser.nvim';
 	'neovim/nvim-lspconfig';
@@ -31,21 +41,16 @@ require 'paq' {
 	'vimwiki/vimwiki';
 }
 
+-----------------------------------------------
 -- load config files for plugins that need additional config
 require("lsp-config")
 require("nvim-treesitter-config")
--- require("nvim-lualine-config")
 require("nvim-autopairs-config")
 require("cmp-config")
 require("comment-config")
 require("gitsigns-config")
-require("neoclip-config")
 require("nvim-tree-config")
 require("luasnip-config")
 require("telescope-config")
 require("vimwiki-config")
-
--- require("which-key-config")
--- require("toggleterm-config")
--- require("bufferline-config")
 
