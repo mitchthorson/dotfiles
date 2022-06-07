@@ -40,6 +40,9 @@ require 'paq' {
 	'jalvesaq/Nvim-R';
 	'kyazdani42/nvim-tree.lua';
 	'vimwiki/vimwiki';
+	--currently testing out some clojure plugins
+	-- 'tpope/vim-fireplace';
+	'Olical/conjure';
 }
 
 -----------------------------------------------
