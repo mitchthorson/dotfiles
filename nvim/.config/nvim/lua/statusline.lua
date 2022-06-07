@@ -1,8 +1,11 @@
------------------------------------------------------------
+-----------------------------------------------
 -- Statusline
------------------------------------------------------------
-
--- heavy inspiration from this blog: https://nuxsh.is-a.dev/blog/custom-nvim-statusline.html
+-----------------------------------------------
+-- took heavy inspiration from this blog: 
+-- https://nuxsh.is-a.dev/blog/custom-nvim-statusline.html
+-- but in general this is a custom rolled status line just for me
+-- no plugins needed
+-----------------------------------------------
 
 local modes = {
   ["n"] = "NORMAL",
