@@ -43,6 +43,8 @@ require 'paq' {
 	--currently testing out some clojure plugins
 	-- 'tpope/vim-fireplace';
 	'Olical/conjure';
+	'tpope/vim-dispatch'; -- dependency for vim-jack-in
+	'clojure-vim/vim-jack-in';
 }
 
 -----------------------------------------------
