@@ -111,3 +111,8 @@ cmd [[
 -- for some reason, i could not format python files the way i wanted
 -- this setting was the reason
 g.python_recommended_style = 0
+
+
+-----------------------------------------------
+-- tidal
+g.tidal_target = "terminal"

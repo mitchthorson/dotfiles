@@ -45,6 +45,7 @@ require 'paq' {
 	'Olical/conjure';
 	'tpope/vim-dispatch'; -- dependency for vim-jack-in
 	'clojure-vim/vim-jack-in';
+	'tidalcycles/vim-tidal'; -- tidal cycles music software
 }
 
 -----------------------------------------------
