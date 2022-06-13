@@ -116,3 +116,9 @@ g.python_recommended_style = 0
 -----------------------------------------------
 -- tidal
 g.tidal_target = "terminal"
+
+-----------------------------------------------
+-- R
+cmd [[
+	au FileType r setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+]]
