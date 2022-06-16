@@ -123,3 +123,10 @@ cmd [[
 	au FileType r setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 ]]
 g.R_csv_app = 'terminal:vd'
+
+-----------------------------------------------
+-- haskell
+-- use spaces instead of tabs for haskell programming
+cmd [[
+	au FileType haskell setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+]]
