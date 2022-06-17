@@ -8,15 +8,7 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # merge in defaults and keymaps
 
 if [ -f $sysresources ]; then
-
-
-
-
-
-
-
     xrdb -merge $sysresources
-
 fi
 
 if [ -f $sysmodmap ]; then
@@ -24,15 +16,7 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
-
-
-
-
-
-
-
     xrdb -merge "$userresources"
-
 fi
 
 if [ -f "$usermodmap" ]; then
@@ -40,7 +24,6 @@ if [ -f "$usermodmap" ]; then
 fi
 
 # start some nice programs
-
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
   [ -x "$f" ] && . "$f"
@@ -48,14 +31,24 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+######################################
+## display settings for destkop PC
+##
 if [ -n $DESKTOP_DUAL_DISPLAY ]; then
 	xrandr --output DP-0 --primary --mode 2560x1440 --rate 143.97 --output HDMI-0 --mode 1920x1080 --rate 75.00 --left-of DP-0
 fi
 
 xset -b
 
+######################################
+## Startup i3
+## these are what I'm running
+
+## desktop wallpaper
 nitrogen --restore &
+## compositing
 picom --experimental-backends &
+## keyring for keys
 eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 exec /usr/bin/i3
