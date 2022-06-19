@@ -1,0 +1,18 @@
+Config { font = "xft:BlexMono Nerd Font:style=Medium:size=11"
+        , borderColor = "#50fa7b"
+        , border = TopB
+        , bgColor = "#282a36"
+        , fgColor = "#f8f8f2"
+        , position = TopSize L 100 35
+        , commands = [ Run Weather "CYVR" ["-t","<tempC>C","-L","18","-H","25","--normal","green","--high","red","--low","lightblue"] 36000
+                        , Run Wireless "wlp3s0" ["-t", "<essid>"] 10
+                        , Run Network "eth1" ["-L","0","-H","32","--normal","#50fa7b","--high","#ffb86c"] 10
+                        , Run Cpu ["-L","3","-H","50","--normal","#50fa7b","--high","#ffb86c"] 10
+                        , Run Memory ["-t","Mem: <usedratio>%"] 10
+                        , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                        , Run StdinReader
+                        ]
+        , sepChar = "%"
+        , alignSep = "}{"
+        , template = "%StdinReader% <fc=#50fa7b>|</fc> | <fc=#ff79c6>%cpu%</fc> | <fc=#bd93f9>%memory%</fc> | <fc=#f1fa8c>%wlp3s0wi%</fc>}{<fc=#f1fa8c>%date%</fc> | %CYVR% "
+        }
