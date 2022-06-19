@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 DOTFILES_FOLDER="$HOME/dotfiles"
-FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst rofi gtk kitty")
+FOLDERS_LINUX=$(echo "bin xinit nvim alacritty zsh tmux i3 polybar picom dunst rofi gtk kitty")
+FOLDERS_FEDORA=$(echo "bin nvim alacritty zsh tmux i3 polybar dunst rofi xmonad xmobar")
 FOLDERS_MAC=$(echo "bin alacritty nvim zsh tmux kitty")
 FOLDERS=$(echo "")
 
@@ -35,6 +36,13 @@ case $1 in
 	--linux )
 		INSTALL_ENV="linux"
 		FOLDERS=$FOLDERS_LINUX
+		cp $DOTFILES_FOLDER/zsh/.zshrc_linux $DOTFILES_FOLDER/zsh/.zshrc
+		cp $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty_linux.yml $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.yml
+		cp $DOTFILES_FOLDER/kitty/.config/kitty/kitty_linux.conf $DOTFILES_FOLDER/kitty/.config/kitty/kitty.conf
+		;;
+	--fedora )
+		INSTALL_ENV="fedora"
+		FOLDERS=$FOLDERS_FEDORA
 		cp $DOTFILES_FOLDER/zsh/.zshrc_linux $DOTFILES_FOLDER/zsh/.zshrc
 		cp $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty_linux.yml $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.yml
 		cp $DOTFILES_FOLDER/kitty/.config/kitty/kitty_linux.conf $DOTFILES_FOLDER/kitty/.config/kitty/kitty.conf
