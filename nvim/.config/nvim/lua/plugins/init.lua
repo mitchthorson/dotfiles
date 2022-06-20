@@ -12,41 +12,39 @@
 -- do all of the above with PaqSync
 -----------------------------------------------
 
-require 'paq' {
-	'savq/paq-nvim';
-	'sbdchd/neoformat';
-	{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'};
-	-- {'catppuccin/nvim', as = 'catppuccin'};
-	-- 'ellisonleao/gruvbox.nvim';
-	'Mofiqul/dracula.nvim';
-	'windwp/nvim-ts-autotag';
-	'p00f/nvim-ts-rainbow';
-	'windwp/nvim-autopairs';
-	'nvim-lua/plenary.nvim';
-	'nvim-telescope/telescope.nvim';
-	'nvim-telescope/telescope-file-browser.nvim';
-	'neovim/nvim-lspconfig';
-	'hrsh7th/cmp-nvim-lsp';
-	'hrsh7th/cmp-buffer';
-	'hrsh7th/cmp-path';
-	'hrsh7th/cmp-cmdline';
-	'hrsh7th/nvim-cmp';
-	'L3MON4D3/LuaSnip';
-	'saadparwaiz1/cmp_luasnip';
-	'onsails/lspkind-nvim';
-	'numToStr/Comment.nvim';
-	'lewis6991/gitsigns.nvim';
-	'tpope/vim-fugitive';
-	'jalvesaq/Nvim-R';
-	'kyazdani42/nvim-tree.lua';
-	'vimwiki/vimwiki';
+require('packer').startup(function() 
+	use 'wbthomason/packer.nvim'
+	use 'sbdchd/neoformat'
+	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+	use 'Mofiqul/dracula.nvim'
+	use 'windwp/nvim-ts-autotag'
+	use 'p00f/nvim-ts-rainbow'
+	use 'windwp/nvim-autopairs'
+	use 'nvim-lua/plenary.nvim'
+	use 'nvim-telescope/telescope.nvim'
+	use 'nvim-telescope/telescope-file-browser.nvim'
+	use 'neovim/nvim-lspconfig'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/nvim-cmp'
+	use 'L3MON4D3/LuaSnip'
+	use 'saadparwaiz1/cmp_luasnip'
+	use 'onsails/lspkind-nvim'
+	use 'numToStr/Comment.nvim'
+	use 'lewis6991/gitsigns.nvim'
+	use 'tpope/vim-fugitive'
+	use 'jalvesaq/Nvim-R'
+	use 'kyazdani42/nvim-tree.lua'
+	use 'vimwiki/vimwiki'
 	--currently testing out some clojure plugins
-	-- 'tpope/vim-fireplace';
-	'Olical/conjure';
-	'tpope/vim-dispatch'; -- dependency for vim-jack-in
-	'clojure-vim/vim-jack-in';
-	'tidalcycles/vim-tidal'; -- tidal cycles music software
-}
+	-- 'tpope/vim-fireplace'
+	use 'Olical/conjure'
+	use 'tpope/vim-dispatch' -- dependency for vim-jack-in
+	use 'clojure-vim/vim-jack-in'
+	use 'tidalcycles/vim-tidal' -- tidal cycles music software
+end)
 
 -----------------------------------------------
 -- load config files for plugins that need additional config
