@@ -6,7 +6,7 @@
 -----------------------------------------------
 
 require("settings")
-require("plugins")
 require("keybindings")
 require("colors")
 require("statusline")
+require("plugins")
