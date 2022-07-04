@@ -246,3 +246,11 @@ bindsym $mod+Shift+x exec powermenu
 bindsym Print exec --no-startup-id screenshot
 bindsym --release Shift+Print exec --no-startup-id screenshot select
 bindsym Control+Print exec --no-startup-id screenshot window
+
+# Set Zoom notification window to floating with no focus
+for_window [title="^zoom\s?$"] floating enable
+no_focus [title="^zoom\s?$"]
+
+# For meetings that you have joined via a link
+for_window [title="^join\?action=join.*$"] floating enable
+no_focus [title="^join\?action=join.*$"]

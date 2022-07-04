@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+xrandr --output HDMI2 --auto --right-of eDP1
