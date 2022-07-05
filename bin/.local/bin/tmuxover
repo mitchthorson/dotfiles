@@ -19,7 +19,7 @@ if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
 fi
 
 if ! tmux has-session -t $selected_name 2> /dev/null; then
-	echo "creating sesstion $selected_name"
+	echo "creating session $selected_name"
     tmux new-session -ds $selected_name -c $selected
 fi
 
