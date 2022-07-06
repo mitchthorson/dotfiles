@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DOTFILES_FOLDER="$HOME/dotfiles"
-FOLDERS_LINUX=$(echo "bin xinit nvim alacritty zsh tmux i3 polybar picom dunst rofi gtk xmonad xmobar")
+FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar picom dunst rofi gtk xmonad xmobar")
 FOLDERS_FEDORA=$(echo "bin nvim alacritty zsh tmux i3 polybar dunst rofi xmonad xmobar")
 FOLDERS_MAC=$(echo "bin alacritty nvim zsh tmux kitty")
 FOLDERS=$(echo "")
