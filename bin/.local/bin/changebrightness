@@ -5,7 +5,7 @@ notify_id=508
 notification_time=2000
 
 function get_brightness {
-	xbacklight -get | awk '{print int($1)}'
+	light | awk '{print int($1)}'
 }
 
 function get_brightness_icon {
@@ -20,11 +20,11 @@ function brightness_notification {
 
 case $1 in
     up)
-		xbacklight -inc 10
+		light -A 10
         brightness_notification
         ;;
     down)
-		xbacklight -dec 10
+		light -U 10
         brightness_notification
 	    ;;
     *)
