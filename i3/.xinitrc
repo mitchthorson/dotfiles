@@ -44,10 +44,6 @@ xset -b
 ## Startup i3
 ## these are what I'm running
 
-## desktop wallpaper
-nitrogen --restore &
-## compositing
-picom --experimental-backends &
 ## keyring for keys
 eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
