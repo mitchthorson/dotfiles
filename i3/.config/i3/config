@@ -61,6 +61,8 @@ bindsym $mod+Shift+c kill
 
 bindsym $mod+d exec --no-startup-id rofi -show drun
 
+bindsym $mod+Tab exec --no-startup-id rofi -show window
+
 # bindsym $mod+d exec --no-startup-id dmenu_run -nb papayawhip -nf coral -sb coral -sf papayawhip
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
