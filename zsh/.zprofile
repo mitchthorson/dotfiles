@@ -6,9 +6,6 @@ if [ -f $HOME/.zsh/local.zsh ]; then
 	source $HOME/.zsh/local.zsh
 fi
 
-# pyenv
-eval "$(pyenv init --path)"
-
 # starting up X
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx

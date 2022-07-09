@@ -66,3 +66,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 GOPATH="$HOME/go"
 GOBIN="$GOPATH/bin"
 export PATH=$GOBIN:$PATH
+
+# pyenv
+eval "$(pyenv init --path)"
+
