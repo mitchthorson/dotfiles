@@ -1,0 +1,5 @@
+#!/bin/env bash
+
+echo Installing lang servers globally with $(which node)
+
+npm install -g typescript typescript-language-server vscode-langservers-extracted svelte-language-server pyright
