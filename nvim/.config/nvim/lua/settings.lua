@@ -122,6 +122,9 @@ g.tidal_target = "terminal"
 cmd [[
 	au FileType r setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 ]]
+cmd [[
+	au FileType rmd setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+]]
 g.R_csv_app = 'terminal:vd'
 
 -----------------------------------------------
