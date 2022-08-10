@@ -55,7 +55,7 @@ require'lspconfig'.gopls.setup{
 -- setup lua language server
 
 -- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
-local sumneko_root_path = (os.getenv("LUA_LSP_PATH") or "/home/mitchthorson/lua-language-server")
+local sumneko_root_path = (os.getenv("LUA_LSP_PATH") or os.getenv("HOME").."/lua-language-server")
 local sumneko_binary = sumneko_root_path.."/bin/lua-language-server"
 
 local runtime_path = vim.split(package.path, ';')
