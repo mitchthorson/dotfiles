@@ -108,8 +108,7 @@ cmd [[
 
 -----------------------------------------------
 -- python
--- for some reason, i could not format python files the way i wanted
--- this setting was the reason
+-- turn off the default styling and take care of it myself
 g.python_recommended_style = 0
 cmd [[
 	au FileType python setlocal expandtab shiftwidth=4 tabstop=4 softtabstop=4
