@@ -44,6 +44,7 @@ require('packer').startup(function()
 	use 'tpope/vim-dispatch' -- dependency for vim-jack-in
 	use 'clojure-vim/vim-jack-in'
 	use 'tidalcycles/vim-tidal' -- tidal cycles music software
+	use 'hkupty/iron.nvim'
 end)
 
 -----------------------------------------------
@@ -59,4 +60,5 @@ require("nvim-tree-config")
 require("luasnip-config")
 require("telescope-config")
 require("vimwiki-config")
+require("iron")
 
