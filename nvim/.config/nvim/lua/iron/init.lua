@@ -10,9 +10,10 @@ iron.setup {
     repl_definition = {
       sh = {
         command = {"zsh"}
-      }
+      },
+	  python = require("iron.fts.python").ipython
     },
-    repl_open_cmd = require('iron.view').curry.bottom(10),
+    repl_open_cmd = "belowright 10 split",
     -- how the REPL window will be opened, the default is opening
     -- a float window of height 40 at the bottom.
   },
