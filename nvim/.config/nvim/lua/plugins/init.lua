@@ -45,6 +45,7 @@ require('packer').startup(function()
 	use 'clojure-vim/vim-jack-in'
 	use 'tidalcycles/vim-tidal' -- tidal cycles music software
 	use 'hkupty/iron.nvim'
+	use 'tpope/vim-sleuth'
 end)
 
 -----------------------------------------------

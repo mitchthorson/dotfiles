@@ -11,8 +11,10 @@ iron.setup {
       sh = {
         command = {"zsh"}
       },
+	  -- python repl should use iptyhon
 	  python = require("iron.fts.python").ipython
     },
+	-- set repl window to a split below
     repl_open_cmd = "belowright 10 split",
     -- how the REPL window will be opened, the default is opening
     -- a float window of height 40 at the bottom.
