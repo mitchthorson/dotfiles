@@ -51,6 +51,7 @@ alias zrc="$EDITOR $HOME/dotfiles/zsh/.zshrc_linux"
 alias ll="ls -lah"
 alias glo="git log --oneline"
 alias glg="git log --graph --decorate --oneline"
+alias gwip='git commit -a -m "work in progress - fixup"'
 alias lazydocker="TERM=screen-256color lazydocker"
 
 # plugins
