@@ -71,3 +71,5 @@ export PATH=$GOBIN:$PATH
 # pyenv
 eval "$(pyenv init --path)"
 
+# rust
+. "$HOME/.cargo/env"
