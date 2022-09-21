@@ -31,7 +31,7 @@ accent6 = #f1fa8c
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 30
+height = 35
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0
@@ -55,10 +55,11 @@ module-margin-left = 1
 module-margin-right = 1
 
 font-0 = BlexMono Nerd Font:size=13:style=Bold
+font-1 = BlexMono Nerd Font:size=13:style=Bold
 
 modules-left = i3
 modules-center = xwindow
-modules-right = pulseaudio wlan system-bluetooth-bluetoothctl battery date powermenu
+modules-right = memory cpu pulseaudio wlan system-bluetooth-bluetoothctl battery date powermenu
 
 tray-position = right
 tray-padding = 3
@@ -169,8 +170,9 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
-label-foreground = ${colors.accent6}
+label = %title%
+label-maxlen = 70
+label-foreground = ${colors.foreground-alt}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -229,29 +231,29 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-foreground = #000
 label-mode-background = ${colors.accent1}
 
 ; focused = Active workspace on focused monitor
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-foreground = ${colors.accent4}
-label-focused-underline= ${colors.accent4}
+label-focused = %name%
+; label-focused-background = ${colors.background-alt}
+label-focused-foreground = ${colors.accent1}
+label-focused-underline= ${colors.accent1}
 label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = %index%
+label-unfocused = %name%
 label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
-label-visible = %index%
+label-visible = %name%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = %index%
+label-urgent = %name%
 label-urgent-background = ${colors.accent5}
 label-urgent-padding = 1
 
@@ -306,18 +308,19 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.accent2}
-label = %percentage:2%%
+format-prefix = "CPU: "
+format-prefix-foreground = ${colors.accent1}
+format-foreground = ${colors.foreground}
+label = %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.accent1}
-label = %percentage_used%%
+format-prefix = "Mem: "
+format-foreground = ${colors.foreground}
+format-prefix-foreground = ${colors.accent3}
+; label = %percentage_used%%
+label = %gb_used%
 
 [module/wlan]
 type = internal/network
