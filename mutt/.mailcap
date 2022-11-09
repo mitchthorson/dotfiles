@@ -1,0 +1,7 @@
+image/jpg; feh --scale-down --magick-timeout 1 -- %s
+image/png; feh --scale-down --magick-timeout 1 -- %s
+
+# show html in firefox
+# text/html; view_html %s; test=test -n "$DISPLAY"; needsterminal;
+
+text/html; lynx -assume_charset=%{charset} -display_charset=utf-8 -collapse_br_tags -dump %s; nametemplate=%s.html; copiousoutput

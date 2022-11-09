@@ -8,8 +8,8 @@ export HISTFILE=$HOME/.histfile
 bindkey -v
 
 # editor info
-export EDITOR=vim
-export VISUAL=vim
+export EDITOR=nvim
+export VISUAL=nvim
 
 # command editor
 autoload -z edit-command-line
@@ -45,6 +45,7 @@ PROMPT='%F{4}%n%F{white}@%F{5}%m %F{white}in %F{6} %~${vcs_info_msg_0_} %F{2}
 
 # aliases
 alias vim="nvim"
+alias mutt="neomutt"
 alias DOTS="cd $HOME/dotfiles"
 alias nvrc="cd $HOME/dotfiles/nvim/.config/nvim"
 alias zrc="$EDITOR $HOME/dotfiles/zsh/.zshrc_linux"
@@ -53,6 +54,7 @@ alias glo="git log --oneline"
 alias glg="git log --graph --decorate --oneline"
 alias gwip='git commit -a -m "work in progress - fixup"'
 alias lazydocker="TERM=screen-256color lazydocker"
+alias devdir="f() { mkdir -p $HOME/dev/$1 };f"
 
 # plugins
 source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"

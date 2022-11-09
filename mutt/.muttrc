@@ -1,0 +1,51 @@
+# "+" substitutes for `folder`
+set mbox_type=Maildir
+set folder=~/.mail/
+set record=+Sent
+set postponed=+Drafts
+set trash=+Trash
+set mail_check=2 # seconds
+# set spoolfile=+INBOX
+
+set virtual_spoolfile # use first defined virtual-mailbox as spool
+virtual-mailboxes "INBOX" "notmuch://?query=folder:INBOX"
+virtual-mailboxes "Archive" "notmuch://?query=folder:Archive"
+virtual-mailboxes "Sent" "notmuch://?query=folder:Sent"
+virtual-mailboxes "Trash" "notmuch://?query=folder:Trash"
+
+# smtp
+source ~/keys/mail
+set smtp_url=smtp://$my_user:$my_pass@127.0.0.1:1025
+set ssl_force_tls
+set ssl_starttls
+
+
+# composing
+set realname="Mitchell Thorson"
+set from="mitch.thorson@protonmail.com"
+set forward_format="Fwd: %s"
+set use_from
+set fast_reply
+set send_charset="utf-8"
+
+# attachments
+set mailcap_path=~/.mailcap
+auto_view text/html
+alternative_order text/plain text/html
+bind attach <return> view-mailcap
+
+# vim-like bindings
+bind index,pager g noop
+bind pager gg top
+bind pager G bottom
+bind alias,index,browser,query gg first-entry
+bind alias,index,browser,query G last-entry
+bind pager j next-line
+bind pager k previous-line
+bind pager \Cj next-entry
+bind pager \Ck previous-entry
+bind index za collapse-thread
+bind index D delete-thread
+bind alias,index,pager,browser,query \Cd half-down
+bind alias,index,pager,browser,query \Cu half-up
+bind index,pager y group-reply
