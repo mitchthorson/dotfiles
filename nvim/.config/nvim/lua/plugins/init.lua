@@ -12,7 +12,7 @@
 -- do all of the above with PaqSync
 -----------------------------------------------
 
-require('packer').startup(function() 
+require('packer').startup(function(use) 
 	use 'wbthomason/packer.nvim'
 	use 'sbdchd/neoformat'
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -62,4 +62,5 @@ require("luasnip-config")
 require("telescope-config")
 require("vimwiki-config")
 require("iron")
+require("neoformat")
 
