@@ -10,3 +10,6 @@ source $HOME/.fzf.zsh
 # pyenv
 eval "$(pyenv init -)"
 
+# gpg fix
+GPG_TTY=$(tty)
+export GPG_TTY
