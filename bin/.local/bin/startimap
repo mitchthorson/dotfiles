@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+session="offlineimap"
+
+tmux has-session -t $session 2>/dev/null
+
+
+if [ $? == 0 ]; then
+	echo "imap session already exists"
+else
+	echo "starting imap session"
+	tmux new -d -s offlineimap -n imap offlineimap
+fi
