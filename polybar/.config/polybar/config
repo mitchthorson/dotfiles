@@ -329,7 +329,7 @@ interface = ${env:WIRELESS_NETWORK_INTERFACE:wlp0s20f3}
 interval = 3.0
 
 ; format-connected-underline = ${colors.accent1}
-label-connected = "直 connected"
+label-connected = "直 %essid%"
 label-connected-foreground = ${colors.accent1}
 
 format-disconnected = "睊 disconnected"
