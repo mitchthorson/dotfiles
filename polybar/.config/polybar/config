@@ -171,8 +171,8 @@ cursor-scroll = ns-resize
 [module/xwindow]
 type = internal/xwindow
 label = %title%
-label-maxlen = 70
-label-foreground = ${colors.foreground-alt}
+label-maxlen = 120
+label-foreground = ${colors.accent1}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -180,15 +180,15 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.accent2}
+format-prefix-underline = ${colors.accent1}
 
 label-layout = %layout%
-label-layout-underline = ${colors.accent2}
+label-layout-underline = ${colors.accent1}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.accent2}
-label-indicator-underline = ${colors.accent2}
+label-indicator-background = ${colors.accent1}
+label-indicator-underline = ${colors.accent1}
 
 [module/filesystem]
 type = internal/fs
@@ -212,7 +212,7 @@ label-occupied = %index%
 label-occupied-padding = 2
 
 label-urgent = %index%!
-label-urgent-background = ${colors.accent5}
+label-urgent-background = ${colors.accent1}
 label-urgent-padding = 2
 
 label-empty = %index%
@@ -244,6 +244,7 @@ label-focused-padding = 1
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
+label-unfocused-foreground = ${colors.foreground-alt}
 label-unfocused-padding = 1
 
 ; visible = Active workspace on unfocused monitor
@@ -254,7 +255,7 @@ label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
-label-urgent-background = ${colors.accent5}
+label-urgent-background = ${colors.accent1}
 label-urgent-padding = 1
 
 ; Separator in between workspaces
@@ -310,15 +311,15 @@ type = internal/cpu
 interval = 2
 format-prefix = "CPU: "
 format-prefix-foreground = ${colors.accent1}
-format-foreground = ${colors.foreground}
+format-foreground = ${colors.accent1}
 label = %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
 format-prefix = "Mem: "
-format-foreground = ${colors.foreground}
-format-prefix-foreground = ${colors.accent3}
+format-foreground = ${colors.accent1}
+format-prefix-foreground = ${colors.accent1}
 ; label = %percentage_used%%
 label = %gb_used%
 
@@ -327,9 +328,9 @@ type = internal/network
 interface = ${env:WIRELESS_NETWORK_INTERFACE:wlp0s20f3}
 interval = 3.0
 
-; format-connected-underline = ${colors.accent5}
+; format-connected-underline = ${colors.accent1}
 label-connected = "直 connected"
-label-connected-foreground = ${colors.accent5}
+label-connected-foreground = ${colors.accent1}
 
 format-disconnected = "睊 disconnected"
 ;format-disconnected = <label-disconnected>
@@ -381,10 +382,10 @@ type = internal/pulseaudio
 
 format-volume = <ramp-volume><label-volume>
 label-volume = %percentage:3:3%%
-format-volume-foreground = ${colors.accent4}
+format-volume-foreground = ${colors.accent1}
 
 label-muted = "婢 muted"
-label-muted-foreground = ${colors.accent4}
+label-muted-foreground = ${colors.accent1}
 
 ramp-volume-0 = 奄
 ramp-volume-1 = 奔
@@ -442,16 +443,16 @@ adapter = AC
 full-at = 98
 
 format-charging = <ramp-capacity> <label-charging>
-format-charging-foreground = ${colors.accent3}
+format-charging-foreground = ${colors.accent1}
 format-charging-prefix = " "
-label-charging-foreground = ${colors.accent3}
+label-charging-foreground = ${colors.accent1}
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-foreground = ${colors.accent3}
-label-discharging-foreground = ${colors.accent3}
+format-discharging-foreground = ${colors.accent1}
+label-discharging-foreground = ${colors.accent1}
 
 format-full= " charged"
-format-full-foreground = ${colors.accent3}
+format-full-foreground = ${colors.accent1}
 
 ramp-capacity-0 = ""
 ramp-capacity-1 = ""
@@ -463,7 +464,7 @@ ramp-capacity-6 = ""
 ramp-capacity-7 = ""
 ramp-capacity-8 = ""
 ramp-capacity-9 = ""
-ramp-capacity-foreground = ${colors.accent3}
+ramp-capacity-foreground = ${colors.accent1}
 
 ramp-charge-0 = ""
 ramp-charge-1 = ""
@@ -472,7 +473,7 @@ ramp-charge-3 = ""
 ramp-charge-4 = ""
 ramp-charge-5 = ""
 ramp-charge-6 = ""
-ramp-charge-foreground = ${colors.accent3}
+ramp-charge-foreground = ${colors.accent1}
 
 [module/temperature]
 type = internal/temperature
@@ -486,7 +487,7 @@ format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.accent2}
+label-warn-foreground = ${colors.accent1}
 
 ramp-0 = 
 ramp-1 = 
@@ -496,7 +497,7 @@ ramp-foreground = ${colors.foreground-alt}
 [module/powermenu]
 type = custom/text
 content=""
-content-foreground = ${colors.accent6}
+content-foreground = ${colors.accent1}
 click-left = powermenu
 
 [module/system-bluetooth-bluetoothctl]
@@ -504,7 +505,7 @@ type = custom/script
 exec = polybarbluetooth
 tail = true
 click-left = polybarbluetooth --toggle &
-format-foreground = ${colors.accent2}
+format-foreground = ${colors.accent1}
 
 [settings]
 screenchange-reload = true
