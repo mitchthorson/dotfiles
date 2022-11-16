@@ -206,7 +206,7 @@ bindsym $mod+r mode "resize"
 # }
 
 # Borders
-for_window [class=".*"] border pixel 2px
+for_window [class=".*"] border pixel 0px
 
 # Colors
 # Dracula
