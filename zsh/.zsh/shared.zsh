@@ -55,6 +55,7 @@ alias glg="git log --graph --decorate --oneline"
 alias gwip='git commit -a -m "work in progress - fixup"'
 alias lazydocker="TERM=screen-256color lazydocker"
 alias devdir="f() { mkdir -p $HOME/dev/$1 };f"
+alias pvpn="protonvpn-cli"
 
 # plugins
 source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
