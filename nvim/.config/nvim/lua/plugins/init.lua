@@ -17,6 +17,8 @@ require('packer').startup(function(use)
 	use 'sbdchd/neoformat'
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	use 'Mofiqul/dracula.nvim'
+	use 'ellisonleao/gruvbox.nvim'
+	use 'shaunsingh/nord.nvim'
 	use 'windwp/nvim-ts-autotag'
 	use 'p00f/nvim-ts-rainbow'
 	use 'windwp/nvim-autopairs'
@@ -35,6 +37,7 @@ require('packer').startup(function(use)
 	use 'numToStr/Comment.nvim'
 	use 'lewis6991/gitsigns.nvim'
 	use 'tpope/vim-fugitive'
+	use 'tpope/vim-rhubarb'
 	use 'jalvesaq/Nvim-R'
 	use 'kyazdani42/nvim-tree.lua'
 	use 'vimwiki/vimwiki'
