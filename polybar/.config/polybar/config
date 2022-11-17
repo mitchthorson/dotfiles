@@ -48,7 +48,7 @@ border-color = #00000000
 
 padding-left = 1
 padding-right = 1
-padding-top = 3
+padding-top = 5
 padding-bottom = 5
 
 ; module-margin-left = 1.75
@@ -56,8 +56,8 @@ padding-bottom = 5
 module-margin-left = 0
 module-margin-right = 3
 
-font-0 = BlexMono Nerd Font:size=13:style=Bold
-font-1 = BlexMono Nerd Font:size=13:style=Bold
+font-0 = BlexMono Nerd Font:size=12:style=Bold
+font-1 = BlexMono Nerd Font:size=12:style=Regular
 
 modules-left = powermenu i3
 modules-center = xwindow
