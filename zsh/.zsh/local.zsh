@@ -1,0 +1,2 @@
+export DESKTOP_DUAL_DISPLAY=true
+
