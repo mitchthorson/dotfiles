@@ -239,6 +239,10 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Dual display handling
+exec_always --no-startup-id $HOME/.local/bin/check_dual_display.sh
+
+
 # Polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 
