@@ -10,3 +10,4 @@ xmonad.o
 nvim/.config/nvim/plugin
 xmonad/**/*.hi
 xmonad/**/*.o
+zsh/.zsh/local.zsh
