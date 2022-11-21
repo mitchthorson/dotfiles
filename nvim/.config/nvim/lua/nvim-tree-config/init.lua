@@ -37,5 +37,3 @@ require'nvim-tree'.setup {
 
 
 vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
-vim.cmd("hi NvimTreeVertSplit guibg=NONE ctermbg=NONE")
-vim.cmd("hi NvimTreeNormal guibg=NONE ctermbg=NONE")
