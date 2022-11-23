@@ -11,8 +11,8 @@ vim.cmd(string.format("hi StatusLineAccent5 gui=NONE guibg=NONE ctermbg=NONE gui
 vim.cmd(string.format("hi StatusLineAccent6 gui=NONE guibg=NONE ctermbg=NONE guifg=%s", palette.orange))
 vim.cmd(string.format("hi GitSignsCurrentLineBlame guifg=%s", palette.pink))
 
-
-vim.cmd(string.format("hi Comment gui=italic guifg=%s", palette.white))
+--[[
+vim.cmd(string.format("hi Comment gui=italic guifg=%s", palette.white)) ]]
 vim.cmd(string.format("hi TSProperty guifg=%s", palette.pink))
 vim.cmd(string.format("hi TSVariable guifg=%s", palette.pink))
 
