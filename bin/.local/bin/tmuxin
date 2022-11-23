@@ -5,16 +5,16 @@ current_name=$(basename "$current_dir" | tr . _)
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $current_name -c $current_dir
+    tmux new-session -s $current_name -c $current_dir -n $current_name
     exit 0
 fi
 
 if ! tmux has-session -t $current_name 2> /dev/null; then
-    tmux new-session -ds $current_name -c $current_dir
+    tmux new-session -ds $current_name -c $current_dir -n $current_name
 fi
 
 if [[ -z $TMUX ]] ; then
-	tmux attach -t $current_name
+	tmux attach -u -t $current_name
 else
 	tmux switch-client -t $current_name
 fi
