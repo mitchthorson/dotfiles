@@ -35,7 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Picom for compositing
-exec --no-startup-id picom --experimental-backends
+exec --no-startup-id picom
 
 # Nitrogen for bgs
 exec --no-startup-id nitrogen --restore
