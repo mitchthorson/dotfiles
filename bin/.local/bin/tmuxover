@@ -25,7 +25,7 @@ fi
 
 
 if [[ -z $TMUX ]] ; then
-	tmux attach -u -t $selected_name
+	tmux -u attach -t $selected_name
 else
 	tmux switch-client -t $selected_name
 fi
