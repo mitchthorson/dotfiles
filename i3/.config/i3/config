@@ -59,9 +59,10 @@ bindsym $mod+Shift+c kill
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run -nb "#161320" -nf "#ABE9B3" -sb "#ABE9B3" -sf "#161320" -fn "BlexMono Nerd Font:style=bold:size=13"
 
-bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
+bindsym $mod+m exec --no-startup-id rofi -show emoji -show-icons
 
-bindsym $mod+Tab exec --no-startup-id rofi -show window
+bindsym $mod+Tab exec --no-startup-id rofi -show window -show-icons
 
 # bindsym $mod+d exec --no-startup-id dmenu_run -nb papayawhip -nf coral -sb coral -sf papayawhip
 # A more modern dmenu replacement is rofi:

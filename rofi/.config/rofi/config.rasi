@@ -1,9 +1,12 @@
 configuration {
-  display-drun: "Applications:";
-  display-window: "Windows:";
-  drun-display-format: "{name}";
+  display-drun: " Apps";
+  display-run: " Run";
+  display-window: " Windows";
+  display-emoji: " Emoji";
+  display-ssh: " SSH";
+  drun-display-format: "{icon} {name}";
   font: "BlexMono Nerd Font Medium 13";
-  modi: "window,run,drun";
+  modi: "drun,window,emoji";
 }
 
 @theme "/dev/null"
@@ -22,6 +25,12 @@ configuration {
   margin: 0;
   padding: 0;
   spacing: 0;
+  text-color: @fg;
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
 }
 
 window {
@@ -49,16 +58,18 @@ element-text {
 
 element-icon {
   size: 30;
+  padding: 5 5 5 10;
 }
 
 entry {
   background-color: @bg-alt;
   padding: 12;
+  // margin: 20px 0px 0px 10px;
   text-color: @fg;
 }
 
 inputbar {
-  children: [entry];
+  children: [prompt, entry];
 }
 
 listview {
@@ -70,7 +81,7 @@ listview {
 
 mainbox {
   background-color: @bg;
-  children: [inputbar, listview];
+  children: [inputbar, message, listview, mode-switcher];
 }
 
 prompt {
@@ -78,6 +89,25 @@ prompt {
   enabled: true;
   padding: 12 0 0 12;
   text-color: @fg;
+}
+
+mode-switcher {
+  // padding: 20;
+  background-color: @bg;
+}
+
+button {
+  text-color: @fg;
+  padding: 5 5 5 5;
+  margin-bottom: -5;
+}
+
+button selected {
+  // border: 2;
+  // border-color: @bg-alt;
+  border-radius: 3px 3px 0 0;
+  background-color: @bg-alt;
+  // text-color: @bg;
 }
 
 /* vim: ft=sass
