@@ -9,5 +9,5 @@ if [ $? == 0 ]; then
 	echo "imap session already exists"
 else
 	echo "starting imap session"
-	tmux new -d -s offlineimap -n imap offlineimap
+	tmux new -d -s $session -n imap offlineimap
 fi
