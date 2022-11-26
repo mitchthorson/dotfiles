@@ -15,7 +15,7 @@ font:
     family: BlexMono Nerd Font
     style: Bold Italic
 import:
-  - ~/.config/alacritty/themes/dracula/dracula.yml
+  - ~/.config/alacritty/themes/catppuccin/catppuccin.yml
 window:
   opacity: 0.8
   dimensions:
