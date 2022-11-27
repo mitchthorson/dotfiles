@@ -207,17 +207,24 @@ bindsym $mod+r mode "resize"
 # }
 
 # Borders
-for_window [class=".*"] border pixel 0px
+for_window [class=".*"] border pixel 2px
 
 # Colors
 # Dracula
-set $base-color	#282a36
-set $text-color #f8f8f2
-set $border-color #bd93f9
-set $border-inactive-color #6272a4
 
+# set $base-color	#282a36
+# set $text-color #f8f8f2
+# set $border-color #bd93f9
+# set $border-inactive-color #6272a4
+
+# Catppuccin
+
+set $base-color	#1e1e2e
+set $text-color #cdd6f4
+set $border-color #cba6f7
+set $border-inactive-color #cba6f7
 #                       border                  background         text                 indicator
-client.focused          $border-color           $border-color      $text-color          $border-color
+client.focused          $border-color           $border-color      $base-color          $border-color
 client.unfocused        $border-inactive-color  $base-color        $text-color          $border-color
 client.focused_inactive $border-inactive-color  $base-color        $text-color          $border-color
 client.urgent           $border-inactive-color  $base-color        $text-color          $border-color
