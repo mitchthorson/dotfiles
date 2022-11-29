@@ -40,7 +40,7 @@ precmd () { vcs_info }
 NEWLINE=$'\n'
 setopt prompt_subst
 zstyle ':vcs_info:git:*' formats ' %F{white}on %F{3} %b'
-PROMPT='%F{4}%n%F{white}@%F{5}%m %F{white}in %F{6} %~${vcs_info_msg_0_} %F{2}$ '
+PROMPT='%F{6} %~${vcs_info_msg_0_} %F{2}$ '
 # RPROMPT='%F{blue}%* %F{green}%(?.﫟.)'
 
 # aliases
