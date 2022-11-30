@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-OUTPUT='/home/mitchthorson/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png'
+OUTPUT="$HOME/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png"
 
 case "$1" in
-	"select") scrot "$OUTPUT" --select --line mode=edge || exit;;
-	"window") scrot "$OUTPUT" --focused --border || exit;;
+	"select") scrot -s --line mode=edge "$OUTPUT" || exit;;
+	"window") scrot -u "$OUTPUT" || exit;;
 	*) scrot "$OUTPUT" || exit;;
 esac
 

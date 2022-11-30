@@ -5,7 +5,7 @@ configuration {
   display-emoji: " Emoji";
   display-ssh: " SSH";
   drun-display-format: "{icon} {name}";
-  font: "BlexMono Nerd Font Medium 13";
+  font: "JetBrainsMono Nerd Font Medium 13";
   modi: "drun,window,emoji";
 }
 
