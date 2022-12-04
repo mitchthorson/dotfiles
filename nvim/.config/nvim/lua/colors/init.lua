@@ -7,7 +7,7 @@
 -----------------------------------------------
 
 
-local colorscheme = "tokyonight"
+local colorscheme = "rose-pine"
 local transparent_bg = true
 
 local function set_color(colorname)

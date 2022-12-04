@@ -21,6 +21,7 @@ require('packer').startup(function(use)
 	use 'shaunsingh/nord.nvim'
 	use 'folke/tokyonight.nvim'
 	use { "catppuccin/nvim", as = "catppuccin" }
+	use 'rose-pine/neovim'
 	use 'windwp/nvim-ts-autotag'
 	use 'p00f/nvim-ts-rainbow'
 	use 'windwp/nvim-autopairs'
