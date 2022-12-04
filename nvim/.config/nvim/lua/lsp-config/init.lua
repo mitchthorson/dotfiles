@@ -51,6 +51,10 @@ require'lspconfig'.gopls.setup{
 	capabilities = capabilities,
 	on_attach = handle_attach
 }
+require'lspconfig'.rust_analyzer.setup{
+	capabilities = capabilities,
+	on_attach = handle_attach
+}
 
 -- setup lua language server
 
