@@ -1,16 +1,22 @@
 env:
   TERM: xterm-256color
 font:
-  size: 17
+  size: 18
   use_thin_strokes: true
   normal:
-    family: BlexMono Nerd Font
-    style: Text
+    family: Iosevka Nerd Font Mono
+    style: Regular
   bold:
-    family: BlexMono Nerd Font
+    family: Iosevka Nerd Font Mono
     style: Bold
+  italic:
+    family: Iosevka Nerd Font Mono
+    style: Regular Italic
+  bold_italic:
+    family: Iosevka Nerd Font Mono
+    style: Bold Italic
 import:
-  - ~/.config/alacritty/themes/dracula/dracula.yml
+  - ~/.config/alacritty/themes/rose-pine/rose-pine.yml
 window:
   dimensions:
     columns: 150
