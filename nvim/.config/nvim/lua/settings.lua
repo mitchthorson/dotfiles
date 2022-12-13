@@ -77,7 +77,7 @@ opt.listchars = {
 	nbsp = '+'
 }
 
-vim.o.list = true
+vim.o.list = false
 
 -----------------------------------------------
 -- autocompletion
