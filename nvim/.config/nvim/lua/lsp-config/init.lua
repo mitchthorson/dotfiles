@@ -56,6 +56,10 @@ require'lspconfig'.rust_analyzer.setup{
 	on_attach = handle_attach
 }
 
+require'lspconfig'.astro.setup{
+	capabilities = capabilities,
+	on_attach = handle_attach
+}
 -- setup lua language server
 
 -- set the path to the sumneko installation; if you previously installed via the now deprecated :LspInstall, use
