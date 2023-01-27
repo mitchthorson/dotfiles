@@ -76,3 +76,6 @@ eval "$(pyenv init --path)"
 
 # rust
 . "$HOME/.cargo/env"
+
+# 1Password SSH agent
+export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
