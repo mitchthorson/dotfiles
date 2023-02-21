@@ -52,6 +52,10 @@ require('packer').startup(function(use)
 	use 'tidalcycles/vim-tidal' -- tidal cycles music software
 	use 'hkupty/iron.nvim'
 	use 'tpope/vim-sleuth'
+	use {'quarto-dev/quarto-nvim', requires = {
+		'jmbuhr/otter.nvim',
+		'neovim/nvim-lspconfig'
+    }}
 end)
 
 -----------------------------------------------
@@ -69,4 +73,5 @@ require("telescope-config")
 require("vimwiki-config")
 require("iron")
 require("neoformat")
+require("quarto-nvim")
 
