@@ -63,7 +63,7 @@ local plugins = {
 	'tpope/vim-rhubarb',
 	'jalvesaq/Nvim-R',
 	'kyazdani42/nvim-tree.lua',
-	'vimwiki/vimwiki',
+	{'vimwiki/vimwiki', init=require("vimwiki-config").init},
 	--currently testing out some clojure plugins
 	-- 'tpope/vim-fireplace'
 	'Olical/conjure',
@@ -92,7 +92,7 @@ require("gitsigns-config")
 require("nvim-tree-config")
 require("luasnip-config")
 require("telescope-config")
-require("vimwiki-config")
+-- require("vimwiki-config")
 require("iron")
 require("neoformat")
 require("quarto-nvim")
