@@ -1,4 +1,5 @@
 local map = vim.api.nvim_set_keymap
+local nvim_lsp = require'lspconfig'
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
@@ -23,40 +24,47 @@ end
 -- capabilities to use with each language server
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require'lspconfig'.html.setup {
+nvim_lsp.html.setup {
 	capabilities = capabilities,
 	on_attach = handle_attach
 }
-require'lspconfig'.tsserver.setup{
+nvim_lsp.denols.setup{
+	on_attach = handle_attach,
+	root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
+}
+
+nvim_lsp.tsserver.setup{
+	capabilities = capabilities,
+	on_attach = handle_attach,
+	root_dir = nvim_lsp.util.root_pattern("package.json"),
+	single_file_support = false
+}
+nvim_lsp.pyright.setup{
 	capabilities = capabilities,
 	on_attach = handle_attach
 }
-require'lspconfig'.pyright.setup{
+nvim_lsp.cssls.setup{
 	capabilities = capabilities,
 	on_attach = handle_attach
 }
-require'lspconfig'.cssls.setup{
+nvim_lsp.svelte.setup{
 	capabilities = capabilities,
 	on_attach = handle_attach
 }
-require'lspconfig'.svelte.setup{
+nvim_lsp.r_language_server.setup{
 	capabilities = capabilities,
 	on_attach = handle_attach
 }
-require'lspconfig'.r_language_server.setup{
+nvim_lsp.gopls.setup{
 	capabilities = capabilities,
 	on_attach = handle_attach
 }
-require'lspconfig'.gopls.setup{
-	capabilities = capabilities,
-	on_attach = handle_attach
-}
-require'lspconfig'.rust_analyzer.setup{
+nvim_lsp.rust_analyzer.setup{
 	capabilities = capabilities,
 	on_attach = handle_attach
 }
 
-require'lspconfig'.astro.setup{
+nvim_lsp.astro.setup{
 	capabilities = capabilities,
 	on_attach = handle_attach
 }
@@ -70,7 +78,7 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, "lua/?.lua")
 table.insert(runtime_path, "lua/?/init.lua")
 
-require'lspconfig'.sumneko_lua.setup {
+nvim_lsp.sumneko_lua.setup {
 	cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"};
 	capabilities = capabilities,
 	on_attach = handle_attach,
