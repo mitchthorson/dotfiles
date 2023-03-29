@@ -83,3 +83,9 @@ export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 # Deno
 export DENO_INSTALL="$HOME/.deno"
 export PATH=$DENO_INSTALL/bin:$PATH
+
+# Re-source the local file
+if [ -f $HOME/.zsh/local.zsh ]; then
+	source $HOME/.zsh/local.zsh
+fi
+
