@@ -74,7 +74,8 @@ local plugins = {
 	{'quarto-dev/quarto-nvim', dependencies = {
 		'jmbuhr/otter.nvim',
 		'neovim/nvim-lspconfig'
-    }}
+	}},
+	'github/copilot.vim',
 }
 
 require('lazy').setup(plugins)
