@@ -1,15 +1,15 @@
 require'nvim-treesitter.configs'.setup {
 	ensure_installed = {"html", "javascript", "typescript", "css", "lua", "svelte", "python", "bash", "json", "go", "gomod", "yaml", "make"},
 	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting = false,
+	    enable = true,
+	    additional_vim_regex_highlighting = false,
 	},
 	autotag = {
-    enable = true,
-  },
+	    enable = true,
+	},
 	rainbow = {
-		enable= true,
-		extended_mode = false,
+	    enable= true,
+	    extended_mode = false,
 	},
 }
 

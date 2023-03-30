@@ -27,7 +27,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	'wbthomason/packer.nvim',
 	'sbdchd/neoformat',
 	{
 		'nvim-treesitter/nvim-treesitter',
