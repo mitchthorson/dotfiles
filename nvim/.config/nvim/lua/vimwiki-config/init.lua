@@ -2,7 +2,7 @@ local M = {}
 
 M.init = function()
 	vim.g.vimwiki_list = {{
-		path = "~/wiki",
+		path = "~/SynologyDrive/wiki",
 		syntax = "markdown",
 		ext = "md"
 	}}
