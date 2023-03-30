@@ -32,7 +32,6 @@ nvim_lsp.denols.setup{
 	on_attach = handle_attach,
 	root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
 }
-
 nvim_lsp.tsserver.setup{
 	capabilities = capabilities,
 	on_attach = handle_attach,
