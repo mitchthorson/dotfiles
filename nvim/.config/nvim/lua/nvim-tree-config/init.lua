@@ -35,6 +35,8 @@ require'nvim-tree'.setup {
 	},
 }
 
+
+-- thanks to https://github.com/nvim-tree/nvim-tree.lua/wiki/Open-At-Startup
 local function open_nvim_tree(data)
 
   -- buffer is a directory
