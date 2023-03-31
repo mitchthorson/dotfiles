@@ -82,7 +82,7 @@ end
 
 local key_map = vim.api.nvim_set_keymap
 -- Telescope shortcuts
-key_map('n', '<leader>f', '<CMD>Telescope find_files<CR>', {noremap = true})
+key_map('n', '<leader>f', '<CMD>Telescope find_files hidden=true<CR>', {noremap = true})
 key_map('n', '<leader>F', '<CMD>Telescope live_grep<CR>', {noremap = true})
 key_map('n', '<leader>r', '<CMD>Telescope lsp_references<CR>', {noremap = true})
 key_map('n', '<leader>h', '<CMD>Telescope help_tags<CR>', {noremap = true})
