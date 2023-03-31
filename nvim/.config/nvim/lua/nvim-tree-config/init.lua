@@ -1,58 +1,62 @@
-local palette = require('dracula').colors()
+local M = {}
 
-vim.g.nvim_tree_refresh_wait = 250
+M.init = function()
+	vim.g.nvim_tree_refresh_wait = 250
 
-require'nvim-tree'.setup {
-	open_on_setup    = false,
-	view = {
-		width = 30,
-	},
-	renderer = {
-		indent_markers = {
-			enable = false,
+	require'nvim-tree'.setup {
+		open_on_setup    = false,
+		view = {
+			width = 30,
 		},
-		icons = {
-			show = {
-				git = false,
-				folder = true,
-				file = false,
-				folder_arrow = false,
+		renderer = {
+			indent_markers = {
+				enable = false,
 			},
-			glyphs = {
-					folder = {
-					arrow_open = '',
-					arrow_closed = '',
-					default = '',
-					open = '',
-				}
-			},
-		}
-	},
-	actions = {
-		open_file = {
-			quit_on_open = true,
+			icons = {
+				show = {
+					git = false,
+					folder = true,
+					file = false,
+					folder_arrow = false,
+				},
+				glyphs = {
+						folder = {
+						arrow_open = '',
+						arrow_closed = '',
+						default = '',
+						open = '',
+					}
+				},
+			}
 		},
-	},
-}
+		actions = {
+			open_file = {
+				quit_on_open = true,
+			},
+		},
+	}
 
 
--- thanks to https://github.com/nvim-tree/nvim-tree.lua/wiki/Open-At-Startup
-local function open_nvim_tree(data)
+	-- thanks to https://github.com/nvim-tree/nvim-tree.lua/wiki/Open-At-Startup
+	local function open_nvim_tree(data)
 
-  -- buffer is a directory
-  local directory = vim.fn.isdirectory(data.file) == 1
+	  -- buffer is a directory
+	  local directory = vim.fn.isdirectory(data.file) == 1
 
-  if not directory then
-    return
-  end
+	  if not directory then
+	    return
+	  end
 
-  -- change to the directory
-  vim.cmd.cd(data.file)
+	  -- change to the directory
+	  vim.cmd.cd(data.file)
 
-  -- open the tree
-  require("nvim-tree.api").tree.open()
+	  -- open the tree
+	  require("nvim-tree.api").tree.open()
+	end
+
+	-- auto call open_nvim_tree when entering a directory
+	vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+	vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 end
 
--- auto call open_nvim_tree when entering a directory
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
-vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+return M

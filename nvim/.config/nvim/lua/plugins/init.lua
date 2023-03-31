@@ -43,7 +43,15 @@ local plugins = {
 		}
 	},
 	'jalvesaq/Nvim-R',
-	'kyazdani42/nvim-tree.lua',
+	{
+		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = require("nvim-tree-config").init,
+	},
+	'nvim-tree/nvim-tree.lua',
 	'lewis6991/gitsigns.nvim',
 	'L3MON4D3/LuaSnip',
 	'Mofiqul/dracula.nvim',
