@@ -52,6 +52,9 @@ map('n', '<leader>x', ':noh<CR>', {noremap = true})
 -- as long as its in ~/wiki/notes/Vim Journal.md
 map('n', '<leader>vj', ':e ~/wiki/notes/Vim Journal.md<CR>', {noremap = true})
 
+-- jump to my neovim config from anywhere
+map('n', '<leader>vo', ':e ~/dotfiles/nvim/.config/nvim/init.lua<CR>', {noremap = true})
+
 -- Toggle NetRW  
 -- deprecated for now
 -- I've moved to nvimtree
