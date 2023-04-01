@@ -1,6 +1,4 @@
-local M = {}
-
-M.init = function()
+return function()
 	vim.g.nvim_tree_refresh_wait = 250
 
 	require'nvim-tree'.setup {
@@ -58,5 +56,3 @@ M.init = function()
 	vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 	vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
 end
-
-return M

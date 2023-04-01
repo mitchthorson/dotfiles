@@ -106,6 +106,8 @@ cmd [[
 	au BufNewFile,BufRead *.glsl set filetype=glsl
 ]]
 
+vim.filetype.add({  extension = {    mdx = 'mdx'  }})
+
 -----------------------------------------------
 -- python
 -- turn off the default styling and take care of it myself

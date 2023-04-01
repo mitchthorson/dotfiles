@@ -1,1 +1,3 @@
-vim.g.neoformat_enabled_python = {'black'}
+return function()
+  vim.g.neoformat_enabled_python = {'black'}
+end
