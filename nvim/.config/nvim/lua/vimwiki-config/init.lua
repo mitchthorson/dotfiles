@@ -1,6 +1,4 @@
-local M = {}
-
-M.init = function()
+return function()
 	vim.g.vimwiki_list = {{
 		path = "~/SynologyDrive/wiki",
 		syntax = "markdown",
@@ -8,4 +6,3 @@ M.init = function()
 	}}
 end
 
-return M

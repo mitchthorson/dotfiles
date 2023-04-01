@@ -1,6 +1,4 @@
-local M = {}
-
-M.init = function()
+return function()
     require("nvim-treesitter.configs").setup {
 	    ensure_installed = {"html", "javascript", "typescript", "css", "lua", "svelte", "python", "bash", "json", "go", "gomod", "yaml", "make"},
 	    highlight = {
@@ -33,4 +31,3 @@ M.init = function()
     )
 end
 
-return M

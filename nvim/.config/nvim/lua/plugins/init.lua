@@ -29,9 +29,9 @@ vim.opt.rtp:prepend(lazypath)
 -- plugin configuration
 local plugins = {
 	'clojure-vim/vim-jack-in',
-	{ "catppuccin/nvim", name = "catppuccin" },
-	'ellisonleao/gruvbox.nvim',
-	'folke/tokyonight.nvim',
+	-- { "catppuccin/nvim", name = "catppuccin" },
+	-- 'ellisonleao/gruvbox.nvim',
+	-- 'folke/tokyonight.nvim',
 	{'github/copilot.vim', config = function()
 		-- 🤖
 		vim.g.copilot_no_tab_map = true
@@ -66,7 +66,7 @@ local plugins = {
 	},
 	{
 		'nvim-treesitter/nvim-treesitter',
-		config = require("nvim-treesitter-config").init,
+		config = require("nvim-treesitter-config"),
 	},
 	{'numToStr/Comment.nvim', config = function() require('Comment').setup() end},
 	'nvim-lua/plenary.nvim',
@@ -90,7 +90,7 @@ local plugins = {
 	'tpope/vim-rhubarb',
 	'tpope/vim-dispatch', -- dependency for vim-jack-in
 	'tpope/vim-sleuth',
-	{'vimwiki/vimwiki', init=require("vimwiki-config").init},
+	{'vimwiki/vimwiki', init=require("vimwiki-config")},
 	'windwp/nvim-ts-autotag',
 	{'windwp/nvim-autopairs', init=require("nvim-autopairs-config")},
 }
