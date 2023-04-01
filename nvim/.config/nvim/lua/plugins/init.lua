@@ -29,9 +29,9 @@ vim.opt.rtp:prepend(lazypath)
 -- plugin configuration
 local plugins = {
 	'clojure-vim/vim-jack-in',
-	-- { "catppuccin/nvim", name = "catppuccin" },
-	-- 'ellisonleao/gruvbox.nvim',
-	-- 'folke/tokyonight.nvim',
+	{ "catppuccin/nvim", name = "catppuccin", lazy= true},
+	{'ellisonleao/gruvbox.nvim', lazy = true},
+	{'folke/tokyonight.nvim', lazy = true},
 	{'github/copilot.vim', config = function()
 		-- 🤖
 		vim.g.copilot_no_tab_map = true
@@ -60,7 +60,7 @@ local plugins = {
 	'nvim-tree/nvim-tree.lua',
 	{'lewis6991/gitsigns.nvim', config = require("gitsigns-config")},
 	{'L3MON4D3/LuaSnip', config = require("luasnip-config")},
-	'Mofiqul/dracula.nvim',
+	{'Mofiqul/dracula.nvim', lazy = true},
 	{'neovim/nvim-lspconfig', 
 		config = require("lsp-config"),
 	},
@@ -78,7 +78,7 @@ local plugins = {
 		'jmbuhr/otter.nvim',
 		'neovim/nvim-lspconfig'
 	}, config = require("quarto-nvim")},
-	'rose-pine/neovim',
+	{'rose-pine/neovim', lazy = true},
 	'saadparwaiz1/cmp_luasnip',
 	{'sbdchd/neoformat', config = require("neoformat")},
 	'shaunsingh/nord.nvim',
