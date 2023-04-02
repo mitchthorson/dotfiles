@@ -29,15 +29,36 @@ vim.opt.rtp:prepend(lazypath)
 -- plugin configuration
 local plugins = {
 	'clojure-vim/vim-jack-in',
-	{ "catppuccin/nvim", name = "catppuccin", lazy= true},
-	{'ellisonleao/gruvbox.nvim', lazy = true},
-	{'folke/tokyonight.nvim', lazy = true},
-	{'github/copilot.vim', config = function()
-		-- 🤖
-		vim.g.copilot_no_tab_map = true
-		vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-	end},
-	{'hkupty/iron.nvim', config = require("iron")},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		lazy= true,
+	},
+	{
+	   "danymat/neogen",
+           dependencies = "nvim-treesitter/nvim-treesitter",
+           -- config = require("neogen-config"),
+           config = true,
+	},
+	{
+		'ellisonleao/gruvbox.nvim',
+		lazy = true,
+	},
+	{
+    'folke/tokyonight.nvim',
+		lazy = true,
+	},
+	{
+		'github/copilot.vim', -- 🤖
+		config = function()
+      vim.g.copilot_no_tab_map = true
+      vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+		end,
+	},
+	{
+		'hkupty/iron.nvim',
+		config = require("iron"),
+	},
 	{
 		'hrsh7th/nvim-cmp',
 		init = require("nvim-cmp-config"),
@@ -49,7 +70,10 @@ local plugins = {
 			'hrsh7th/cmp-nvim-lua',
 		}
 	},
-	{'jalvesaq/Nvim-R', ft = "r"},
+	{
+		'jalvesaq/Nvim-R',
+		ft = "r",
+	},
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",
@@ -59,29 +83,60 @@ local plugins = {
 		config = require("nvim-tree-config"),
 	},
 	'nvim-tree/nvim-tree.lua',
-	{'lewis6991/gitsigns.nvim', config = require("gitsigns-config")},
-	{'L3MON4D3/LuaSnip', config = require("luasnip-config")},
-	{'Mofiqul/dracula.nvim', lazy = true},
-	{'neovim/nvim-lspconfig', 
+	{
+		'lewis6991/gitsigns.nvim',
+		config = require("gitsigns-config"),
+	},
+	{
+		'L3MON4D3/LuaSnip',
+		config = require("luasnip-config"),
+	},
+	{
+		'Mofiqul/dracula.nvim',
+		lazy = true,
+	},
+	{
+		'neovim/nvim-lspconfig',
 		config = require("lsp-config"),
 	},
 	{
 		'nvim-treesitter/nvim-treesitter',
 		config = require("nvim-treesitter-config"),
 	},
-	{'numToStr/Comment.nvim', config = function() require('Comment').setup() end},
+	{
+		'numToStr/Comment.nvim',
+		config = true,
+	},
 	'nvim-lua/plenary.nvim',
-	{'nvim-telescope/telescope.nvim', config = require("telescope-config").init},
-	{'nvim-telescope/telescope-file-browser.nvim', dependencies = { "nvim-telescope/telescope.nvim" }},
+	{
+    'nvim-telescope/telescope.nvim',
+		config = require("telescope-config").init,
+	},
+	{
+    'nvim-telescope/telescope-file-browser.nvim',
+    dependencies = { 
+      "nvim-telescope/telescope.nvim",
+    },
+  },
 	'onsails/lspkind-nvim',
 	'p00f/nvim-ts-rainbow',
-	{'quarto-dev/quarto-nvim', dependencies = {
-		'jmbuhr/otter.nvim',
-		'neovim/nvim-lspconfig'
-	}, config = require("quarto-nvim")},
-	{'rose-pine/neovim', lazy = true},
+	{
+    'quarto-dev/quarto-nvim',
+    dependencies = {
+      'jmbuhr/otter.nvim',
+      'neovim/nvim-lspconfig',
+    },
+    config = require("quarto-nvim"),
+  },
+	{
+    'rose-pine/neovim',
+    lazy = true,
+  },
 	'saadparwaiz1/cmp_luasnip',
-	{'sbdchd/neoformat', config = require("neoformat")},
+	{
+    'sbdchd/neoformat',
+    config = require("neoformat"),
+  },
 	'shaunsingh/nord.nvim',
 	--currently testing out some clojure plugins
 	-- 'Olical/conjure',
@@ -91,9 +146,15 @@ local plugins = {
 	'tpope/vim-rhubarb',
 	'tpope/vim-dispatch', -- dependency for vim-jack-in
 	'tpope/vim-sleuth',
-	{'vimwiki/vimwiki', init=require("vimwiki-config")},
+	{
+    'vimwiki/vimwiki',
+    init=require("vimwiki-config"),
+  },
 	'windwp/nvim-ts-autotag',
-	{'windwp/nvim-autopairs', init=require("nvim-autopairs-config")},
+	{
+    'windwp/nvim-autopairs',
+    init=require("nvim-autopairs-config")
+  },
 }
 
 -- initialize lazy with configuration
