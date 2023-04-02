@@ -46,6 +46,7 @@ local plugins = {
 			'hrsh7th/cmp-buffer',
 			'hrsh7th/cmp-path',
 			'hrsh7th/cmp-emoji',
+			'hrsh7th/cmp-nvim-lua',
 		}
 	},
 	{'jalvesaq/Nvim-R', ft = "r"},
