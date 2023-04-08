@@ -1,7 +1,7 @@
  -- Setup and configure nvim-cmp plugin
  -- https://github.com/hrsh7th/nvim-cmp
  -- this provides easy to use completions from sources like lsp and luasnip
-function init()
+return function()
 	vim.g.completeopt="menu,menuone,noselect,noinsert"
 
 	local cmp = require'cmp'
@@ -23,6 +23,10 @@ function init()
 			expand = function(args)
 				luasnip.lsp_expand(args.body) -- For `luasnip` users.
 			end,
+		},
+		window = {
+			completion = cmp.config.window.bordered(),
+			documentation = cmp.config.window.bordered(),
 		},
 		mapping = {
 			['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
@@ -55,11 +59,14 @@ function init()
 			end, { "i", "s" }),
 		},
 		sources = cmp.config.sources({
-			{ name = 'nvim_lsp' },
-			{ name = 'luasnip' }, -- For luasnip users.
-			{ name = 'emoji'},
-		}, {
-			{ name = 'buffer' },
+				{ name = 'nvim_lsp' },
+				{ name = 'luasnip' }, -- For luasnip users.
+				{ name = 'emoji' },
+				{ name = 'nvim_lua' }
+			},
+			{
+				{ name = 'path' },
+				{ name = 'buffer' },
 		}),
 		formatting = {
 	    format = lspkind.cmp_format({with_text = true, maxwidth = 50})
@@ -68,4 +75,3 @@ function init()
 
 
 end
-return init
