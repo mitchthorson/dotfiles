@@ -84,6 +84,14 @@ export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 export DENO_INSTALL="$HOME/.deno"
 export PATH=$DENO_INSTALL/bin:$PATH
 
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
 # Re-source the local file
 if [ -f $HOME/.zsh/local.zsh ]; then
 	source $HOME/.zsh/local.zsh
