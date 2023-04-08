@@ -3,6 +3,9 @@
 # history
 export SAVEHIST=50000
 export HISTFILE=$HOME/.histfile
+export HISTCONTROL=ignoredups:erasedups
+setopt share_history
+setopt histignorealldups
 
 # vi keybindings
 bindkey -v
