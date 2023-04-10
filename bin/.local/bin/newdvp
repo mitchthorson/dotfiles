@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+if [ -z "$1" ]
+  then
+    echo "Please provide a repository name in the format of \"org/repo\""
+    exit
+fi
+
+gh repo create \
+  --private \
+  --clone \
+  -p ui-research/dataviz-project-starter-kit \
+  $1 

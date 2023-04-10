@@ -3,6 +3,9 @@
 # history
 export SAVEHIST=50000
 export HISTFILE=$HOME/.histfile
+export HISTCONTROL=ignoredups:erasedups
+setopt share_history
+setopt histignorealldups
 
 # vi keybindings
 bindkey -v
@@ -83,6 +86,14 @@ export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 # Deno
 export DENO_INSTALL="$HOME/.deno"
 export PATH=$DENO_INSTALL/bin:$PATH
+
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
 # Re-source the local file
 if [ -f $HOME/.zsh/local.zsh ]; then
