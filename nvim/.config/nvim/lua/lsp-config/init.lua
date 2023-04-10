@@ -72,6 +72,18 @@ function init()
 		capabilities = capabilities,
 		on_attach = handle_attach
 	}
+	nvim_lsp.yamlls.setup{
+		capabilities = capabilities,
+		on_attach = handle_attach,
+		settings = {
+			yaml = {
+				schemas = {
+					["https://json.schemastore.org/circleciconfig.json"] = "/.circleci/*",
+					["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*"
+				},
+			},
+		}
+	}
 	-- setup lua language server
 
 	nvim_lsp.lua_ls.setup {
