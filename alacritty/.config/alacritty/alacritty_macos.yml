@@ -2,7 +2,6 @@ env:
   TERM: xterm-256color
 font:
   size: 18
-  use_thin_strokes: true
   normal:
     family: Iosevka Nerd Font Mono
     style: Regular
@@ -18,6 +17,7 @@ font:
 import:
   - ~/.config/alacritty/themes/rose-pine/rose-pine.yml
 window:
+  opacity: 0.75
   dimensions:
     columns: 150
     lines: 50
@@ -26,6 +26,5 @@ window:
     y: 20
   dynamic_padding: true
   decorations: transparent
-background_opacity: 0.75
 key_bindings:
   - { key: Return,              mods: Command,            action: ToggleSimpleFullscreen      }
