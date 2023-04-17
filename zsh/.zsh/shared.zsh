@@ -101,3 +101,6 @@ if [ -f $HOME/.zsh/local.zsh ]; then
 	source $HOME/.zsh/local.zsh
 fi
 
+# startup starship
+eval "$(starship init zsh)"
+
