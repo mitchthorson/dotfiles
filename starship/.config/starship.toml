@@ -60,3 +60,8 @@ format = '([\[$all_status$ahead_behind\]]($style) )'
 [nodejs]
 style = 'bold green'
 format = '[$symbol($version )]($style)'
+
+[rlang]
+style = 'bold blue'
+symbol = 'R '
+format = '[$symbol($version )]($style)'
