@@ -2,7 +2,17 @@
 alias ls="ls --color=auto"
 
 # FZF fuzzy find history
-source /usr/share/fzf/shell/key-bindings.zsh
+if [ -f /usr/share/fzf/shell/key-bindings.zsh ]; then 
+	source /usr/share/fzf/shell/key-bindings.zsh
+fi
+
+if [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]; then 
+	source /usr/share/doc/fzf/examples/key-bindings.zsh
+fi
+
+if [ -f /usr/share/doc/fzf/examples/completion.zsh ]; then 
+	source /usr/share/doc/fzf/examples/completion.zsh
+fi
 
 # add lua language server to $PATH
 export PATH="$HOME/lua-language-server/bin:$PATH"

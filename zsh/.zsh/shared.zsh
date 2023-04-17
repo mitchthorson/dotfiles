@@ -70,6 +70,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # golang stuff
+export PATH=$PATH:/usr/local/go/bin
 GOPATH="$HOME/go"
 GOBIN="$GOPATH/bin"
 export PATH=$GOBIN:$PATH
