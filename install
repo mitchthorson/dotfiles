@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 DOTFILES_FOLDER="$HOME/dotfiles"
-FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar fontconfig")
+FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar fontconfig starship")
 FOLDERS_I3=$(echo "i3 polybar dunst rofi picom")
 FOLDERS_MAC=$(echo "bin alacritty nvim zsh tmux gnupg-mac starship")
 FOLDERS=$(echo "")

@@ -23,6 +23,7 @@ local function set_color(colorname)
 		vim.cmd("hi StatusLineAccent4 gui=NONE guibg=NONE ctermbg=NONE")
 		vim.cmd("hi StatusLineAccent5 gui=NONE guibg=NONE ctermbg=NONE")
 		vim.cmd("hi StatusLineAccent6 gui=NONE guibg=NONE ctermbg=NONE")
+		vim.cmd("hi ZenBg gui=NONE guibg=NONE ctermbg=NONE")
 		vim.cmd("hi NvimTreeVertSplit guibg=NONE ctermbg=NONE")
 		vim.cmd("hi NvimTreeNormal guibg=NONE ctermbg=NONE")
 	end
@@ -51,6 +52,9 @@ set_color(colorscheme)
 local function set_color_command(opts)
 	local new_color = opts.fargs[1]
 	set_color(new_color)
+end
+
+local function toggle_transparent()
 end
 
 vim.api.nvim_create_user_command("SetColor", set_color_command, {
