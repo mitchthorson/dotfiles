@@ -149,7 +149,7 @@ local plugins = {
 	'tpope/vim-fugitive',
 	'tpope/vim-rhubarb',
 	'tpope/vim-dispatch', -- dependency for vim-jack-in
-	'tpope/vim-sleuth',
+	-- 'tpope/vim-sleuth',
 	{
     'vimwiki/vimwiki',
     init=require("vimwiki-config"),
