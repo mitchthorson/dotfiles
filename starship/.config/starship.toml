@@ -64,6 +64,7 @@ style = 'bold green'
 format = '[$symbol($version )]($style)'
 
 [rlang]
+detect_files = []
 style = 'bold blue'
 symbol = 'R '
 format = '[$symbol($version )]($style)'
