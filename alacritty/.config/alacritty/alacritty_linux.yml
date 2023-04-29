@@ -1,7 +1,7 @@
 env:
   TERM: xterm-256color
 font:
-  size: 16
+  size: 18
   normal:
     family: Iosevka Nerd Font Mono
     style: Regular
@@ -22,6 +22,6 @@ window:
     columns: 100
     lines: 30
   padding:
-    x: 10
-    y: 15
-  decorations: none
+    x: 0
+    y: 0
+  decorations: full
