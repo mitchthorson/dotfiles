@@ -13,6 +13,7 @@ vim.o.background = "dark"
 
 local function set_color(colorname)
 	vim.cmd("colorscheme " .. colorname)
+	vim.env.colorscheme = colorname
 	if (vim.env.transparent_bg) then
 		vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 		vim.cmd("hi CursorLine guibg=NONE")
@@ -42,7 +43,7 @@ local function set_color(colorname)
 	vim.cmd("hi DiagnosticSignHint guibg=NONE ctermbg=NONE")
 	vim.cmd("hi DiagnosticSignInfo guibg=NONE ctermbg=NONE")
 	vim.cmd("hi DiagnosticSignWarn guibg=NONE ctermbg=NONE")
-	vim.cmd("hi TelescopeNormal guibg=NONE ctermbg=NONE")
+	-- vim.cmd("hi TelescopeNormal guibg=NONE ctermbg=NONE")
 	-----------------------------------------------
 	-- custom italic and syntax settings
 	vim.cmd("hi TSMethod gui=italic")
