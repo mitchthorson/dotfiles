@@ -76,7 +76,7 @@ local plugins = {
 	},
 	{
 		'jalvesaq/Nvim-R',
-		ft = "r",
+		ft = {"r", "rmd", "rmarkdown", "quarto", "qmd"},
 	},
 	{
 		"nvim-tree/nvim-tree.lua",
@@ -131,6 +131,7 @@ local plugins = {
       'neovim/nvim-lspconfig',
     },
     config = require("quarto-nvim"),
+		ft = { "rmd", "rmarkdown", "quarto", "qmd" },
   },
 	{
     'rose-pine/neovim',
