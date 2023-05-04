@@ -1,5 +1,5 @@
  -- Setup and configure nvim-cmp plugin
- -- https://github.com/hrsh7th/nvim-cmp
+ -- https://github.com/hrsh7th/nvim-cmpcmp
  -- this provides easy to use completions from sources like lsp and luasnip
 return function()
 	vim.g.completeopt="menu,menuone,noselect,noinsert"
@@ -60,6 +60,7 @@ return function()
 		},
 		sources = cmp.config.sources({
 				{ name = 'nvim_lsp' },
+				{ name = 'otter' },
 				{ name = 'luasnip' }, -- For luasnip users.
 				{ name = 'emoji' },
 				{ name = 'nvim_lua' }

@@ -74,10 +74,10 @@ local plugins = {
 			'hrsh7th/cmp-nvim-lua',
 		}
 	},
-	{
-		'jalvesaq/Nvim-R',
-		ft = {"r", "rmd", "rmarkdown", "quarto", "qmd"},
-	},
+	-- {
+	-- 	'jalvesaq/Nvim-R',
+	-- 	ft = {"r", "rmd", "rmarkdown", "quarto", "qmd"},
+	-- },
 	{
 		"nvim-tree/nvim-tree.lua",
 		version = "*",

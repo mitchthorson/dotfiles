@@ -1,22 +1,29 @@
 return function()
   local iron = require("iron.core")
+	local view = require("iron.view")
 
-  iron.setup {
+	iron.setup {
     config = {
       -- If iron should expose `<plug>(...)` mappings for the plugins
       should_map_plug = false,
       -- Whether a repl should be discarded or not
-      scratch_repl = true,
+      scratch_repl = false,
       -- Your repl definitions come here
       repl_definition = {
-	sh = {
-	  command = {"zsh"}
-	},
-	    -- python repl should use iptyhon
-	    python = require("iron.fts.python").ipython
+				sh = {
+					command = {"zsh"}
+				},
+				-- python repl should use iptyhon
+				python = require("iron.fts.python").ipython,
+				quarto = {
+					command = {"R"}
+				},
+				r = {
+					command = {"R"}
+				},
       },
 	  -- set repl window to a split below
-      repl_open_cmd = "belowright 10 split",
+			repl_open_cmd = view.split.vertical.botright("40%")
       -- how the REPL window will be opened, the default is opening
       -- a float window of height 40 at the bottom.
     },
