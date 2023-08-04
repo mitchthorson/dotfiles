@@ -49,7 +49,7 @@ PROMPT='%F{6} %~${vcs_info_msg_0_} %F{2}$ '
 # aliases
 alias vim="nvim"
 alias mutt="neomutt"
-alias DOTS="cd $HOME/dotfiles"
+alias DOTS="tmuxover $HOME/dotfiles"
 alias nvrc="cd $HOME/dotfiles/nvim/.config/nvim"
 alias zrc="$EDITOR $HOME/dotfiles/zsh/.zshrc_linux"
 alias ll="ls -lah"
