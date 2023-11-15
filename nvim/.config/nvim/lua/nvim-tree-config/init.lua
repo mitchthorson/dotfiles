@@ -2,7 +2,6 @@ return function()
 	vim.g.nvim_tree_refresh_wait = 250
 
 	require'nvim-tree'.setup {
-		open_on_setup    = false,
 		view = {
 			width = 30,
 		},
