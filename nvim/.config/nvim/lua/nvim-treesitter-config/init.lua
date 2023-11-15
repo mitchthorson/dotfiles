@@ -8,10 +8,11 @@ return function()
 	    autotag = {
 				enable = true,
 	    },
-	    rainbow = {
-				enable= true,
-				extended_mode = false,
-	    },
+			-- ts-rainbow is no longer maintained and causing errors
+	   --  rainbow = {
+				-- enable= true,
+				-- extended_mode = false,
+	   --  },
     }
 
     -- vim.treesitter.language.register("markdown", "mdx")

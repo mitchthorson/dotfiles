@@ -123,7 +123,8 @@ local plugins = {
     },
   },
 	'onsails/lspkind-nvim',
-	'p00f/nvim-ts-rainbow',
+	-- nvim-ts-rainbow is no longer maintained and causing errors
+	-- 'p00f/nvim-ts-rainbow',
 	{
     'quarto-dev/quarto-nvim',
     dependencies = {
