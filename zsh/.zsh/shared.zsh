@@ -64,11 +64,6 @@ alias pvpn="protonvpn-cli"
 source "$HOME/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-# nvm setup
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # golang stuff
 export PATH=$PATH:/usr/local/go/bin
 GOPATH="$HOME/go"
@@ -100,6 +95,11 @@ esac
 if [ -f $HOME/.zsh/local.zsh ]; then
 	source $HOME/.zsh/local.zsh
 fi
+
+# nvm setup
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # startup starship
 eval "$(starship init zsh)"

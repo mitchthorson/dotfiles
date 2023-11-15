@@ -52,10 +52,10 @@ g.netrw_browse_split = 0
 
 -----------------------------------------------
 -- tabs, indent settings
-opt.expandtab = false     -- use tabs, not spaces
-opt.shiftwidth = 2        -- shift 4 spaces when tab
-opt.tabstop = 2           -- 1 tab == 4 spaces
-opt.softtabstop = 2       -- 1 tab == 4 spaces
+opt.expandtab = true     -- use spaces, not tabs
+opt.shiftwidth = 2        -- shift 2 spaces when tab
+opt.tabstop = 2           -- 1 tab == 2 spaces
+opt.softtabstop = 2       -- 1 tab == 2 spaces
 opt.smartindent = true    -- autoindent new lines
 
 -----------------------------------------------
