@@ -13,3 +13,6 @@
 [submodule "alacritty/.config/alacritty/themes/dracula"]
 	path = alacritty/.config/alacritty/themes/dracula
 	url = git@github.com:dracula/alacritty.git
+[submodule "tmux/.config/tmux/plugins/tpm"]
+	path = tmux/.config/tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git
