@@ -102,6 +102,9 @@ local plugins = {
 	{
 		'neovim/nvim-lspconfig',
 		config = require("lsp-config"),
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+    },
 	},
 	{
 		'nvim-treesitter/nvim-treesitter',
@@ -160,6 +163,30 @@ local plugins = {
 	{
     'windwp/nvim-autopairs',
     init=require("nvim-autopairs-config")
+  },
+  {
+    "williamboman/mason.nvim",
+    config=function()
+      require("mason").setup()
+    end
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    dependencies = {
+      "williamboman/mason.nvim",
+    },
+    init=function()
+      require("mason-lspconfig").setup{
+        ensure_installed = {
+          "gopls",
+          "tsserver",
+          "marksman",
+          "mdx_analyzer",
+          "pyright",
+          "r_language_server",
+        },
+      }
+    end
   },
 }
 
