@@ -53,13 +53,28 @@ local plugins = {
 		'folke/zen-mode.nvim',
 		config = true
 	},
-	{
-		'github/copilot.vim', -- 🤖
-		config = function()
-      vim.g.copilot_no_tab_map = true
-      vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-		end,
-	},
+  {
+    'zbirenbaum/copilot.lua',
+    config = function()
+      require("copilot").setup({
+      suggestion = { enabled = false },
+      panel = { enabled = false },
+    })
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function ()
+      require("copilot_cmp").setup()
+    end
+  },
+	-- {
+	-- 	'github/copilot.vim', -- 🤖
+	-- 	config = function()
+ --      vim.g.copilot_no_tab_map = true
+ --      vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+	-- 	end,
+	-- },
 	{
 		'hkupty/iron.nvim',
 		config = require("iron"),

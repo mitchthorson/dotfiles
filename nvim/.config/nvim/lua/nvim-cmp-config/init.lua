@@ -59,6 +59,8 @@ return function()
 			end, { "i", "s" }),
 		},
 		sources = cmp.config.sources({
+        -- Copilot Source
+        { name = "copilot" },
 				{ name = 'nvim_lsp' },
 				{ name = 'otter' },
 				{ name = 'luasnip' }, -- For luasnip users.
@@ -70,7 +72,16 @@ return function()
 				{ name = 'buffer' },
 		}),
 		formatting = {
-	    format = lspkind.cmp_format({with_text = true, maxwidth = 50})
+	    format = lspkind.cmp_format({
+        -- with_text = true,
+        maxwidth = 50,
+        symbol_map = {
+          Copilot = "",
+        },
+        -- symbol_map = {
+        --   Copilot = "",
+        -- },
+     })
 	  },
 	})
 
