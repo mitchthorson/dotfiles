@@ -29,6 +29,7 @@ vim.opt.rtp:prepend(lazypath)
 -- plugin configuration
 local plugins = {
 	'clojure-vim/vim-jack-in',
+  'christoomey/vim-tmux-navigator',
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
