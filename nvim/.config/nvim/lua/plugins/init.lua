@@ -102,7 +102,6 @@ local plugins = {
 		},
 		config = require("nvim-tree-config"),
 	},
-	"nvim-tree/nvim-tree.lua",
 	{
 		"lewis6991/gitsigns.nvim",
 		config = require("gitsigns-config"),

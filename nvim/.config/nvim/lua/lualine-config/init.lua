@@ -5,11 +5,10 @@ return function()
 			icons_enabled = false,
 			component_separators = { left = "|", right = "|" },
 			section_separators = { left = "", right = "" },
-			-- ... your lualine config
 		},
 		sections = {
 			lualine_a = { "mode" },
-			lualine_b = { "branch", "diff", "buffers" },
+			lualine_b = { "branch", "diff", "diagnostics" },
 			lualine_c = { "filename" },
 			lualine_x = { "encoding", "filetype" },
 			lualine_y = { "progress" },
