@@ -208,6 +208,16 @@ local plugins = {
 			})
 		end,
 	},
+	{
+		"ThePrimeagen/harpoon",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+		},
+		config = function()
+			require("telescope").load_extension("harpoon")
+		end,
+	},
 }
 
 -- initialize lazy with configuration
