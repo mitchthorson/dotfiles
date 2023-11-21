@@ -204,6 +204,7 @@ local plugins = {
           "marksman",
           "mdx_analyzer",
           "pyright",
+          "lua_ls",
           "r_language_server",
         },
       })
