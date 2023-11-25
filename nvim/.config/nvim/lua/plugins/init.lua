@@ -129,7 +129,6 @@ local plugins = {
   {
     "numToStr/Comment.nvim",
     config = true,
-    lazy = true,
   },
   "nvim-lua/plenary.nvim",
   {
