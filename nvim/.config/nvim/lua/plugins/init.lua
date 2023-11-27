@@ -225,6 +225,7 @@ local plugins = {
     config = require("lualine-config"),
   },
   require("trouble-config"),
+  require("obsidian-config"),
 }
 
 -- initialize lazy with configuration
