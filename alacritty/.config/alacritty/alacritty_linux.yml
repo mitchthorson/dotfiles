@@ -17,7 +17,7 @@ font:
 import:
   - ~/.config/alacritty/themes/rose-pine/rose-pine.yml
 window:
-  opacity: 0.8
+  opacity: 0.9
   dimensions:
     columns: 100
     lines: 30
