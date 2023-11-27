@@ -2,11 +2,10 @@ configuration {
   display-drun: " Apps";
   display-run: " Run";
   display-window: " Windows";
-  display-emoji: " Emoji";
   display-ssh: " SSH";
   drun-display-format: "{icon} {name}";
   font: "JetBrainsMono Nerd Font Medium 13";
-  modi: "drun,window,emoji";
+  modi: "drun,window";
 }
 
 @theme "/dev/null"
