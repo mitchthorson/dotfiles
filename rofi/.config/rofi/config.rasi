@@ -4,19 +4,19 @@ configuration {
   display-window: " Windows";
   display-ssh: " SSH";
   drun-display-format: "{icon} {name}";
-  font: "JetBrainsMono Nerd Font Medium 13";
+  font: "Iosevka Nerd Font Mono Regular 14";
   modi: "drun,window";
 }
 
 @theme "/dev/null"
 
 * {
-  bg: #282a36;
-  bg-alt: #44475a;
+  bg: #191724;
+  bg-alt: #1f1d2e;
 
-  fg: #f8f8f2;
-  fg-alt: #6272a4;
-  accent: #ff79c6;
+  fg: #e0def4;
+  fg-alt: #908caa;
+  accent: #f6c177;
 
   background-color: @bg;
   
