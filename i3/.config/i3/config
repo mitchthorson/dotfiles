@@ -159,11 +159,11 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # assign apps to workspaces
-assign [class="firefox"] $ws1
-assign [class="discord"] $ws9
+# assign [class="firefox"] $ws1
+# assign [class="discord"] $ws9
 # workaround for spotify, as it does not set its class initially
 # see: https://www.reddit.com/r/i3wm/comments/52dy4m/spotify_doesnt_start_at_assigned_workspace/
-for_window [class="Spotify"] move to workspace $ws10
+# for_window [class="Spotify"] move to workspace $ws10
 
 # reload the configuration file
 # bindsym $mod+Shift+e reload

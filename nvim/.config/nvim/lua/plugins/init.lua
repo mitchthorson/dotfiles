@@ -157,6 +157,19 @@ local plugins = {
     "rose-pine/neovim",
     lazy = true,
   },
+  {
+    "shaunsingh/nord.nvim",
+    lazy = true,
+  },
+  {
+    "neanias/everforest-nvim",
+    version = false,
+    config = function()
+      require("everforest").setup({
+        -- Your config here
+      })
+    end,
+  },
   "saadparwaiz1/cmp_luasnip",
   -- {
   --    'sbdchd/neoformat',
