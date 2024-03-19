@@ -60,6 +60,7 @@ bindsym $mod+Shift+c kill
 # bindsym $mod+d exec --no-startup-id dmenu_run -nb "#161320" -nf "#ABE9B3" -sb "#ABE9B3" -sf "#161320" -fn "BlexMono Nerd Font:style=bold:size=13"
 
 bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
+bindsym $mod+Shift+d exec --no-startup-id rofi -show run -show-icons
 bindsym $mod+m exec --no-startup-id rofi -show emoji -show-icons
 
 bindsym $mod+Tab exec --no-startup-id rofi -show window -show-icons
