@@ -43,6 +43,8 @@ case $1 in
 	--i3 )
 		INSTALL_ENV="I3"
 		FOLDERS=$FOLDERS_I3
+		cp $DOTFILES_FOLDER/zsh/.zshrc_linux $DOTFILES_FOLDER/zsh/.zshrc
+		cp $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty_linux.yml $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.yml
 		;;
 
 	* ) 
