@@ -191,14 +191,14 @@ local plugins = {
   {
     "NeogitOrg/neogit",
     dependencies = {
-      "nvim-lua/plenary.nvim",         -- required
-      "sindrets/diffview.nvim",        -- optional - Diff integration
+      "nvim-lua/plenary.nvim",  -- required
+      "sindrets/diffview.nvim", -- optional - Diff integration
 
       -- Only one of these is needed, not both.
       "nvim-telescope/telescope.nvim", -- optional
       "ibhagwan/fzf-lua",              -- optional
     },
-    config = function ()
+    config = function()
       require('neogit').setup({
         integrations = {
           diffview = true,
@@ -206,12 +206,17 @@ local plugins = {
         }
       })
       require("neogit-config")
-      
     end
   },
+  -- {
+  --   "vimwiki/vimwiki",
+  --   init = require("vimwiki-config"),
+  -- },
   {
-    "vimwiki/vimwiki",
-    init = require("vimwiki-config"),
+    "vim-pandoc/vim-pandoc",
+  },
+  {
+    "vim-pandoc/vim-pandoc-syntax",
   },
   "windwp/nvim-ts-autotag",
   {
@@ -261,5 +266,6 @@ local plugins = {
   require("obsidian-config"),
 }
 
+require("pandoc-config")
 -- initialize lazy with configuration
 require("lazy").setup(plugins)
