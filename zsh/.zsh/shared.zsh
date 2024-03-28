@@ -54,6 +54,7 @@ alias repos="cd $HOME/repos"
 alias nvrc="cd $HOME/dotfiles/nvim/.config/nvim"
 alias zrc="$EDITOR $HOME/dotfiles/zsh/.zshrc_linux"
 alias ll="ls -lah"
+alias c="clear"
 alias glo="git log --oneline"
 alias glg="git log --graph --decorate --oneline"
 alias gwip='git commit -a -m "work in progress - fixup"'
