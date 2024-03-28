@@ -1,0 +1,36 @@
+import = ["/Users/mthorson/.config/alacritty/themes/rose-pine/dist/rose-pine.toml"]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 18
+
+[font.bold]
+family = "Iosevka Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Iosevka Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Iosevka Nerd Font Mono"
+style = "Regular Italic"
+
+[font.normal]
+family = "Iosevka Nerd Font Mono"
+style = "Regular"
+
+[window]
+decorations = "full"
+dynamic_padding = false
+opacity = 0.9
+
+[window.dimensions]
+columns = 100
+lines = 30
+
+[window.padding]
+x = 0
+y = 0
