@@ -1,10 +1,10 @@
-import = ["/Users/mthorson/.config/alacritty/themes/rose-pine/dist/rose-pine.toml"]
+import = ["~/.config/alacritty/themes/rose-pine/dist/rose-pine.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 18
+size = 16
 
 [font.bold]
 family = "Iosevka Nerd Font Mono"
