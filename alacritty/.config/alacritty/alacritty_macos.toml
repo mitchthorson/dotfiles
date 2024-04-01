@@ -1,25 +1,25 @@
-import = ["/Users/mthorson/.config/alacritty/themes/rose-pine/dist/rose-pine.toml"]
+import = ["~/.config/alacritty/themes/rose-pine/dist/rose-pine.toml"]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 18
+size = 22
 
 [font.bold]
-family = "Iosevka Nerd Font Mono"
+family = "UbuntuMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "Iosevka Nerd Font Mono"
+family = "UbuntuMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Iosevka Nerd Font Mono"
+family = "UbuntuMono Nerd Font"
 style = "Regular Italic"
 
 [font.normal]
-family = "Iosevka Nerd Font Mono"
+family = "UbuntuMono Nerd Font"
 style = "Regular"
 
 [[keyboard.bindings]]
@@ -28,9 +28,9 @@ key = "Return"
 mods = "Command"
 
 [window]
-decorations = "none"
-dynamic_padding = false
-opacity = 0.75
+decorations = "full"
+dynamic_padding = true
+opacity = 0.8
 
 [window.dimensions]
 columns = 150
