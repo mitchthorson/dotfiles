@@ -47,7 +47,16 @@ local plugins = {
   {
     "folke/zen-mode.nvim",
     config = true,
-    lazy = true,
+    lazy = false,
+    opts = {
+      backdrop = 0.5,
+      width = 0.5,
+      plugins = {
+        options = { laststatus = 0 },
+        gitsigns = { enabled = true },
+      },
+
+    },
   },
   {
     "zbirenbaum/copilot.lua",
