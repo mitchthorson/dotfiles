@@ -12,3 +12,4 @@ nvim/.config/nvim/plugin
 xmonad/**/*.hi
 xmonad/**/*.o
 zsh/.zsh/local.zsh
+nvim/.config/nvim/lazy-lock.json
