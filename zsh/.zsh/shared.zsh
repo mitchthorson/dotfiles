@@ -37,15 +37,6 @@ bindkey -M vicmd v "edit-command-line"
 # 14 light cyan
 # 15 light white
 
-# prompt
-autoload -Uz vcs_info
-precmd () { vcs_info }
-NEWLINE=$'\n'
-setopt prompt_subst
-zstyle ':vcs_info:git:*' formats ' %F{white}on %F{3} %b'
-PROMPT='%F{6} %~${vcs_info_msg_0_} %F{2}$ '
-# RPROMPT='%F{blue}%* %F{green}%(?.﫟.)'
-
 # aliases
 alias vim="nvim"
 alias mutt="neomutt"
