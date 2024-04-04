@@ -29,7 +29,7 @@ M.init = function()
 			sorting_strategy = "ascending",
 			layout_strategy = "horizontal",
 			file_sorter = require("telescope.sorters").get_fuzzy_file,
-			file_ignore_patterns = { "node_modules", ".git", "**/*.csv" },
+			file_ignore_patterns = { "node_modules", ".git/", "**/*.csv" },
 			generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
 			path_display = {},
 			winblend = 0,
@@ -68,7 +68,7 @@ M.init = function()
 	local key_map = vim.api.nvim_set_keymap
 	-- Telescope shortcuts
 	key_map("n", "<leader>f", "<CMD>Telescope find_files hidden=true<CR>", { noremap = true })
-	key_map("n", "<leader>F", "<CMD>Telescope live_grep<CR>", { noremap = true })
+	key_map("n", "<leader>/", "<CMD>Telescope live_grep<CR>", { noremap = true })
 	key_map("n", "<leader>r", "<CMD>Telescope lsp_references<CR>", { noremap = true })
 	key_map("n", "<leader>h", "<CMD>Telescope help_tags<CR>", { noremap = true })
 	key_map("n", "<leader>p", "<CMD>Telescope file_browser<CR>", { noremap = true })
