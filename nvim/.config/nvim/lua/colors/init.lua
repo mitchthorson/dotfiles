@@ -30,6 +30,7 @@ local function set_color(colorname)
 		vim.cmd("hi GitSignsAdd guibg=None ctermbg=None")
 		vim.cmd("hi GitSignsChange guibg=None ctermbg=None")
 		vim.cmd("hi GitSignsDelete guibg=None ctermbg=None")
+
 	end
 	if (colorname == "dracula") then
 		package.loaded["colors.dracula"] = nil
@@ -43,6 +44,7 @@ local function set_color(colorname)
 	vim.cmd("hi DiagnosticSignHint guibg=NONE ctermbg=NONE")
 	vim.cmd("hi DiagnosticSignInfo guibg=NONE ctermbg=NONE")
 	vim.cmd("hi DiagnosticSignWarn guibg=NONE ctermbg=NONE")
+  vim.api.nvim_set_hl(0, "NotifyBackground", { link = "NormalFloat"})
 	-- vim.cmd("hi TelescopeNormal guibg=NONE ctermbg=NONE")
 	-----------------------------------------------
 	-- custom italic and syntax settings
