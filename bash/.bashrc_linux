@@ -1,0 +1,21 @@
+# linux specific alias
+alias ls="ls --color=auto"
+
+# FZF fuzzy find history
+if [ -f /usr/share/fzf/shell/key-bindings.bash ]; then 
+	source /usr/share/fzf/shell/key-bindings.bash
+fi
+
+# add lua language server to $PATH
+export PATH="$HOME/lua-language-server/bin:$PATH"
+
+# pyenv 
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+
+alias luamake="$HOME/lua-language-server/3rd/luamake/luamake"
+
+# ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" 
+
+source $HOME/config/bash/shared.sh

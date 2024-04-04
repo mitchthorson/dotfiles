@@ -1,6 +1,7 @@
 zsh/.oh-my-zsh/custom/themes/async
 zsh/.oh-my-zsh/custom/themes/typewritten.zsh-theme
 zsh/.zshrc
+bash/.bashrc
 alacritty/.config/alacritty/alacritty.yml
 alacritty/.config/alacritty/alacritty.toml
 kitty/.config/kitty/kitty.conf

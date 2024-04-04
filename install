@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 DOTFILES_FOLDER="$HOME/dotfiles"
-FOLDERS_LINUX=$(echo "bin nvim alacritty zsh tmux i3 polybar fontconfig starship")
+FOLDERS_LINUX=$(echo "bin nvim alacritty bash tmux i3 polybar fontconfig starship")
 FOLDERS_I3=$(echo "i3 polybar dunst rofi picom")
 FOLDERS_MAC=$(echo "bin alacritty nvim zsh tmux gnupg-mac starship")
 FOLDERS=$(echo "")
 
 # remove .zshrc if it exists so we can
 # create it with the correct version for the environment
-if [ -f $DOTFILES_FOLDER/zsh/.zshrc ]; then
-	rm zsh/.zshrc
+if [ -f $DOTFILES_FOLDER/bash/.bashrc ]; then
+	rm $DOTFILES_FOLDER/bash/.bashrc
 fi
 
 # remove alacritty config if it exists so we can
@@ -28,7 +28,7 @@ case $1 in
 	--macos )
 		INSTALL_ENV="macos"
 		FOLDERS=$FOLDERS_MAC
-		cp $DOTFILES_FOLDER/zsh/.zshrc_macos $HOME/dotfiles/zsh/.zshrc
+		cp $DOTFILES_FOLDER/bash/.bashrc_macos $HOME/dotfiles/bash/.bashrc
 		cp $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty_macos.toml $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.toml
 		cp $DOTFILES_FOLDER/kitty/.config/kitty/kitty_macos.conf $DOTFILES_FOLDER/kitty/.config/kitty/kitty.conf
 		;;
@@ -36,14 +36,14 @@ case $1 in
 	--linux )
 		INSTALL_ENV="linux"
 		FOLDERS=$FOLDERS_LINUX
-		cp $DOTFILES_FOLDER/zsh/.zshrc_linux $DOTFILES_FOLDER/zsh/.zshrc
+		cp $DOTFILES_FOLDER/bash/.bashrc_linux $DOTFILES_FOLDER/bash/.bashrc
 		cp $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty_linux.toml $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.toml
 		cp $DOTFILES_FOLDER/kitty/.config/kitty/kitty_linux.conf $DOTFILES_FOLDER/kitty/.config/kitty/kitty.conf
 		;;
 	--i3 )
 		INSTALL_ENV="I3"
 		FOLDERS=$FOLDERS_I3
-		cp $DOTFILES_FOLDER/zsh/.zshrc_linux $DOTFILES_FOLDER/zsh/.zshrc
+		cp $DOTFILES_FOLDER/bash/.bashrc_linux $DOTFILES_FOLDER/bash/.bashrc
 		cp $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty_linux.toml $DOTFILES_FOLDER/alacritty/.config/alacritty/alacritty.toml
 		;;
 
