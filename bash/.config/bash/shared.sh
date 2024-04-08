@@ -100,3 +100,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # startup starship
 eval "$(starship init bash)"
 
+# fzf
+eval "$(fzf --bash)"
+
+
