@@ -273,7 +273,7 @@ local plugins = {
   },
   require("trouble-config"),
   require("obsidian-config"),
-  require("noice-config"),
+  -- require("noice-config"),
 }
 
 require("pandoc-config")
