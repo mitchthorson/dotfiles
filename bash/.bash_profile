@@ -2,8 +2,8 @@
 export PATH="$HOME/.local/bin:$PATH"
 
 # source local variables before starting X
-if [ -f $HOME/.bash/local.sh ]; then
-	source $HOME/.bash/local.sh
+if [ -f $HOME/.config/bash/local.sh ]; then
+	source $HOME/.config/bash/local.sh
 fi
 
 if [ -r ~/.bashrc ]; then
