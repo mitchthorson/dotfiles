@@ -1,11 +1,14 @@
-# load shared configuration
-source $HOME/config/bash/shared.sh
-
 # macos specific aliases
 alias ls="ls -G"
 
+export PATH="/opt/homebrew/bin:$PATH"
+
 # TODO figure this out FZF fuzzy find history
 # source $HOME/.fzf.zsh
+
+# pyenv 
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 
 # pyenv
 eval "$(pyenv init -)"
@@ -13,3 +16,6 @@ eval "$(pyenv init -)"
 # gpg fix
 GPG_TTY=$(tty)
 export GPG_TTY
+
+# load shared configuration
+source $HOME/.config/bash/shared.sh
