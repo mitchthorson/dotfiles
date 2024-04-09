@@ -18,4 +18,4 @@ alias luamake="$HOME/lua-language-server/3rd/luamake/luamake"
 # ghcup-env
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" 
 
-source $HOME/config/bash/shared.sh
+source $HOME/.config/bash/shared.sh
