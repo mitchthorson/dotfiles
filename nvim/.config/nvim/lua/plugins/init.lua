@@ -49,8 +49,14 @@ local plugins = {
     config = true,
     lazy = false,
     opts = {
-      backdrop = 0.5,
-      width = 0.5,
+      window = {
+        backdrop = 0.95,
+        width = 0.4,
+        options = {
+          number = false,
+          relativenumber = false
+        }
+      },
       plugins = {
         options = { laststatus = 0 },
         gitsigns = { enabled = true },
