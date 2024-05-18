@@ -25,7 +25,7 @@ style = "Regular"
 [window]
 decorations = "full"
 dynamic_padding = false
-opacity = 0.9
+opacity = 1
 
 [window.dimensions]
 columns = 100
