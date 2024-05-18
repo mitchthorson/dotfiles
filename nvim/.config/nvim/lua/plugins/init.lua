@@ -88,17 +88,7 @@ local plugins = {
     "hkupty/iron.nvim",
     config = require("iron"),
   },
-  {
-    "hrsh7th/nvim-cmp",
-    init = require("nvim-cmp-config"),
-    dependencies = {
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-path",
-      "hrsh7th/cmp-emoji",
-      "hrsh7th/cmp-nvim-lua",
-    },
-  },
+  require("nvim-cmp-config"),
   -- {
   -- 	'jalvesaq/Nvim-R',
   -- 	ft = {"r", "rmd", "rmarkdown", "quarto", "qmd"},
