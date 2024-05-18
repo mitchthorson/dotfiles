@@ -50,8 +50,6 @@ local plugins = {
     lazy = false,
     opts = {
       window = {
-        backdrop = 0.95,
-        width = 0.4,
         options = {
           number = false,
           relativenumber = false
@@ -64,21 +62,21 @@ local plugins = {
 
     },
   },
-  -- {
-  --   "zbirenbaum/copilot.lua",
-  --   config = function()
-  --     require("copilot").setup({
-  --       suggestion = { enabled = false },
-  --       panel = { enabled = false },
-  --     })
-  --   end,
-  -- },
-  -- {
-  --   "zbirenbaum/copilot-cmp",
-  --   config = function()
-  --     require("copilot_cmp").setup()
-  --   end,
-  -- },
+  {
+    "zbirenbaum/copilot.lua",
+    config = function()
+      require("copilot").setup({
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      })
+    end,
+  },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function()
+      require("copilot_cmp").setup()
+    end,
+  },
   -- {
   -- 	'github/copilot.vim', -- 🤖
   -- 	config = function()
@@ -90,11 +88,6 @@ local plugins = {
     "hkupty/iron.nvim",
     config = require("iron"),
   },
-  "hrsh7th/cmp-nvim-lsp",
-  "hrsh7th/cmp-buffer",
-  "hrsh7th/cmp-path",
-  "hrsh7th/cmp-emoji",
-  "hrsh7th/cmp-nvim-lua",
   {
     "hrsh7th/nvim-cmp",
     init = require("nvim-cmp-config"),
@@ -203,26 +196,7 @@ local plugins = {
   "tpope/vim-rhubarb",
   "tpope/vim-dispatch", -- dependency for vim-jack-in
   -- 'tpope/vim-sleuth',
-  {
-    "NeogitOrg/neogit",
-    dependencies = {
-      "nvim-lua/plenary.nvim",  -- required
-      "sindrets/diffview.nvim", -- optional - Diff integration
-
-      -- Only one of these is needed, not both.
-      "nvim-telescope/telescope.nvim", -- optional
-      "ibhagwan/fzf-lua",              -- optional
-    },
-    config = function()
-      require('neogit').setup({
-        integrations = {
-          diffview = true,
-          telescope = true,
-        }
-      })
-      require("neogit-config")
-    end
-  },
+  require("neogit-config"),
   -- {
   --   "vimwiki/vimwiki",
   --   init = require("vimwiki-config"),
@@ -280,6 +254,7 @@ local plugins = {
   require("trouble-config"),
   require("obsidian-config"),
   -- require("noice-config"),
+  require("oil-config"),
 }
 
 require("pandoc-config")
