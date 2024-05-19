@@ -3,7 +3,10 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     require('oil').setup {
-      columnc = { "icon" },
+      columns = { 
+        -- "icon",
+        -- "size",
+      },
       keymaps = {
         ["<C-h>"] = false,
         ["<M-h>"] = "actions.select_split",
