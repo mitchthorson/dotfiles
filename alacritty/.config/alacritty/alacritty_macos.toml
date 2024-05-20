@@ -4,7 +4,7 @@ import = ["~/.config/alacritty/themes/rose-pine/dist/rose-pine.toml"]
 TERM = "xterm-256color"
 
 [font]
-size = 22
+size = 18
 
 [font.bold]
 family = "UbuntuMono Nerd Font"
@@ -30,7 +30,7 @@ mods = "Command"
 [window]
 decorations = "full"
 dynamic_padding = true
-opacity = 0.8
+opacity = 1
 
 [window.dimensions]
 columns = 150
