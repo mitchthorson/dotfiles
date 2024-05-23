@@ -245,6 +245,7 @@ local plugins = {
   require("obsidian-config"),
   -- require("noice-config"),
   require("oil-config"),
+  require("dadbod-config"),
 }
 
 require("pandoc-config")
