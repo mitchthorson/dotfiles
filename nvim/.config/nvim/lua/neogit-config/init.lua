@@ -18,6 +18,8 @@ return {
 
     vim.keymap.set("n", "<leader>gs", neogit.open, { silent = true, noremap = true })
 
+    vim.keymap.set("n", "<leader>gS", function() neogit.open({kind = "split"}) end, { silent = true, noremap = true })
+
     vim.keymap.set("n", "<leader>gc", ":Neogit commit<CR>", { silent = true, noremap = true })
 
     vim.keymap.set("n", "<leader>gp", ":Neogit pull<CR>", { silent = true, noremap = true })
