@@ -20,6 +20,7 @@ if not vim.uv.fs_stat(lazypath) then
 		"--branch=stable",
 		lazypath,
 	})
+
 end
 
 -- Add lazy to the `runtimepath`, this allows us to `require` it.
