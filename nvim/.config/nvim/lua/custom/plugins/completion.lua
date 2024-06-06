@@ -6,6 +6,9 @@ return {
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-emoji",
 		"hrsh7th/cmp-nvim-lua",
+    {
+      "L3MON4D3/LuaSnip",
+    },
     "onsails/lspkind-nvim",
     "saadparwaiz1/cmp_luasnip",
 	},
