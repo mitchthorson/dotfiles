@@ -208,7 +208,7 @@ bindsym $mod+r mode "resize"
 # }
 
 # Borders
-for_window [class=".*"] border pixel 2px
+for_window [class=".*"] border pixel 1px
 
 # Colors
 # Dracula
@@ -218,12 +218,11 @@ for_window [class=".*"] border pixel 2px
 # set $border-color #bd93f9
 # set $border-inactive-color #6272a4
 
-# Catppuccin
-
-set $base-color	#1e1e2e
-set $text-color #cdd6f4
-set $border-color #cba6f7
-set $border-inactive-color #cba6f7
+# Rose-pine
+set $base-color	#1f1d2e
+set $text-color #e0def4
+set $border-color #908caa
+set $border-inactive-color #6e6a86
 #                       border                  background         text                 indicator
 client.focused          $border-color           $border-color      $base-color          $border-color
 client.unfocused        $border-inactive-color  $base-color        $text-color          $border-color
@@ -235,7 +234,7 @@ client.urgent           $border-inactive-color  $base-color        $text-color  
 # client.focused #9d79d6 #393bff #9d79d6 #9d79d6 #9d79d6
 
 # Set gaps
-gaps inner 10
+gaps inner 8
 gaps outer 0
 
 # Sreen brightness controls
