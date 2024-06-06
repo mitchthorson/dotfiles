@@ -9,247 +9,128 @@
 
 -- ensure lazy is installed
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
+
+---@diagnostic disable-next-line: undefined-field
+if not vim.uv.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable",
+		lazypath,
+	})
 end
+
+-- Add lazy to the `runtimepath`, this allows us to `require` it.
+---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 -- plugin configuration
 local plugins = {
-  "clojure-vim/vim-jack-in",
-  "christoomey/vim-tmux-navigator",
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    lazy = true,
-  },
-  {
-    "danymat/neogen",
-    dependencies = "nvim-treesitter/nvim-treesitter",
-    -- config = require("neogen-config"),
-    config = true,
-  },
-  {
-    "ellisonleao/gruvbox.nvim",
-    lazy = true,
-  },
-  {
-    "folke/tokyonight.nvim",
-    lazy = true,
-  },
-  {
-    "shortcuts/no-neck-pain.nvim", 
-    version = "*",
-  },
-  {
-    "folke/zen-mode.nvim",
-    config = true,
-    lazy = false,
-    opts = {
-      window = {
-        options = {
-          number = false,
-          relativenumber = false
-        }
-      },
-      plugins = {
-        options = { laststatus = 0 },
-        gitsigns = { enabled = true },
-      },
-
-    },
-  },
-  {
-    "zbirenbaum/copilot.lua",
-    config = function()
-      require("copilot").setup({
-        suggestion = { enabled = false },
-        panel = { enabled = false },
-      })
-    end,
-  },
-  {
-    "zbirenbaum/copilot-cmp",
-    config = function()
-      require("copilot_cmp").setup()
-    end,
-  },
-  -- {
-  -- 	'github/copilot.vim', -- 🤖
-  -- 	config = function()
-  --      vim.g.copilot_no_tab_map = true
-  --      vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-  -- 	end,
-  -- },
-  {
-    "hkupty/iron.nvim",
-    config = require("iron"),
-  },
-  require("nvim-cmp-config"),
-  -- {
-  -- 	'jalvesaq/Nvim-R',
-  -- 	ft = {"r", "rmd", "rmarkdown", "quarto", "qmd"},
-  -- },
-  {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-    config = require("nvim-tree-config"),
-  },
-  {
-    "lewis6991/gitsigns.nvim",
-    config = require("gitsigns-config"),
-  },
-  {
-    "L3MON4D3/LuaSnip",
-    config = require("luasnip-config"),
-  },
-  {
-    "Mofiqul/dracula.nvim",
-    lazy = true,
-  },
-  {
-    "neovim/nvim-lspconfig",
-    config = require("lsp-config"),
-    dependencies = {
-      "williamboman/mason-lspconfig.nvim",
-    },
-  },
-  {
-    "nvim-treesitter/nvim-treesitter",
-    config = require("nvim-treesitter-config"),
-  },
-  {
-    "numToStr/Comment.nvim",
-    config = true,
-  },
-  "nvim-lua/plenary.nvim",
-  {
-    "nvim-telescope/telescope.nvim",
-    config = require("telescope-config").init,
-  },
-  {
-    "nvim-telescope/telescope-file-browser.nvim",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-    },
-  },
-  "onsails/lspkind-nvim",
-  -- nvim-ts-rainbow is no longer maintained and causing errors
-  -- 'p00f/nvim-ts-rainbow',
-  {
-    "quarto-dev/quarto-nvim",
-    dependencies = {
-      "jmbuhr/otter.nvim",
-      "neovim/nvim-lspconfig",
-    },
-    config = require("quarto-nvim"),
-    ft = { "rmd", "rmarkdown", "quarto", "qmd" },
-  },
-  {
-    "rose-pine/neovim",
-    lazy = true,
-  },
-  {
-    "shaunsingh/nord.nvim",
-    lazy = true,
-  },
-  {
-    "neanias/everforest-nvim",
-    version = false,
-    config = function()
-      require("everforest").setup({
-        -- Your config here
-      })
-    end,
-  },
-  "saadparwaiz1/cmp_luasnip",
-  -- {
-  --    'sbdchd/neoformat',
-  --    config = require("neoformat"),
-  --  },
-  {
-    "stevearc/conform.nvim",
-    config = require("conform-config"),
-  },
-  "shaunsingh/nord.nvim",
-  --currently testing out some clojure plugins
-  -- 'Olical/conjure',
-  -- 'tidalcycles/vim-tidal', -- tidal cycles music software
-  -- 'tpope/vim-fireplace'
-  "tpope/vim-fugitive",
-  "tpope/vim-rhubarb",
-  "tpope/vim-dispatch", -- dependency for vim-jack-in
-  -- 'tpope/vim-sleuth',
-  require("neogit-config"),
-  -- {
-  --   "vimwiki/vimwiki",
-  --   init = require("vimwiki-config"),
-  -- },
-  {
-    "vim-pandoc/vim-pandoc",
-  },
-  {
-    "vim-pandoc/vim-pandoc-syntax",
-  },
-  "windwp/nvim-ts-autotag",
-  {
-    "windwp/nvim-autopairs",
-    init = require("nvim-autopairs-config"),
-  },
-  {
-    "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup()
-    end,
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    dependencies = {
-      "williamboman/mason.nvim",
-    },
-    init = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "gopls",
-          "ts_ls",
-          "marksman",
-          "mdx_analyzer",
-          "pyright",
-          "lua_ls",
-          "r_language_server",
-        },
-      })
-    end,
-  },
-  {
-    "ThePrimeagen/harpoon",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    config = function()
-      require("telescope").load_extension("harpoon")
-    end,
-  },
-  {
-    "nvim-lualine/lualine.nvim",
-    config = require("lualine-config"),
-  },
-  require("trouble-config"),
-  require("obsidian-config"),
-  -- require("noice-config"),
-  require("oil-config"),
-  require("dadbod-config"),
+	require("custom.plugins.colors"),
+	require("custom.plugins.tmux_navigator"),
+	require("custom.plugins.zenmode"),
+	require("custom.plugins.completion"),
+	require("custom.plugins.copilot"),
+	require("custom.plugins.clojure"),
+	require("custom.plugins.iron"),
+	require("custom.plugins.R"),
+	require("custom.plugins.tree"),
+	require("custom.plugins.octo"),
+	require("custom.plugins.oil"),
+	require("custom.plugins.dadbod"),
+	require("custom.plugins.gitsigns"),
+	require("custom.plugins.treesitter"),
+	{
+		"shortcuts/no-neck-pain.nvim",
+		version = "*",
+	},
+	{
+		"neovim/nvim-lspconfig",
+		config = require("lsp-config"),
+		dependencies = {
+			"williamboman/mason-lspconfig.nvim",
+		},
+	},
+	{
+		"numToStr/Comment.nvim",
+		config = true,
+	},
+	"nvim-lua/plenary.nvim",
+	{
+		"nvim-telescope/telescope.nvim",
+		config = require("telescope-config").init,
+	},
+	{
+		"nvim-telescope/telescope-file-browser.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+		},
+	},
+	{
+		"quarto-dev/quarto-nvim",
+		dependencies = {
+			"jmbuhr/otter.nvim",
+			"neovim/nvim-lspconfig",
+		},
+		config = require("quarto-nvim"),
+		ft = { "rmd", "rmarkdown", "quarto", "qmd" },
+	},
+	require("conform-config"),
+	"tpope/vim-fugitive",
+	"tpope/vim-rhubarb",
+	"tpope/vim-dispatch", -- dependency for vim-jack-in
+	require("neogit-config"),
+	"vim-pandoc/vim-pandoc",
+	"vim-pandoc/vim-pandoc-syntax",
+	"windwp/nvim-ts-autotag",
+	{
+		"windwp/nvim-autopairs",
+		init = require("nvim-autopairs-config"),
+	},
+	{
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		dependencies = {
+			"williamboman/mason.nvim",
+		},
+		init = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"gopls",
+					"ts_ls",
+					"marksman",
+					"mdx_analyzer",
+					"pyright",
+					"lua_ls",
+					"r_language_server",
+				},
+			})
+		end,
+	},
+	{
+		"ThePrimeagen/harpoon",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+		config = function()
+			require("telescope").load_extension("harpoon")
+		end,
+	},
+	{
+		"nvim-lualine/lualine.nvim",
+		config = require("lualine-config"),
+	},
+	require("trouble-config"),
+	require("obsidian-config"),
+	-- require("noice-config"),
 }
 
 require("pandoc-config")
