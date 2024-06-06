@@ -24,6 +24,12 @@ if [ -f $DOTFILES_FOLDER/kitty/.config/kitty/kitty.conf ]; then
 	rm $DOTFILES_FOLDER/kitty/.config/kitty/kitty.conf
 fi
 
+# make sure some folders exist before stow takes control
+mkdir -p $HOME/.config/tmux/plugins/
+mkdir -p $HOME/.local/bin/
+touch $HOME/.config/tmux/plugins/.placeholder
+touch $HOME/.local/bin/.placeholder
+
 case $1 in
 	--macos )
 		INSTALL_ENV="macos"
