@@ -70,7 +70,8 @@ export PATH=$GOBIN:$PATH
 eval "$(pyenv init --path)"
 
 # rust
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
+export PATH=$PATH:/$HOME/.cargo/bin
 
 # 1Password SSH agent
 export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
