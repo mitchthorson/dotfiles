@@ -9,6 +9,7 @@ gnome-extensions disable ding@rastersoft.com
 gext install tactile@lundal.io
 gext install just-perfection-desktop@just-perfection
 gext install space-bar@luchrioh
+gext install dash-to-dock@micxgx.gmail.com
 
 # gnome dock settings
 # Set default pinned applications (funny installer name to ensure it runs after all app installations!)
