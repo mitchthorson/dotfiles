@@ -28,7 +28,7 @@ key = "Return"
 mods = "Command"
 
 [window]
-decorations = "full"
+decorations = "none"
 dynamic_padding = true
 opacity = 1
 
