@@ -37,7 +37,7 @@ function init()
 		on_attach = handle_attach,
 		root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
 	}
-	nvim_lsp.tsserver.setup{
+	nvim_lsp.ts_ls.setup{
 		capabilities = capabilities,
 		on_attach = handle_attach,
 		root_dir = nvim_lsp.util.root_pattern("package.json"),

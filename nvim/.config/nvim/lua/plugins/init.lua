@@ -217,7 +217,7 @@ local plugins = {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "gopls",
-          "tsserver",
+          "ts_ls",
           "marksman",
           "mdx_analyzer",
           "pyright",
