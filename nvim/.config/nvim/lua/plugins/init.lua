@@ -45,6 +45,10 @@ local plugins = {
     lazy = true,
   },
   {
+    "shortcuts/no-neck-pain.nvim", 
+    version = "*",
+  },
+  {
     "folke/zen-mode.nvim",
     config = true,
     lazy = false,

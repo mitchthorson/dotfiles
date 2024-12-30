@@ -37,11 +37,14 @@ function init()
 		on_attach = handle_attach,
 		root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
 	}
-	nvim_lsp.ts_ls.setup{
+	-- nvim_lsp.ts_ls.setup{
+	-- 	capabilities = capabilities,
+	-- 	on_attach = handle_attach,
+	-- 	root_dir = nvim_lsp.util.root_pattern("package.json"),
+ --  }
+	nvim_lsp.vtsls.setup{
 		capabilities = capabilities,
 		on_attach = handle_attach,
-		root_dir = nvim_lsp.util.root_pattern("package.json"),
-		single_file_support = false
 	}
 	nvim_lsp.pyright.setup{
 		capabilities = capabilities,
