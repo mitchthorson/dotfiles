@@ -105,3 +105,5 @@ eval "$(starship init bash)"
 eval "$(fzf --bash)"
 
 
+# zig
+export PATH="$HOME/zig:$PATH"
