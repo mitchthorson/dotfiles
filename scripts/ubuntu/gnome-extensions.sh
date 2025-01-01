@@ -1,6 +1,6 @@
 # Turn off default Ubuntu extensions
 gnome-extensions disable tiling-assistant@ubuntu.com
-gnome-extensions disable ubuntu-appindicators@ubuntu.com
+# gnome-extensions disable ubuntu-appindicators@ubuntu.com
 gnome-extensions disable ubuntu-dock@ubuntu.com
 gnome-extensions disable ding@rastersoft.com
 
@@ -13,7 +13,7 @@ gext install dash-to-dock@micxgx.gmail.com
 
 # gnome dock settings
 # Set default pinned applications (funny installer name to ensure it runs after all app installations!)
-gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'Alacritty.desktop', 'md.obsidian.Obsidian.desktop', 'spotify.desktop', '1password.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Nautilus.desktop']"
+gsettings set org.gnome.shell favorite-apps "['firefox_firefox.desktop', 'Alacritty.desktop', 'md.obsidian.Obsidian.desktop', 'com.spotify.Client', '1password.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Nautilus.desktop']"
 
 # Compile gsettings schemas in order to be able to set them
 sudo cp ~/.local/share/gnome-shell/extensions/tactile@lundal.io/schemas/org.gnome.shell.extensions.tactile.gschema.xml /usr/share/glib-2.0/schemas/
