@@ -1,2 +1,3 @@
 theme = rose-pine
 font-size = 18
+keybind = super+shift+b=toggle_window_decorations
