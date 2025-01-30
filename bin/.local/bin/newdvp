@@ -10,4 +10,4 @@ gh repo create \
   --private \
   --clone \
   -p ui-research/dataviz-project-starter-kit \
-  $1 
+  ui-research/$1 
