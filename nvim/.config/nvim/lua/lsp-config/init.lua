@@ -32,16 +32,20 @@ function init()
 		capabilities = capabilities,
 		on_attach = handle_attach
 	}
-	nvim_lsp.denols.setup{
-		capabilities = capabilities,
-		on_attach = handle_attach,
-		root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
-	}
-	-- nvim_lsp.ts_ls.setup{
+	-- nvim_lsp.denols.setup{
 	-- 	capabilities = capabilities,
 	-- 	on_attach = handle_attach,
-	-- 	root_dir = nvim_lsp.util.root_pattern("package.json"),
- --  }
+	-- 	root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
+	-- }
+	nvim_lsp.ts_ls.setup{
+		capabilities = capabilities,
+		on_attach = handle_attach,
+		root_dir = nvim_lsp.util.root_pattern("package.json"),
+  }
+  nvim_lsp.tailwindcss.setup{
+		capabilities = capabilities,
+		on_attach = handle_attach,
+  }
 	nvim_lsp.vtsls.setup{
 		capabilities = capabilities,
 		on_attach = handle_attach,
@@ -50,10 +54,10 @@ function init()
 		capabilities = capabilities,
 		on_attach = handle_attach
 	}
-	nvim_lsp.cssls.setup{
-		capabilities = capabilities,
-		on_attach = handle_attach
-	}
+	-- nvim_lsp.cssls.setup{
+	-- 	capabilities = capabilities,
+	-- 	on_attach = handle_attach
+	-- }
 	nvim_lsp.svelte.setup{
 		capabilities = capabilities,
 		on_attach = handle_attach
