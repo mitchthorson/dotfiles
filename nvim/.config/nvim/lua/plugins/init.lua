@@ -37,7 +37,7 @@ local plugins = {
 	require("custom.plugins.clojure"),
 	require("custom.plugins.iron"),
 	require("custom.plugins.R"),
-	require("custom.plugins.tree"),
+	-- require("custom.plugins.tree"),
 	require("custom.plugins.octo"),
 	require("custom.plugins.oil"),
 	require("custom.plugins.dadbod"),
