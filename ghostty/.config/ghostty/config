@@ -1,4 +1,4 @@
-theme = gruvbox-material
+theme = ayu
 font-family = "Berkeley Mono"
 font-size = 20
 keybind = super+shift+b=toggle_window_decorations

@@ -7,7 +7,7 @@
 -----------------------------------------------
 
 
-vim.env.colorscheme = "gruvbox"
+vim.env.colorscheme = "ayu"
 vim.env.transparent_bg = true
 vim.o.background = "dark"
 

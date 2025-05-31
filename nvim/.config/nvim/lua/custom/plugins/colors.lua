@@ -1,5 +1,9 @@
 return {
   {
+    "Shatur/neovim-ayu",
+    lazy = true,
+  },
+  {
     "rose-pine/neovim",
     lazy = true,
   },
@@ -10,6 +14,10 @@ return {
   },
   {
     "ellisonleao/gruvbox.nvim",
+    lazy = true,
+  },
+  {
+    "sainnhe/gruvbox-material",
     lazy = true,
   },
   {
