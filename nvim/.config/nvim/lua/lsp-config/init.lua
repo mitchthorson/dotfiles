@@ -1,7 +1,7 @@
 function init()
 
 	local map = vim.api.nvim_set_keymap
-	local nvim_lsp = require'lspconfig'
+	local nvim_lsp = vim.lsp
 
 	local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 
@@ -28,58 +28,49 @@ function init()
 	-- capabilities to use with each language server
 	local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-	nvim_lsp.html.setup {
+	nvim_lsp.config("html", {
 		capabilities = capabilities,
 		on_attach = handle_attach
-	}
-	-- nvim_lsp.denols.setup{
-	-- 	capabilities = capabilities,
-	-- 	on_attach = handle_attach,
-	-- 	root_dir = nvim_lsp.util.root_pattern("deno.json", "deno.jsonc"),
-	-- }
-	nvim_lsp.ts_ls.setup{
+	})
+	nvim_lsp.config("ts_ls",{
 		capabilities = capabilities,
 		on_attach = handle_attach,
-		root_dir = nvim_lsp.util.root_pattern("package.json"),
-  }
-  nvim_lsp.tailwindcss.setup{
+		root_dir = require'lspconfig.util'.root_pattern("package.json"),
+  })
+  nvim_lsp.config("tailwindcss", {
 		capabilities = capabilities,
 		on_attach = handle_attach,
-  }
-	nvim_lsp.vtsls.setup{
+  })
+	nvim_lsp.config("vtsls", {
 		capabilities = capabilities,
 		on_attach = handle_attach,
-	}
-	nvim_lsp.pyright.setup{
+	})
+	nvim_lsp.config("pyright", {
 		capabilities = capabilities,
 		on_attach = handle_attach
-	}
-	-- nvim_lsp.cssls.setup{
-	-- 	capabilities = capabilities,
-	-- 	on_attach = handle_attach
-	-- }
-	nvim_lsp.svelte.setup{
+	})
+	nvim_lsp.config("svelte", {
 		capabilities = capabilities,
 		on_attach = handle_attach
-	}
-	nvim_lsp.r_language_server.setup{
+	})
+	nvim_lsp.config("r_language_server", {
 		capabilities = capabilities,
 		on_attach = handle_attach
-	}
-	nvim_lsp.gopls.setup{
+	})
+	nvim_lsp.config("gopls", {
 		capabilities = capabilities,
 		on_attach = handle_attach
-	}
-	nvim_lsp.rust_analyzer.setup{
+	})
+	nvim_lsp.config("rust_analyzer", {
 		capabilities = capabilities,
 		on_attach = handle_attach
-	}
+	})
 
-	nvim_lsp.astro.setup{
+	nvim_lsp.config("astro", {
 		capabilities = capabilities,
 		on_attach = handle_attach
-	}
-	nvim_lsp.yamlls.setup{
+	})
+	nvim_lsp.config("yamlls", {
 		capabilities = capabilities,
 		on_attach = handle_attach,
 		settings = {
@@ -90,10 +81,10 @@ function init()
 				},
 			},
 		}
-	}
+	})
 	-- setup lua language server
 
-	nvim_lsp.lua_ls.setup {
+	nvim_lsp.config("lua_ls", {
 		capabilities = capabilities,
 		on_attach = handle_attach,
 	  settings = {
@@ -112,7 +103,7 @@ function init()
 	      },
 	    },
 	  },
-	}
+	})
 
 end
 
