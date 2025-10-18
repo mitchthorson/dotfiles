@@ -125,10 +125,10 @@ local plugins = {
 			require("telescope").load_extension("harpoon")
 		end,
 	},
-	{
-		"nvim-lualine/lualine.nvim",
-		config = require("lualine-config"),
-	},
+	-- {
+	-- 	"nvim-lualine/lualine.nvim",
+	-- 	config = require("lualine-config"),
+	-- },
 	require("trouble-config"),
 	require("obsidian-config"),
 	-- require("noice-config"),

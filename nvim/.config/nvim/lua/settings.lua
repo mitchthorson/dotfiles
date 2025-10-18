@@ -137,3 +137,10 @@ g.R_csv_app = 'terminal:vd'
 cmd [[
 	au FileType haskell setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 ]]
+
+
+-----------------------------------------------
+-- status line
+-- disable statusline for now
+vim.opt.laststatus = 0
+vim.opt.cmdheight = 0     -- hide command line (Neovim 0.9+)
