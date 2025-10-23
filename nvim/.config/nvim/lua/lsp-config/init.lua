@@ -32,44 +32,54 @@ function init()
 		capabilities = capabilities,
 		on_attach = handle_attach
 	})
+  nvim_lsp.enable("html")
 	nvim_lsp.config("ts_ls",{
 		capabilities = capabilities,
 		on_attach = handle_attach,
 		root_dir = require'lspconfig.util'.root_pattern("package.json"),
   })
+  nvim_lsp.enable("ts_ls")
   nvim_lsp.config("tailwindcss", {
 		capabilities = capabilities,
 		on_attach = handle_attach,
   })
+  nvim_lsp.enable("tailwindcss")
 	nvim_lsp.config("vtsls", {
 		capabilities = capabilities,
 		on_attach = handle_attach,
 	})
+  nvim_lsp.enable("vtsls")
 	nvim_lsp.config("pyright", {
 		capabilities = capabilities,
 		on_attach = handle_attach
 	})
+  nvim_lsp.enable("pyright")
 	nvim_lsp.config("svelte", {
 		capabilities = capabilities,
 		on_attach = handle_attach
 	})
+  nvim_lsp.enable("svelte")
 	nvim_lsp.config("r_language_server", {
 		capabilities = capabilities,
 		on_attach = handle_attach
 	})
+  nvim_lsp.enable("r_language_server")
 	nvim_lsp.config("gopls", {
 		capabilities = capabilities,
 		on_attach = handle_attach
 	})
+  nvim_lsp.enable("gopls")
 	nvim_lsp.config("rust_analyzer", {
 		capabilities = capabilities,
 		on_attach = handle_attach
 	})
+  nvim_lsp.enable("rust_analyzer")
 
 	nvim_lsp.config("astro", {
 		capabilities = capabilities,
 		on_attach = handle_attach
 	})
+  nvim_lsp.enable("astro")
 	nvim_lsp.config("yamlls", {
 		capabilities = capabilities,
 		on_attach = handle_attach,
@@ -82,6 +92,7 @@ function init()
 			},
 		}
 	})
+  nvim_lsp.enable("yamlls")
 	-- setup lua language server
 
 	nvim_lsp.config("lua_ls", {
@@ -104,6 +115,7 @@ function init()
 	    },
 	  },
 	})
+  nvim_lsp.enable("lua_ls")
 
 end
 

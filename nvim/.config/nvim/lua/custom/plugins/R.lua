@@ -1,6 +1,7 @@
 return {
-  -- {
-  -- 	'jalvesaq/Nvim-R',
-  -- 	ft = {"r", "rmd", "rmarkdown", "quarto", "qmd"},
-  -- },
+	{
+		"R-nvim/R.nvim",
+		-- Only required if you also set defaults.lazy = true
+		lazy = false,
+	},
 }
