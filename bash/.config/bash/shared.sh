@@ -88,10 +88,6 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# Re-source the local file
-if [ -f $HOME/.bash/local.sh ]; then
-	source $HOME/.bash/local.sh
-fi
 
 # nvm setup
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -107,3 +103,8 @@ eval "$(fzf --bash)"
 
 # zig
 export PATH="$HOME/zig:$PATH"
+
+# Source the local file last to allow overrides
+if [ -f $HOME/.config/bash/local.sh ]; then
+	source $HOME/.config/bash/local.sh
+fi
