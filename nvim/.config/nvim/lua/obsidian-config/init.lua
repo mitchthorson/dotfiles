@@ -20,7 +20,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "~/obsidian/vault",
+        path = "~/obsidian/main-vault",
       },
     },
     templates = {
