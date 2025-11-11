@@ -1,4 +1,5 @@
 theme = "Gruvbox Material Dark"
 font-family = "Berkeley Mono"
 font-size = 20
+background-opacity = 0.9
 keybind = super+shift+b=toggle_window_decorations
