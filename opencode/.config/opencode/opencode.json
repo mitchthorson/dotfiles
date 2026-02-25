@@ -26,5 +26,12 @@
     "sort *": "allow",
     "uniq *": "allow",
     "echo *": "allow",
-  }
+  },
+  "mcp": {
+    "svelte": {
+      "type": "remote",
+      "url": "https://mcp.svelte.dev/mcp",
+      "enabled": true
+    }
+  },
 }
