@@ -12,20 +12,23 @@
     "lsp": "allow",
     "todoread": "allow",
     "todowrite": "allow",
-    "git status *": "allow",
-    "git log *": "allow",
-    "git find *": "allow",
-    "ls *": "allow",
-    "find *": "allow",
-    "head *": "allow",
-    "tail *": "allow",
-    "cat *": "allow",
-    "jq *": "allow",
-    "grep *": "allow",
-    "awk *": "allow",
-    "sort *": "allow",
-    "uniq *": "allow",
-    "echo *": "allow",
+    "bash": {
+      "*": "ask",
+      "ls *": "allow",
+      "find *": "allow",
+      "head *": "allow",
+      "tail *": "allow",
+      "cat *": "allow",
+      "jq *": "allow",
+      "grep *": "allow",
+      "awk *": "allow",
+      "sort *": "allow",
+      "uniq *": "allow",
+      "echo *": "allow",
+      "git log *": "allow",
+      "git find *": "allow",
+      "git status *": "allow",
+    }
   },
   "mcp": {
     "svelte": {
@@ -34,4 +37,7 @@
       "enabled": true
     }
   },
+  "tools": {
+    "svelte": false
+  }
 }
