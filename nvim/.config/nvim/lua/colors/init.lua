@@ -7,7 +7,7 @@
 -----------------------------------------------
 
 
-vim.env.colorscheme = "gruvbox-material"
+vim.env.colorscheme = "rose-pine"
 vim.env.transparent_bg = true
 vim.o.background = "dark"
 
