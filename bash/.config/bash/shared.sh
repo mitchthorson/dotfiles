@@ -76,7 +76,7 @@ export PATH=$GOBIN:$PATH
 export PATH=$PATH:/$HOME/.cargo/bin
 
 # 1Password SSH agent
-export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
+# export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 
 # Deno
 export DENO_INSTALL="$HOME/.deno"
