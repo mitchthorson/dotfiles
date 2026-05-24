@@ -17,6 +17,8 @@
       "ls *": "allow",
       "find *": "allow",
       "head *": "allow",
+      "tr *": "allow",
+      "wc *": "allow",
       "tail *": "allow",
       "cat *": "allow",
       "jq *": "allow",
