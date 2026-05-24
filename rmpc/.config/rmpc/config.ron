@@ -26,7 +26,7 @@
     auto_open_downloads: true,
     album_art: (
         method: Auto,
-        max_size_px: (width: 1200, height: 1200),
+        max_size_px: (width: 1600, height: 1600),
         disabled_protocols: ["http://", "https://"],
         vertical_align: Center,
         horizontal_align: Center,
@@ -177,17 +177,9 @@
                             panes: [
                                 (
                                     size: "100%",
-                                    borders: "LEFT | RIGHT | TOP",
+                                    borders: "ALL",
                                     border_symbols: Rounded,
                                     pane: Pane(AlbumArt)
-                                ),
-                                (
-                                    size: "7",
-                                    borders: "ALL",
-                                    border_symbols: Inherited(parent: Rounded, top_left: "├", top_right: "┤",),
-                                    border_title: [(kind: Text("  "))],
-                                    border_title_alignment: Right,
-                                    pane: Pane(Cava)
                                 ),
                             ],
                         ),
@@ -217,7 +209,7 @@
                                 ),
                                 (
                                     size: "100%",
-                                    borders: "LEFT | RIGHT | BOTTOM",
+                                    borders: "LEFT | RIGHT",
                                     border_symbols: Rounded,
                                     pane: Split(
                                         direction: Horizontal,
@@ -232,6 +224,14 @@
                                             ),
                                         ]
                                     )
+                                ),
+                                (
+                                    size: "7",
+                                    borders: "ALL",
+                                    border_symbols: Inherited(parent: Rounded, top_left: "├", top_right: "┤",),
+                                    border_title: [(kind: Text("  "))],
+                                    border_title_alignment: Right,
+                                    pane: Pane(Cava)
                                 ),
                             ],
                         )
